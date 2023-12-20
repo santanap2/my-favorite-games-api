@@ -1,19 +1,33 @@
 import { Request, Response } from 'express'
-import { prismaClient } from '../database/prismaClient'
+import { UserService } from '../services/User.service'
 
 export class UserController {
-  async create(req: Request, res: Response) {
-    const { email, password, name, phone } = req.body
+  private userService = new UserService()
 
-    const user = await prismaClient.user.create({
-      data: {
-        email,
-        password,
-        name,
-        phone,
-      },
-    })
+  public async create(req: Request, res: Response) {
+    const { status, message, data } = await this.userService.create(req.body)
+    return res.status(status).json({ message, data })
+  }
 
-    return res.status(201).json(user)
+  public async read(_req: Request, res: Response) {
+    const { status, message, data } = await this.userService.read()
+    return res.status(status).json({ message, data })
+  }
+
+  public async readOne(req: Request, res: Response) {
+    const { email } = req.body
+    const { status, message, data } = await this.userService.readOne(email)
+    return res.status(status).json({ message, data })
+  }
+
+  public async update(req: Request, res: Response) {
+    const { email, name, password, phone } = req.body
+    const { status, message, data } = await this.userService.update(
+      email,
+      name,
+      password,
+      phone,
+    )
+    return res.status(status).json({ message, data })
   }
 }
