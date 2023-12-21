@@ -61,24 +61,23 @@ export class UserService {
   // ////////////////////////////////////////////////////////////////
 
   public async update(
-    name: string,
+    name: string | undefined,
     currentEmail: string,
-    newEmail: string,
-    phone: string,
+    newEmail: string | undefined,
+    phone: string | undefined,
     currentPassword: string,
-    newPassword: string,
+    newPassword: string | undefined,
   ) {
-    const validation = updateUserFieldsValidation(
-      name,
-      currentEmail,
-      newEmail,
-      phone,
-      currentPassword,
-      newPassword,
-    )
+    const validation = updateUserFieldsValidation(currentEmail, currentPassword)
 
     if (validation)
       return { status: validation.status, message: validation.message }
+
+    const dataToUpdate: Record<string, unknown> = {}
+    if (name) dataToUpdate.name = name
+    if (newEmail) dataToUpdate.email = newEmail
+    if (phone) dataToUpdate.phone = phone
+    if (newPassword) dataToUpdate.password = newPassword
 
     const { data } = await this.readOne(currentEmail)
     if (!data)
@@ -95,12 +94,7 @@ export class UserService {
 
     const updatedUser = await prismaClient.user.update({
       where: { email: currentEmail },
-      data: {
-        name,
-        email: newEmail,
-        phone,
-        password: newPassword,
-      },
+      data: dataToUpdate,
     })
 
     return {
