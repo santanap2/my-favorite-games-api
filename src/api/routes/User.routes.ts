@@ -13,7 +13,11 @@ userRouter.get('/get-all-users', (req: Request, res: Response) =>
   userController.read(req, res),
 )
 
-userRouter.get('/get-user/:email', (req: Request, res: Response) =>
+userRouter.get('/get-user-by-email/:email', (req: Request, res: Response) =>
+  userController.readByEmail(req, res),
+)
+
+userRouter.get('/get-user/:id', (req: Request, res: Response) =>
   userController.readOne(req, res),
 )
 

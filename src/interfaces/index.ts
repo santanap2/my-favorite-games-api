@@ -11,4 +11,6 @@ export interface IRegister extends IUser {
 export interface IPayloadJWT {
   id: number
   email: string
+  name: string
+  phone: string
 }

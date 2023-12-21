@@ -15,9 +15,16 @@ export class UserController {
   }
 
   public async readOne(req: Request, res: Response) {
-    const { email } = req.params
-    const { status, message, data } = await this.userService.readOne(email)
+    const { id } = req.params
+    const { status, message, data } = await this.userService.readOne(Number(id))
 
+    return res.status(status).json({ message, data })
+  }
+
+  public async readByEmail(req: Request, res: Response) {
+    const { email } = req.params
+
+    const { status, message, data } = await this.userService.readByEmail(email)
     return res.status(status).json({ message, data })
   }
 

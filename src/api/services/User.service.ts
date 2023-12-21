@@ -1,6 +1,6 @@
 import { prismaClient } from '../../database/prismaClient'
 import { IRegister } from '../../interfaces'
-import { hashPassword } from '../../utils/bcrypt'
+import { comparePasswords, hashPassword } from '../../utils/bcrypt'
 import {
   createUserFieldsValidation,
   updateUserFieldsValidation,
@@ -14,7 +14,7 @@ export class UserService {
     if (validation)
       return { status: validation.status, message: validation.message }
 
-    const { data } = await this.readOne(email)
+    const { data } = await this.readByEmail(email)
     if (data)
       return { status: 400, message: 'Email já cadastrado no banco de dados' }
 
@@ -67,13 +67,39 @@ export class UserService {
 
   // ////////////////////////////////////////////////////////////////
 
-  public async readOne(email: string) {
+  public async readOne(id: number) {
+    const result = await prismaClient.user.findUnique({
+      where: { id },
+    })
+
+    if (!id)
+      return {
+        status: 400,
+        message: 'Por favor forneça o parâmetro para busca',
+      }
+    if (!result) return { status: 404, message: 'Usuário não cadastrado' }
+
+    await prismaClient.$disconnect()
+    return {
+      status: 200,
+      message: 'Usuário encontrado com sucesso',
+      data: result,
+    }
+  }
+
+  // ////////////////////////////////////////////////////////////////
+
+  public async readByEmail(email: string) {
     const result = await prismaClient.user.findUnique({
       where: { email },
     })
 
-    if (!email) return { status: 400, message: 'Parâmetro não foi provido' }
-    if (!result) return { status: 404, message: 'Usuário não encontrado' }
+    if (!email)
+      return {
+        status: 400,
+        message: 'Por favor forneça o parâmetro para busca',
+      }
+    if (!result) return { status: 404, message: 'Usuário não cadastrado' }
 
     await prismaClient.$disconnect()
     return {
@@ -104,18 +130,20 @@ export class UserService {
     if (phone) dataToUpdate.phone = phone
     if (newPassword) dataToUpdate.password = newPassword
 
-    const { data } = await this.readOne(currentEmail)
+    const { data } = await this.readByEmail(currentEmail)
     if (!data)
       return {
         status: 404,
         message: 'Usuário não encontrado no banco de dados',
       }
 
-    if (data.password !== currentPassword)
-      return {
-        status: 400,
-        message: 'A senha informada está incorreta',
-      }
+    const passwordsCheck = await comparePasswords(
+      currentPassword,
+      data.password,
+    )
+
+    if (!passwordsCheck)
+      return { status: 401, message: 'A senha informada está incorreta' }
 
     const updatedUser = await prismaClient.user.update({
       where: { email: currentEmail },
