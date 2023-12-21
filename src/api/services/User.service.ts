@@ -1,12 +1,15 @@
-import { prismaClient } from '../database/prismaClient'
-import { IUser } from '../interfaces'
-import { userFieldsValidations } from './validations/User'
+import { prismaClient } from '../../database/prismaClient'
+import { IUser } from '../../interfaces'
+import {
+  createUserFieldsValidation,
+  updateUserFieldsValidation,
+} from '../validations/User'
 
 export class UserService {
   public async create(user: IUser) {
     const { email, name, password, phone } = user
 
-    const validation = userFieldsValidations(email, name, password, phone)
+    const validation = createUserFieldsValidation(email, name, password, phone)
     if (validation)
       return { status: validation.status, message: validation.message }
 
@@ -36,6 +39,9 @@ export class UserService {
     if (!result)
       return { status: 500, message: 'An error ocurred, please try again!' }
 
+    if (result.length === 0)
+      return { status: 404, message: 'No registered users' }
+
     return { status: 200, message: 'Users found successfully', data: result }
   }
 
@@ -46,6 +52,8 @@ export class UserService {
       where: { email },
     })
 
+    if (!email) return { status: 400, message: 'Param was not provided' }
+
     if (!result) return { status: 404, message: 'User not found in database' }
     return { status: 200, message: 'User found successfully', data: result }
   }
@@ -53,26 +61,51 @@ export class UserService {
   // ////////////////////////////////////////////////////////////////
 
   public async update(
-    email: string,
     name: string,
-    password: string,
+    currentEmail: string,
+    newEmail: string,
     phone: string,
+    currentPassword: string,
+    newPassword: string,
   ) {
-    const { data } = await this.readOne(email)
-    if (!data) return { status: 400, message: 'User not found in database' }
+    const validation = updateUserFieldsValidation(
+      name,
+      currentEmail,
+      newEmail,
+      phone,
+      currentPassword,
+      newPassword,
+    )
+
+    if (validation)
+      return { status: validation.status, message: validation.message }
+
+    const { data } = await this.readOne(currentEmail)
+    if (!data)
+      return {
+        status: 404,
+        message: 'Usuário não encontrado no banco de dados',
+      }
+
+    if (data.password !== currentPassword)
+      return {
+        status: 400,
+        message: 'A senha informada está incorreta',
+      }
 
     const updatedUser = await prismaClient.user.update({
-      where: { email },
+      where: { email: currentEmail },
       data: {
         name,
-        password,
+        email: newEmail,
         phone,
+        password: newPassword,
       },
     })
 
     return {
       status: 200,
-      message: 'User updated successfully',
+      message: 'Dados atualizados com sucesso',
       data: updatedUser,
     }
   }
