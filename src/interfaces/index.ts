@@ -1,6 +1,14 @@
 export interface IUser {
   email: string
-  name: string
   password: string
+}
+
+export interface IRegister extends IUser {
+  name: string
   phone: string
+}
+
+export interface IPayloadJWT {
+  id: number
+  email: string
 }

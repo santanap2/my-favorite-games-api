@@ -1,12 +1,13 @@
 import { prismaClient } from '../../database/prismaClient'
-import { IUser } from '../../interfaces'
+import { IRegister } from '../../interfaces'
+import { hashPassword } from '../../utils/bcrypt'
 import {
   createUserFieldsValidation,
   updateUserFieldsValidation,
 } from '../validations/User'
 
 export class UserService {
-  public async create(user: IUser) {
+  public async create(user: IRegister) {
     const { email, name, password, phone } = user
 
     const validation = createUserFieldsValidation(email, name, password, phone)
@@ -14,21 +15,32 @@ export class UserService {
       return { status: validation.status, message: validation.message }
 
     const { data } = await this.readOne(email)
-    if (data) return { status: 400, message: 'User already exists in database' }
+    if (data)
+      return { status: 400, message: 'Email já cadastrado no banco de dados' }
+
+    const encryptedPassword = await hashPassword(password)
 
     const result = await prismaClient.user.create({
       data: {
         email,
-        password,
+        password: encryptedPassword,
         name,
         phone,
       },
     })
 
     if (!result)
-      return { status: 500, message: 'An error ocurred, please try again!' }
+      return {
+        status: 500,
+        message: 'Ocorreu um erro inesperado, por favor tente novamente',
+      }
 
-    return { status: 201, message: 'User created successfully', data: result }
+    await prismaClient.$disconnect()
+    return {
+      status: 201,
+      message: 'Usuário cadastrado com sucesso',
+      data: result,
+    }
   }
 
   // ////////////////////////////////////////////////////////////////
@@ -37,12 +49,20 @@ export class UserService {
     const result = await prismaClient.user.findMany()
 
     if (!result)
-      return { status: 500, message: 'An error ocurred, please try again!' }
+      return {
+        status: 500,
+        message: 'Ocorreu um erro inesperado, por favor tente novamente',
+      }
 
     if (result.length === 0)
-      return { status: 404, message: 'No registered users' }
+      return { status: 404, message: 'Sem usuários cadastrados' }
 
-    return { status: 200, message: 'Users found successfully', data: result }
+    await prismaClient.$disconnect()
+    return {
+      status: 200,
+      message: 'Usuários encontrados com sucesso',
+      data: result,
+    }
   }
 
   // ////////////////////////////////////////////////////////////////
@@ -52,10 +72,15 @@ export class UserService {
       where: { email },
     })
 
-    if (!email) return { status: 400, message: 'Param was not provided' }
+    if (!email) return { status: 400, message: 'Parâmetro não foi provido' }
+    if (!result) return { status: 404, message: 'Usuário não encontrado' }
 
-    if (!result) return { status: 404, message: 'User not found in database' }
-    return { status: 200, message: 'User found successfully', data: result }
+    await prismaClient.$disconnect()
+    return {
+      status: 200,
+      message: 'Usuário encontrado com sucesso',
+      data: result,
+    }
   }
 
   // ////////////////////////////////////////////////////////////////
@@ -97,6 +122,7 @@ export class UserService {
       data: dataToUpdate,
     })
 
+    await prismaClient.$disconnect()
     return {
       status: 200,
       message: 'Dados atualizados com sucesso',
