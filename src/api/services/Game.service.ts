@@ -10,7 +10,7 @@ export class GameService {
     if (validation)
       return { status: validation.status, message: validation.message }
 
-    const { data } = await this.readByName(name)
+    const { data } = await this.readByName(encodeURIComponent(name))
     if (data)
       return { status: 400, message: 'Jogo já adicionado no banco de dados' }
 
