@@ -17,3 +17,16 @@ model User {
 
   @@map("users")
 }
+
+model Game {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique
+  genre       String
+  genrePt     String
+  price       Int
+  image       String
+  description String   @db.VarChar(1000)
+  created_at  DateTime @default(now())
+
+  @@map("games")
+}

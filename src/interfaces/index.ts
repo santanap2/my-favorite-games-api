@@ -14,3 +14,12 @@ export interface IPayloadJWT {
   name: string
   phone: string
 }
+
+export interface IGame {
+  name: string
+  genre: string
+  genrePt: string
+  price: number
+  image: string
+  description: string
+}
