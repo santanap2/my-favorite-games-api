@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { prismaClient } from '../../database/prismaClient'
 import { IFilters, IGame, IQueryObject } from '../../interfaces'
 import { createGameFieldsValidation } from '../validations/Game'
@@ -140,6 +141,19 @@ export class GameService {
         data: result,
       }
     }
+
+    if (queryObject.busca !== null && queryObject.busca !== '') {
+      const filteredByName = result.filter((game) =>
+        game.name.toLowerCase().includes(queryObject.busca!.toLowerCase()),
+      )
+
+      return {
+        status: 200,
+        message: 'Jogos encontrados pela busca',
+        data: filteredByName,
+      }
+    }
+
     const transformQueryToObjectTs = () => {
       const params = new URLSearchParams()
       Object.entries(queryObject || {}).forEach(([key, value]) => {

@@ -38,6 +38,7 @@ export interface IFilters {
 }
 
 export interface IQueryObject {
+  busca?: string | null
   actionAdventure?: string
   rpgOpenWorld?: string
   racing?: string
