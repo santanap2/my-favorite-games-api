@@ -14,7 +14,7 @@ gameRouter.post('/add-many-games', (req: Request, res: Response) =>
 )
 
 gameRouter.get('/get-games', (req: Request, res: Response) =>
-  gameController.read(req, res),
+  gameController.readWithFilters(req, res),
 )
 
 gameRouter.get('/get-game/:id', (req: Request, res: Response) =>

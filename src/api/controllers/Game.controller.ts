@@ -31,8 +31,10 @@ export class GameController {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async read(_req: Request, res: Response) {
-    const { status, message, data } = await this.myService.read()
+  public async readWithFilters(req: Request, res: Response) {
+    const { status, message, data } = await this.myService.readWithFilters(
+      req.query,
+    )
 
     return res.status(status).json({ message, data })
   }
@@ -54,6 +56,8 @@ export class GameController {
 
     return res.status(status).json({ message, data })
   }
+
+  // ///////////////////////////////////////////////////////////////
 
   //   public async update(req: Request, res: Response) {}
 
