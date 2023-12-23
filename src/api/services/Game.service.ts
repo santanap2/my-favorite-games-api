@@ -142,7 +142,7 @@ export class GameService {
       }
     }
 
-    if (queryObject.busca !== null && queryObject.busca !== '') {
+    if (queryObject.busca != null && queryObject.busca !== '') {
       const filteredByName = result.filter((game) =>
         game.name.toLowerCase().includes(queryObject.busca!.toLowerCase()),
       )
