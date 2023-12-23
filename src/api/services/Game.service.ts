@@ -147,6 +147,9 @@ export class GameService {
         game.name.toLowerCase().includes(queryObject.busca!.toLowerCase()),
       )
 
+      if (filteredByName.length === 0)
+        return { status: 404, message: 'Nenhum jogo encontrado' }
+
       return {
         status: 200,
         message: 'Jogos encontrados pela busca',
