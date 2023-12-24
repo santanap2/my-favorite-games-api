@@ -50,3 +50,8 @@ export interface IQueryObject {
   minPrice?: string | null
   maxPrice?: string | null
 }
+
+export interface ICartItem {
+  gameId: string
+  userId: string
+}

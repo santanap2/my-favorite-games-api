@@ -15,6 +15,8 @@ model User {
   phone      String
   created_at DateTime @default(now())
 
+  cart Cart?
+
   @@map("users")
 }
 
@@ -28,5 +30,16 @@ model Game {
   description String   @db.VarChar(1000)
   created_at  DateTime @default(now())
 
+  cart Cart[]
+
   @@map("games")
+}
+
+model Cart {
+  userId Int  @id @unique
+  user   User @relation(fields: [userId], references: [id])
+
+  products Game[]
+
+  @@map("carts")
 }

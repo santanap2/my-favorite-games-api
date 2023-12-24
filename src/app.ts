@@ -3,6 +3,7 @@ import cors from 'cors'
 import { userRouter } from './api/routes/User.routes'
 import { loginRouter } from './api/routes/Login.routes'
 import { gameRouter } from './api/routes/Game.routes'
+import { cartRouter } from './api/routes/Cart.routes'
 
 const app = express()
 
@@ -17,5 +18,6 @@ app.get('/', (req: Request, res: Response) => {
 app.use(userRouter)
 app.use(loginRouter)
 app.use(gameRouter)
+app.use(cartRouter)
 
 export default app
