@@ -55,6 +55,60 @@ export class CartService {
 
   // ///////////////////////////////////////////////////////////////
 
+  public async buyOne(data: ICartItem) {
+    const { gameId, userId } = data
+
+    const validation = await validateUserAndGame(Number(userId), Number(gameId))
+    if (validation) return validation
+
+    const cartExists = await new CartService().read(Number(userId))
+
+    if (cartExists.status === 200) {
+      await this.emptyCart({ gameId, userId })
+
+      const result = await prismaClient.cart.update({
+        where: { userId: Number(userId) },
+        data: {
+          products: {
+            connect: { id: Number(gameId) },
+          },
+        },
+        include: {
+          user: { select: { id: true, name: true, email: true } },
+          products: true,
+        },
+      })
+
+      return {
+        status: 200,
+        message: 'Carrinho atualizado com sucesso',
+        data: { user: result.user, products: result.products },
+      }
+    }
+
+    const result = await prismaClient.cart.create({
+      data: {
+        userId: Number(userId),
+        products: {
+          connect: { id: Number(gameId) },
+        },
+      },
+      include: {
+        user: { select: { id: true, name: true, email: true } },
+        products: true,
+      },
+    })
+
+    await prismaClient.$disconnect()
+    return {
+      status: 201,
+      message: 'Carrinho criado e item adicionado com sucesso',
+      data: { user: result.user, products: result.products },
+    }
+  }
+
+  // ///////////////////////////////////////////////////////////////
+
   public async read(userId: number) {
     if (isNaN(userId))
       return {

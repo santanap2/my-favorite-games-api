@@ -9,6 +9,10 @@ cartRouter.post('/add-to-cart/:userId', (req: Request, res: Response) =>
   cartController.create(req, res),
 )
 
+cartRouter.put('/buy-one-item/:userId', (req: Request, res: Response) =>
+  cartController.buyOne(req, res),
+)
+
 cartRouter.get('/get-user-cart/:userId', (req: Request, res: Response) =>
   cartController.read(req, res),
 )

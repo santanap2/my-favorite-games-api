@@ -18,6 +18,20 @@ export class CartController {
 
   // ///////////////////////////////////////////////////////////////
 
+  public async buyOne(req: Request, res: Response) {
+    const { gameId } = req.body
+    const { userId } = req.params
+
+    const { status, message, data } = await this.myService.buyOne({
+      gameId,
+      userId,
+    })
+
+    return res.status(status).json({ message, data })
+  }
+
+  // ///////////////////////////////////////////////////////////////
+
   public async read(req: Request, res: Response) {
     const { userId } = req.params
     const { status, message, data } = await this.myService.read(Number(userId))
