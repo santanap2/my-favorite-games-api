@@ -1,5 +1,6 @@
 import { Request, Response } from 'express'
 import { GameService } from '../services/Game.service'
+import { setCookie } from 'nookies'
 
 export class GameController {
   private myService = new GameService()
@@ -44,6 +45,12 @@ export class GameController {
   public async readOne(req: Request, res: Response) {
     const { id } = req.params
     const { status, message, data } = await this.myService.readOne(Number(id))
+
+    setCookie(null, 'testing', 'testando essa porra de cookie', {
+      maxAge: 60 * 60 * 24, // 24 hours
+      httpOnly: true,
+      path: '/',
+    })
 
     return res.status(status).json({ message, data })
   }

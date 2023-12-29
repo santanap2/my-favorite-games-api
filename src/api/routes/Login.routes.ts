@@ -6,5 +6,5 @@ export const loginRouter = Router()
 const loginController = new LoginController()
 
 loginRouter.post('/login', (req: Request, res: Response) =>
-  loginController.requestLogin(req, res),
+  loginController.signIn(req, res),
 )

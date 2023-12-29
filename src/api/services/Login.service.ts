@@ -7,7 +7,7 @@ import { UserService } from './User.service'
 export class LoginService {
   private userService = new UserService()
 
-  public async requestLogin({ email, password }: IUser) {
+  public async signIn({ email, password }: IUser) {
     const { status, message, data } = await this.userService.readByEmail(email)
 
     if (!data) return { status, message }
@@ -19,7 +19,7 @@ export class LoginService {
 
     const token = await generateToken({
       id: data.id,
-      email,
+      email: data.email,
       name: data.name,
       phone: data.phone,
     })

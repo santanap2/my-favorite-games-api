@@ -1,8 +1,8 @@
 import * as jwt from 'jsonwebtoken'
 import { IPayloadJWT } from '../interfaces'
 import * as dotenv from 'dotenv'
-dotenv.config()
 
+dotenv.config()
 const secretKey = process.env.SECRET_KEY ?? ''
 
 export const generateToken = async (payload: IPayloadJWT) => {
