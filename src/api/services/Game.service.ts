@@ -123,32 +123,36 @@ export class GameService {
   // ///////////////////////////////////////////////////////////////
 
   public async readWithFilters(queryObject: IQueryObject | undefined) {
-    const result = await prismaClient.game.findMany()
+    const allGames = await prismaClient.game.findMany()
 
     if (!queryObject) {
-      if (!result)
+      if (!allGames)
         return {
           status: 500,
           message: 'Ocorreu um erro inesperado, por favor tente novamente',
         }
 
-      if (result.length === 0)
+      if (allGames.length === 0)
         return { status: 404, message: 'Sem jogos adicionados' }
 
       return {
         status: 200,
         message: 'Jogos encontrados',
-        data: result,
+        data: allGames,
       }
     }
 
     if (queryObject.busca != null && queryObject.busca !== '') {
-      const filteredByName = result.filter((game) =>
+      const filteredByName = allGames.filter((game) =>
         game.name.toLowerCase().includes(queryObject.busca!.toLowerCase()),
       )
 
       if (filteredByName.length === 0)
-        return { status: 404, message: 'Nenhum jogo encontrado' }
+        return {
+          status: 404,
+          message: 'Nenhum jogo encontrado',
+          data: filteredByName,
+        }
 
       return {
         status: 200,
@@ -157,7 +161,7 @@ export class GameService {
       }
     }
 
-    const transformQueryToObjectTs = () => {
+    const transformQueryToObject = () => {
       const params = new URLSearchParams()
       Object.entries(queryObject || {}).forEach(([key, value]) => {
         params.set(key, value)
@@ -207,11 +211,11 @@ export class GameService {
       return gamesFiltrados
     }
 
-    const filters = transformQueryToObjectTs()
+    const filters = transformQueryToObject()
     const filtersChanged = changedFilters(filters)
 
     const filteredGames = filterGames(
-      result,
+      allGames,
       filtersChanged,
       filters.minPrice,
       filters.maxPrice,

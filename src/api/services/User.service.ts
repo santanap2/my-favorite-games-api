@@ -176,7 +176,7 @@ export class UserService {
     if (name) dataToUpdate.name = name
     if (newEmail) dataToUpdate.email = newEmail
     if (phone) dataToUpdate.phone = phone
-    if (newPassword) dataToUpdate.password = newPassword
+    if (newPassword) dataToUpdate.password = await hashPassword(newPassword)
 
     const { data } = await this.readByEmail(currentEmail)
     const userPassword = await this.readPassword(currentEmail)

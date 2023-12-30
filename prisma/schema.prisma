@@ -15,7 +15,8 @@ model User {
   phone      String
   created_at DateTime @default(now())
 
-  cart Cart?
+  cart   Cart?
+  orders Order[]
 
   @@map("users")
 }
@@ -30,7 +31,8 @@ model Game {
   description String   @db.VarChar(1000)
   created_at  DateTime @default(now())
 
-  cart Cart[]
+  cart   Cart[]
+  orders Order[]
 
   @@map("games")
 }
@@ -42,4 +44,14 @@ model Cart {
   products Game[]
 
   @@map("carts")
+}
+
+model Order {
+  id     Int  @id @default(autoincrement())
+  userId Int
+  user   User @relation(fields: [userId], references: [id])
+
+  products Game[]
+
+  @@map("orders")
 }
