@@ -1,123 +1,14 @@
 import { prismaClient } from '../../database/prismaClient'
-import { ICartItem } from '../../interfaces'
-import { validateUserAndGame } from '../validations/Cart'
+import { validateGame } from '../validations/Cart'
+import { isAuthenticatedValidation } from '../validations/CookieToken'
 
 export class CartService {
-  public async create(data: ICartItem) {
-    const { gameId, userId } = data
-
-    const validation = await validateUserAndGame(Number(userId), Number(gameId))
-    if (validation) return validation
-
-    const cartExists = await new CartService().read(Number(userId))
-
-    if (cartExists.status === 200) {
-      const result = await prismaClient.cart.update({
-        where: { userId: Number(userId) },
-        data: {
-          products: {
-            connect: { id: Number(gameId) },
-          },
-        },
-        include: {
-          user: { select: { id: true, name: true, email: true } },
-          products: true,
-        },
-      })
-
-      return {
-        status: 200,
-        message: 'Carrinho atualizado com sucesso',
-        data: { user: result.user, products: result.products },
-      }
-    }
-
-    const result = await prismaClient.cart.create({
-      data: {
-        userId: Number(userId),
-        products: {
-          connect: { id: Number(gameId) },
-        },
-      },
-      include: {
-        user: { select: { id: true, name: true, email: true } },
-        products: true,
-      },
-    })
-
-    await prismaClient.$disconnect()
-    return {
-      status: 201,
-      message: 'Carrinho criado e item adicionado com sucesso',
-      data: { user: result.user, products: result.products },
-    }
-  }
-
-  // ///////////////////////////////////////////////////////////////
-
-  public async buyOne(data: ICartItem) {
-    const { gameId, userId } = data
-
-    const validation = await validateUserAndGame(Number(userId), Number(gameId))
-    if (validation) return validation
-
-    const cartExists = await new CartService().read(Number(userId))
-
-    if (cartExists.status === 200) {
-      await this.emptyCart({ gameId, userId })
-
-      const result = await prismaClient.cart.update({
-        where: { userId: Number(userId) },
-        data: {
-          products: {
-            connect: { id: Number(gameId) },
-          },
-        },
-        include: {
-          user: { select: { id: true, name: true, email: true } },
-          products: true,
-        },
-      })
-
-      return {
-        status: 200,
-        message: 'Carrinho atualizado com sucesso',
-        data: { user: result.user, products: result.products },
-      }
-    }
-
-    const result = await prismaClient.cart.create({
-      data: {
-        userId: Number(userId),
-        products: {
-          connect: { id: Number(gameId) },
-        },
-      },
-      include: {
-        user: { select: { id: true, name: true, email: true } },
-        products: true,
-      },
-    })
-
-    await prismaClient.$disconnect()
-    return {
-      status: 201,
-      message: 'Carrinho criado e item adicionado com sucesso',
-      data: { user: result.user, products: result.products },
-    }
-  }
-
-  // ///////////////////////////////////////////////////////////////
-
-  public async read(userId: number) {
-    if (isNaN(userId))
-      return {
-        status: 400,
-        message: 'Insira um usuário válido',
-      }
+  public async read(cookie?: string) {
+    const { status, message, data } = await isAuthenticatedValidation(cookie)
+    if (!data) return { status, message }
 
     const result = await prismaClient.cart.findUnique({
-      where: { userId: Number(userId) },
+      where: { userId: data.id },
       include: {
         user: { select: { id: true, name: true, email: true } },
         products: true,
@@ -146,13 +37,122 @@ export class CartService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async removeItemCart(data: ICartItem) {
-    const { gameId, userId } = data
-
-    const validation = await validateUserAndGame(Number(userId), Number(gameId))
+  public async create(gameId: string, cookie?: string) {
+    const validation = await validateGame(Number(gameId))
     if (validation) return validation
 
-    const cart = await this.read(Number(userId))
+    const { status, message, data } = await isAuthenticatedValidation(cookie)
+    if (!data) return { status, message }
+
+    const cartExists = await new CartService().read(cookie)
+
+    if (cartExists.status === 200) {
+      const result = await prismaClient.cart.update({
+        where: { userId: data.id },
+        data: {
+          products: {
+            connect: { id: Number(gameId) },
+          },
+        },
+        include: {
+          user: { select: { id: true, name: true, email: true } },
+          products: true,
+        },
+      })
+
+      return {
+        status: 200,
+        message: 'Carrinho atualizado com sucesso',
+        data: { user: result.user, products: result.products },
+      }
+    }
+
+    const result = await prismaClient.cart.create({
+      data: {
+        userId: data.id,
+        products: {
+          connect: { id: Number(gameId) },
+        },
+      },
+      include: {
+        user: { select: { id: true, name: true, email: true } },
+        products: true,
+      },
+    })
+
+    await prismaClient.$disconnect()
+    return {
+      status: 201,
+      message: 'Carrinho criado e item adicionado com sucesso',
+      data: { user: result.user, products: result.products },
+    }
+  }
+
+  // ///////////////////////////////////////////////////////////////
+
+  public async buyOne(gameId: string, cookie?: string) {
+    const validation = await validateGame(Number(gameId))
+    if (validation) return validation
+
+    const { status, message, data } = await isAuthenticatedValidation(cookie)
+    if (!data) return { status, message }
+
+    const cartExists = await new CartService().read(cookie)
+
+    if (cartExists.status === 200) {
+      await this.emptyCart(gameId, cookie)
+
+      const result = await prismaClient.cart.update({
+        where: { userId: data.id },
+        data: {
+          products: {
+            connect: { id: Number(gameId) },
+          },
+        },
+        include: {
+          user: { select: { id: true, name: true, email: true } },
+          products: true,
+        },
+      })
+
+      return {
+        status: 200,
+        message: 'Carrinho atualizado com sucesso',
+        data: { user: result.user, products: result.products },
+      }
+    }
+
+    const result = await prismaClient.cart.create({
+      data: {
+        userId: data.id,
+        products: {
+          connect: { id: Number(gameId) },
+        },
+      },
+      include: {
+        user: { select: { id: true, name: true, email: true } },
+        products: true,
+      },
+    })
+
+    await prismaClient.$disconnect()
+    return {
+      status: 201,
+      message: 'Carrinho criado e item adicionado com sucesso',
+      data: { user: result.user, products: result.products },
+    }
+  }
+
+  // ///////////////////////////////////////////////////////////////
+
+  public async removeItemCart(gameId: string, cookie?: string) {
+    const validation = await validateGame(Number(gameId))
+    if (validation) return validation
+
+    const { status, message, data } = await isAuthenticatedValidation(cookie)
+    if (!data) return { status, message }
+
+    const cart = await this.read(cookie)
 
     if (cart?.data?.products) {
       const filteredGames = cart.data.products.filter(
@@ -160,7 +160,7 @@ export class CartService {
       )
 
       const result = await prismaClient.cart.update({
-        where: { userId: Number(userId) },
+        where: { userId: data.id },
         data: {
           products: {
             set: filteredGames,
@@ -193,17 +193,18 @@ export class CartService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async emptyCart(data: ICartItem) {
-    const { userId, gameId } = data
-
-    const validation = await validateUserAndGame(Number(userId), Number(gameId))
+  public async emptyCart(gameId: string, cookie?: string) {
+    const validation = await validateGame(Number(gameId))
     if (validation) return validation
 
-    const cart = await this.read(Number(userId))
+    const { status, message, data } = await isAuthenticatedValidation(cookie)
+    if (!data) return { status, message }
+
+    const cart = await this.read(cookie)
 
     if (cart?.data?.products) {
       await prismaClient.cart.update({
-        where: { userId: Number(userId) },
+        where: { userId: data.id },
         data: {
           products: {
             set: [],

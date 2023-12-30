@@ -4,14 +4,23 @@ import { CartService } from '../services/Cart.service'
 export class CartController {
   private myService = new CartService()
 
+  public async read(req: Request, res: Response) {
+    const { cookie } = req.headers
+    const { status, message, data } = await this.myService.read(cookie)
+
+    return res.status(status).json({ message, data })
+  }
+
+  // ///////////////////////////////////////////////////////////////
+
   public async create(req: Request, res: Response) {
     const { gameId } = req.body
-    const { userId } = req.params
+    const { cookie } = req.headers
 
-    const { status, message, data } = await this.myService.create({
+    const { status, message, data } = await this.myService.create(
       gameId,
-      userId,
-    })
+      cookie,
+    )
 
     return res.status(status).json({ message, data })
   }
@@ -20,21 +29,12 @@ export class CartController {
 
   public async buyOne(req: Request, res: Response) {
     const { gameId } = req.body
-    const { userId } = req.params
+    const { cookie } = req.headers
 
-    const { status, message, data } = await this.myService.buyOne({
+    const { status, message, data } = await this.myService.buyOne(
       gameId,
-      userId,
-    })
-
-    return res.status(status).json({ message, data })
-  }
-
-  // ///////////////////////////////////////////////////////////////
-
-  public async read(req: Request, res: Response) {
-    const { userId } = req.params
-    const { status, message, data } = await this.myService.read(Number(userId))
+      cookie,
+    )
 
     return res.status(status).json({ message, data })
   }
@@ -42,31 +42,23 @@ export class CartController {
   // ///////////////////////////////////////////////////////////////
 
   public async removeItemCart(req: Request, res: Response) {
-    const { userId } = req.params
     const { gameId } = req.body
-    const { message, status, data } = await this.myService.removeItemCart({
+    const { cookie } = req.headers
+    const { message, status, data } = await this.myService.removeItemCart(
       gameId,
-      userId,
-    })
+      cookie,
+    )
 
     return res.status(status).json({ message, data })
   }
+
   // ///////////////////////////////////////////////////////////////
 
   public async emptyCart(req: Request, res: Response) {
-    const { userId } = req.params
     const { gameId } = req.body
-    const { message, status } = await this.myService.emptyCart({
-      gameId,
-      userId,
-    })
+    const { cookie } = req.headers
+    const { message, status } = await this.myService.emptyCart(gameId, cookie)
 
     return res.status(status).json({ message, status })
   }
-
-  // ///////////////////////////////////////////////////////////////
-
-  //   public async update(req: Request, res: Response) {}
-  //
-  //   public async delete(req: Request, res: Response) {}
 }
