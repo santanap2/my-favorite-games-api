@@ -22,9 +22,16 @@ export const isAuthenticatedValidation = async (cookie?: string) => {
 
   const { data } = await new UserService().readOne(payload.id)
 
+  if (data)
+    return {
+      status: 200,
+      message: 'Usuário encontrado com sucesso',
+      data,
+    }
+
   return {
-    status: 200,
-    message: 'Usuário encontrado com sucesso',
-    data,
+    status: 500,
+    message: 'Ocorreu um erro inesperado, tente novamente',
+    data: null,
   }
 }

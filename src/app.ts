@@ -5,6 +5,7 @@ import { loginRouter } from './api/routes/Login.routes'
 import { gameRouter } from './api/routes/Game.routes'
 import { cartRouter } from './api/routes/Cart.routes'
 import * as dotenv from 'dotenv'
+import { orderRouter } from './api/routes/Order.routes'
 
 dotenv.config()
 
@@ -28,5 +29,6 @@ app.use(userRouter)
 app.use(loginRouter)
 app.use(gameRouter)
 app.use(cartRouter)
+app.use(orderRouter)
 
 export default app

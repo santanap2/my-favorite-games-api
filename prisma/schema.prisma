@@ -51,7 +51,9 @@ model Order {
   userId Int
   user   User @relation(fields: [userId], references: [id])
 
-  products Game[]
+  products   Game[]
+  value      Int
+  created_at DateTime @default(now())
 
   @@map("orders")
 }

@@ -1,0 +1,10 @@
+import { Request, Response, Router } from 'express'
+import { OrderController } from '../controllers/Order.controller'
+
+export const orderRouter = Router()
+
+const orderController = new OrderController()
+
+orderRouter.post('/create-order', (req: Request, res: Response) =>
+  orderController.create(req, res),
+)
