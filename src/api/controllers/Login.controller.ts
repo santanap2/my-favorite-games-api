@@ -20,6 +20,14 @@ export class LoginController {
       })
     }
 
-    return res.status(status).json({ message, token })
+    return res.status(status).json({ message })
+  }
+
+  // ///////////////////////////////////////////////////////////////
+
+  public async signOut(_req: Request, res: Response) {
+    const { status, message } = await this.myService.signOut(res)
+
+    return res.status(status).json({ message })
   }
 }

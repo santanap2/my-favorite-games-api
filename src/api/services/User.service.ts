@@ -1,6 +1,8 @@
 import { prismaClient } from '../../database/prismaClient'
+import { parseCookie } from '../../helpers/parse'
 import { IRegister } from '../../interfaces'
 import { comparePasswords, hashPassword } from '../../utils/bcrypt'
+import { verifyToken } from '../../utils/jwt'
 import {
   createUserFieldsValidation,
   updateUserFieldsValidation,
@@ -70,6 +72,9 @@ export class UserService {
   public async readOne(id: number) {
     const result = await prismaClient.user.findUnique({
       where: { id },
+      include: {
+        cart: true,
+      },
     })
 
     if (!id)
@@ -77,17 +82,76 @@ export class UserService {
         status: 400,
         message: 'Por favor forneça o parâmetro para busca',
       }
+
     if (!result) return { status: 404, message: 'Usuário não cadastrado' }
 
     await prismaClient.$disconnect()
     return {
       status: 200,
       message: 'Usuário encontrado com sucesso',
-      data: result,
+      data: {
+        id: result.id,
+        email: result.email,
+        name: result.name,
+        phone: result.phone,
+        created_at: result.created_at,
+        cart: result.cart,
+      },
     }
   }
 
   // ///////////////////////////////////////////////////////////////
+
+  public async readByToken(cookie?: string) {
+    if (!cookie || cookie === '')
+      return {
+        status: 404,
+        message: 'Usuário não está logado',
+      }
+
+    const parsedCookie = parseCookie(cookie)
+    const payload = verifyToken(parsedCookie?.gamingPlatformAuth || '')
+
+    if (!payload)
+      return {
+        status: 404,
+        message: 'Usuário não encontrado',
+      }
+
+    const { data } = await this.readOne(payload.id)
+
+    return {
+      status: 200,
+      message: 'Usuário encontrado com sucesso',
+      data,
+    }
+  }
+
+  // ///////////////////////////////////////////////////////////////
+
+  public async readPassword(email: string) {
+    const result = await prismaClient.user.findUnique({
+      where: { email },
+    })
+
+    if (!email)
+      return {
+        status: 400,
+        message: 'Por favor forneça o parâmetro para busca',
+      }
+
+    if (!result) return { status: 404, message: 'Usuário não encontrado' }
+
+    await prismaClient.$disconnect()
+    return {
+      status: 200,
+      message: 'Usuário encontrado com sucesso',
+      data: {
+        id: result.id,
+        password: result.password,
+      },
+    }
+  }
 
   public async readByEmail(email: string) {
     const result = await prismaClient.user.findUnique({
@@ -105,7 +169,13 @@ export class UserService {
     return {
       status: 200,
       message: 'Usuário encontrado com sucesso',
-      data: result,
+      data: {
+        id: result.id,
+        email: result.email,
+        name: result.name,
+        phone: result.phone,
+        created_at: result.created_at,
+      },
     }
   }
 
@@ -131,7 +201,14 @@ export class UserService {
     if (newPassword) dataToUpdate.password = newPassword
 
     const { data } = await this.readByEmail(currentEmail)
+    const checkPassword = await this.readPassword(currentEmail)
     if (!data)
+      return {
+        status: 404,
+        message: 'Usuário não encontrado no banco de dados',
+      }
+
+    if (!checkPassword || !checkPassword.data?.password)
       return {
         status: 404,
         message: 'Usuário não encontrado no banco de dados',
@@ -139,7 +216,7 @@ export class UserService {
 
     const passwordsCheck = await comparePasswords(
       currentPassword,
-      data.password,
+      checkPassword.data?.password,
     )
 
     if (!passwordsCheck)

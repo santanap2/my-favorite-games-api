@@ -1,6 +1,4 @@
-export const parseString = (
-  cookie?: string,
-): { [key: string]: string } | null => {
+export const parseCookie = (cookie?: string) => {
   if (cookie) {
     const keyValuePairs = cookie.split('&')
 
@@ -13,6 +11,4 @@ export const parseString = (
 
     return result
   }
-
-  return null
 }

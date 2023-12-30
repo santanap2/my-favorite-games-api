@@ -15,12 +15,12 @@ export const generateToken = async (payload: IPayloadJWT) => {
   return token
 }
 
-export const verifyToken = (token: string) => {
+export const verifyToken = (token: string): IPayloadJWT | null => {
   try {
-    const decoded = jwt.verify(token, secretKey)
+    const decoded = jwt.verify(token, secretKey) as IPayloadJWT
     return decoded
   } catch (error) {
     console.error(error)
-    return error
+    return null
   }
 }

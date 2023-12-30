@@ -21,6 +21,10 @@ userRouter.get('/get-user/:id', (req: Request, res: Response) =>
   userController.readOne(req, res),
 )
 
+userRouter.get('/get-user-by-token', (req: Request, res: Response) =>
+  userController.readByToken(req, res),
+)
+
 userRouter.put('/update-user', (req: Request, res: Response) =>
   userController.update(req, res),
 )
