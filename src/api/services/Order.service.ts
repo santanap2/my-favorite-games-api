@@ -1,14 +1,22 @@
+/* eslint-disable camelcase */
 import { prismaClient } from '../../database/prismaClient'
 import { IGame } from '../../interfaces'
 import { isAuthenticatedValidation } from '../validations/CookieToken'
 import { CartService } from './Cart.service'
 
 export class OrderService {
-  public async create(cookie?: string) {
+  public async create(paymentMethod: string, cookie?: string) {
     const { status, message, data } = await isAuthenticatedValidation(cookie)
     if (!data) return { status, message }
 
+    if (!paymentMethod)
+      return {
+        status: 400,
+        message: 'Por favor informe o método de pagamento',
+      }
+
     const { data: cart } = await new CartService().read(cookie)
+
     if (cart) {
       const games: IGame[] = cart.products
       const value = games.reduce((sum, product) => product.price + sum, 0)
@@ -27,6 +35,8 @@ export class OrderService {
               }),
             ),
           },
+          payment_method: paymentMethod,
+          status: 'awaitingPayment',
           user: { connect: { id: data.id } },
           value,
         },
@@ -44,7 +54,35 @@ export class OrderService {
     }
   }
 
-  //   public async read(data: any) {}
+  public async read(cookie?: string) {
+    const { status, message, data } = await isAuthenticatedValidation(cookie)
+    if (!data) return { status, message }
+
+    const result = await prismaClient.order.findMany({
+      where: { userId: data.id },
+      include: { products: true },
+    })
+
+    if (result.length === 0)
+      return {
+        status: 404,
+        message: 'O usuário não possui nenhum pedido',
+        data: null,
+      }
+
+    if (result)
+      return {
+        status: 200,
+        message: 'Pedidos encontrados com sucesso',
+        data: result,
+      }
+
+    return {
+      status: 500,
+      message: 'Ocorreu um erro inesperado',
+      data: null,
+    }
+  }
   //
   //   public async update(data: any) {}
   //

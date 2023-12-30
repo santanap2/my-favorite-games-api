@@ -6,12 +6,21 @@ export class OrderController {
 
   public async create(req: Request, res: Response) {
     const { cookie } = req.headers
-    const { status, message, data } = await this.myService.create(cookie)
+    const { paymentMethod } = req.body
+    const { status, message, data } = await this.myService.create(
+      paymentMethod,
+      cookie,
+    )
 
     return res.status(status).json({ message, data })
   }
 
-  //   public async read(req: Request, res: Response) {}
+  public async read(req: Request, res: Response) {
+    const { cookie } = req.headers
+    const { status, message, data } = await this.myService.read(cookie)
+
+    return res.status(status).json({ message, data })
+  }
   //
   //   public async update(req: Request, res: Response) {}
   //

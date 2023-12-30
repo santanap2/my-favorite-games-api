@@ -8,3 +8,7 @@ const orderController = new OrderController()
 orderRouter.post('/create-order', (req: Request, res: Response) =>
   orderController.create(req, res),
 )
+
+orderRouter.get('/get-orders', (req: Request, res: Response) =>
+  orderController.read(req, res),
+)
