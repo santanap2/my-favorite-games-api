@@ -8,6 +8,15 @@ export interface IRegister extends IUser {
   phone: string
 }
 
+export interface IUpdateUser {
+  currentEmail: string
+  currentPassword: string
+  name?: string
+  newEmail?: string
+  newPassword?: string
+  phone?: string
+}
+
 export interface IPayloadJWT {
   id: number
   email: string

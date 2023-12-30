@@ -5,24 +5,16 @@ export const userRouter = Router()
 
 const userController = new UserController()
 
-userRouter.post('/register', (req: Request, res: Response) =>
-  userController.create(req, res),
-)
-
-userRouter.get('/get-all-users', (req: Request, res: Response) =>
-  userController.read(req, res),
+userRouter.get('/get-user-by-token', (req: Request, res: Response) =>
+  userController.readByToken(req, res),
 )
 
 userRouter.get('/get-user-by-email/:email', (req: Request, res: Response) =>
   userController.readByEmail(req, res),
 )
 
-userRouter.get('/get-user/:id', (req: Request, res: Response) =>
-  userController.readOne(req, res),
-)
-
-userRouter.get('/get-user-by-token', (req: Request, res: Response) =>
-  userController.readByToken(req, res),
+userRouter.post('/register', (req: Request, res: Response) =>
+  userController.create(req, res),
 )
 
 userRouter.put('/update-user', (req: Request, res: Response) =>
