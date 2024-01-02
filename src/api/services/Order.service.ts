@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 import { prismaClient } from '../../database/prismaClient'
-import { IGame } from '../../interfaces'
+import { IGame, IQueryOrder } from '../../interfaces'
 import { isAuthenticatedValidation } from '../validations/CookieToken'
 import { CartService } from './Cart.service'
 
@@ -54,7 +54,7 @@ export class OrderService {
     }
   }
 
-  public async read(cookie?: string) {
+  public async read(cookie?: string, queryParam?: IQueryOrder) {
     const { status, message, data } = await isAuthenticatedValidation(cookie)
     if (!data) return { status, message }
 
@@ -63,18 +63,51 @@ export class OrderService {
       include: { products: true },
     })
 
-    if (result.length === 0)
-      return {
-        status: 404,
-        message: 'O usuário não possui nenhum pedido',
-        data: null,
-      }
+    if (!queryParam?.status) {
+      if (!result)
+        return {
+          status: 500,
+          message: 'Ocorreu um erro inesperado, por favor tente novamente',
+          data: null,
+        }
 
-    if (result)
+      if (result.length === 0)
+        return {
+          status: 404,
+          message: 'O usuário não possui nenhum pedido',
+          data: null,
+        }
+
       return {
         status: 200,
         message: 'Pedidos encontrados com sucesso',
         data: result,
+      }
+    }
+
+    if (queryParam.status === 'all')
+      return {
+        status: 200,
+        message: 'Todos os pedidos',
+        data: result,
+      }
+
+    const filteredOrders = result.filter(
+      (order) => order.status === queryParam.status,
+    )
+
+    if (filteredOrders.length === 0)
+      return {
+        status: 404,
+        message: 'Não há nenhum pedido de acordo com os filtros',
+        data: filteredOrders,
+      }
+
+    if (filteredOrders.length > 0)
+      return {
+        status: 200,
+        message: 'Pedidos filtrados com sucesso',
+        data: filteredOrders,
       }
 
     return {
@@ -83,6 +116,7 @@ export class OrderService {
       data: null,
     }
   }
+  //
   //
   //   public async update(data: any) {}
   //

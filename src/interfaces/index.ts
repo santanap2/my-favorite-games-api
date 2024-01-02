@@ -59,3 +59,7 @@ export interface IQueryObject {
   minPrice?: string | null
   maxPrice?: string | null
 }
+
+export interface IQueryOrder {
+  status?: string | null
+}
