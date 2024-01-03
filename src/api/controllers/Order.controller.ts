@@ -6,9 +6,13 @@ export class OrderController {
 
   public async create(req: Request, res: Response) {
     const { cookie } = req.headers
-    const { paymentMethod } = req.body
+    const {
+      data: { paymentMethod, cardData },
+    } = req.body
+    console.log(req.body)
     const { status, message, data } = await this.myService.create(
       paymentMethod,
+      cardData,
       cookie,
     )
 

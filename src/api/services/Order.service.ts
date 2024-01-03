@@ -1,11 +1,15 @@
 /* eslint-disable camelcase */
 import { prismaClient } from '../../database/prismaClient'
-import { IGame, IQueryOrder } from '../../interfaces'
+import { ICardData, IGame, IQueryOrder } from '../../interfaces'
 import { isAuthenticatedValidation } from '../validations/CookieToken'
 import { CartService } from './Cart.service'
 
 export class OrderService {
-  public async create(paymentMethod: string, cookie?: string) {
+  public async create(
+    paymentMethod: string,
+    cardData: ICardData,
+    cookie?: string,
+  ) {
     const { status, message, data } = await isAuthenticatedValidation(cookie)
     if (!data) return { status, message }
 
@@ -17,7 +21,14 @@ export class OrderService {
 
     const { data: cart } = await new CartService().read(cookie)
 
-    if (cart) {
+    if (cart?.products && cart.products.length === 0)
+      return {
+        status: 400,
+        message: 'Seu carrinho está vazio',
+        data: null,
+      }
+
+    if (cart?.products && cart?.products.length > 0) {
       const games: IGame[] = cart.products
       const value = games.reduce((sum, product) => product.price + sum, 0)
 
@@ -43,12 +54,13 @@ export class OrderService {
         include: { products: true },
       })
 
+      await new CartService().emptyCart(cookie)
       await prismaClient.$disconnect()
       return { status: 201, message: 'Pedido feito com sucesso', data: result }
     }
 
     return {
-      status: 400,
+      status: 500,
       message: 'Ocorreu um erro inesperado, tente novamente',
       data: null,
     }

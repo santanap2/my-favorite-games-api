@@ -100,7 +100,7 @@ export class CartService {
     const cartExists = await new CartService().read(cookie)
 
     if (cartExists.status === 200) {
-      await this.emptyCart(gameId, cookie)
+      await this.emptyCart(cookie)
 
       const result = await prismaClient.cart.update({
         where: { userId: data.id },
@@ -193,10 +193,7 @@ export class CartService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async emptyCart(gameId: string, cookie?: string) {
-    const validation = await validateGame(Number(gameId))
-    if (validation) return validation
-
+  public async emptyCart(cookie?: string) {
     const { status, message, data } = await isAuthenticatedValidation(cookie)
     if (!data) return { status, message }
 

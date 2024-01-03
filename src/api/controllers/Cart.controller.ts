@@ -55,9 +55,8 @@ export class CartController {
   // ///////////////////////////////////////////////////////////////
 
   public async emptyCart(req: Request, res: Response) {
-    const { gameId } = req.body
     const { cookie } = req.headers
-    const { message, status } = await this.myService.emptyCart(gameId, cookie)
+    const { message, status } = await this.myService.emptyCart(cookie)
 
     return res.status(status).json({ message, status })
   }
