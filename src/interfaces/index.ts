@@ -25,6 +25,7 @@ export interface IPayloadJWT {
 }
 
 export interface IGame {
+  id?: number
   name: string
   genre: string
   genrePt: string

@@ -6,6 +6,7 @@ import { gameRouter } from './api/routes/Game.routes'
 import { cartRouter } from './api/routes/Cart.routes'
 import * as dotenv from 'dotenv'
 import { orderRouter } from './api/routes/Order.routes'
+import { favoritesRouter } from './api/routes/Favorite.routes'
 
 dotenv.config()
 
@@ -21,7 +22,7 @@ app.use(
   }),
 )
 
-app.get('/', (req: Request, res: Response) => {
+app.get('/', (_req: Request, res: Response) => {
   res.status(200).json({ message: 'API online and working fine' })
 })
 
@@ -30,5 +31,6 @@ app.use(loginRouter)
 app.use(gameRouter)
 app.use(cartRouter)
 app.use(orderRouter)
+app.use(favoritesRouter)
 
 export default app
