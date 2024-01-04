@@ -12,3 +12,7 @@ orderRouter.post('/create-order', (req: Request, res: Response) =>
 orderRouter.get('/get-orders', (req: Request, res: Response) =>
   orderController.read(req, res),
 )
+
+orderRouter.get('/get-order/:id', (req: Request, res: Response) =>
+  orderController.readOne(req, res),
+)

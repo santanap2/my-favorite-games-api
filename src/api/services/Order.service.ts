@@ -66,6 +66,8 @@ export class OrderService {
     }
   }
 
+  // ///////////////////////////////////////////////////////////////
+
   public async read(cookie?: string, queryParam?: IQueryOrder) {
     const { status, message, data } = await isAuthenticatedValidation(cookie)
     if (!data) return { status, message }
@@ -125,6 +127,34 @@ export class OrderService {
     return {
       status: 500,
       message: 'Ocorreu um erro inesperado',
+      data: null,
+    }
+  }
+
+  // ///////////////////////////////////////////////////////////////
+
+  public async readOne(id: string, cookie?: string) {
+    const { status, message, data } = await isAuthenticatedValidation(cookie)
+    if (!data) return { status, message }
+
+    const result = await prismaClient.order.findUnique({
+      where: {
+        userId: data.id,
+        id: Number(id),
+      },
+      include: { products: true },
+    })
+
+    if (result)
+      return {
+        status: 200,
+        message: 'Pedidos encontrado com sucesso',
+        data: { ...result, user: data },
+      }
+
+    return {
+      status: 404,
+      message: 'Pedido não encontrado ou o usuário não possui autorização',
       data: null,
     }
   }
