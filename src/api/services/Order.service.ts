@@ -85,26 +85,30 @@ export class OrderService {
           data: null,
         }
 
-      if (result.length === 0)
-        return {
-          status: 404,
-          message: 'O usuário não possui nenhum pedido',
-          data: null,
-        }
-
       return {
         status: 200,
-        message: 'Pedidos encontrados com sucesso',
+        message:
+          result.length === 0
+            ? 'O usuário não possui nenhum pedido'
+            : 'Pedidos encontrados com sucesso',
         data: result,
       }
     }
 
-    if (queryParam.status === 'all')
+    if (queryParam.status === 'all') {
+      if (result.length === 0)
+        return {
+          status: 200,
+          message: 'O usuário nao possui nenhum pedido',
+          data: result,
+        }
+
       return {
         status: 200,
         message: 'Todos os pedidos',
         data: result,
       }
+    }
 
     const filteredOrders = result.filter(
       (order) => order.status === queryParam.status,

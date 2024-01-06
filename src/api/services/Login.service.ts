@@ -11,18 +11,13 @@ export class LoginService {
 
   public async signIn({ email, password }: IUser) {
     const { status, message, data } = await this.userService.readByEmail(email)
-    const checkPassword = await this.userService.readPassword(email)
-
     if (!data) return { status, message }
 
-    if (!checkPassword || !checkPassword.data?.password)
+    const user = await this.userService.readPassword(email)
+    if (!user || !user.data?.password)
       return { status: 404, message: 'Usuário não encontrado' }
 
-    const passwordsCheck = await comparePasswords(
-      password,
-      checkPassword.data?.password,
-    )
-
+    const passwordsCheck = await comparePasswords(password, user.data?.password)
     if (!passwordsCheck)
       return { status: 401, message: 'A senha informada está incorreta' }
 
