@@ -72,3 +72,8 @@ export interface ICardData {
   cardCvv: string
   cardPortions: string
 }
+
+export interface ICategory {
+  name: string
+  namePt: string
+}

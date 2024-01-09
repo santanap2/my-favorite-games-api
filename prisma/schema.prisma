@@ -32,11 +32,23 @@ model Game {
   description String   @db.VarChar(1000)
   created_at  DateTime @default(now())
 
-  carts     Cart[]
-  orders    Order[]
-  favorites Favorite[]
+  carts      Cart[]
+  orders     Order[]
+  favorites  Favorite[]
+  category   Category   @relation(fields: [categoryId], references: [id])
+  categoryId Int        @default(1)
 
   @@map("games")
+}
+
+model Category {
+  id     Int    @id @default(autoincrement())
+  name   String @unique
+  namePt String
+
+  products Game[]
+
+  @@map("categories")
 }
 
 model Cart {
