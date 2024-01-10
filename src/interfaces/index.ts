@@ -33,6 +33,19 @@ export interface IGame {
   description: string
 }
 
+export interface IGameApi {
+  id: number
+  name: string
+  category: {
+    id: number
+    name: string
+    namePt: string
+  }
+  price: number
+  image: string
+  description: string
+}
+
 export interface IFilters {
   actionAdventure?: boolean
   rpgOpenWorld?: boolean

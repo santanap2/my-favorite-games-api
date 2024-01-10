@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { prismaClient } from '../../database/prismaClient'
-import { IFilters, IGame, IQueryObject } from '../../interfaces'
+import { IFilters, IGame, IGameApi, IQueryObject } from '../../interfaces'
 import { createGameFieldsValidation } from '../validations/Game'
 
 export class GameService {
@@ -168,7 +168,7 @@ export class GameService {
     }
 
     const filterGames = (
-      games: IGame[],
+      games: IGameApi[],
       genres: string[],
       minPrice: string | boolean | null,
       maxPrice: string | boolean | null,
@@ -178,15 +178,15 @@ export class GameService {
       const maxPriceNumber =
         typeof maxPrice === 'string' ? Number(maxPrice) : null
 
-      const gamesFiltrados = games.filter((game: IGame) => {
-        // const areaCondition = genres.length === 0 || genres.includes(game.genre)
+      const gamesFiltrados = games.filter((game: IGameApi) => {
+        const areaCondition =
+          genres.length === 0 || genres.includes(game.category.name)
         const minPriceCondition =
           minPriceNumber === null || game.price >= minPriceNumber
         const maxPriceCondition =
           maxPriceNumber === null || game.price <= maxPriceNumber
 
-        return minPriceCondition && maxPriceCondition
-        // areaCondition
+        return areaCondition && minPriceCondition && maxPriceCondition
       })
       return gamesFiltrados
     }
