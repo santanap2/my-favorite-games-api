@@ -2,8 +2,7 @@ import { IGame } from '../../interfaces'
 
 export const createGameFieldsValidation = ({
   name,
-  genre,
-  genrePt,
+  categoryId,
   price,
   image,
   description,
@@ -11,10 +10,7 @@ export const createGameFieldsValidation = ({
   if (!name || name === '')
     return { status: 400, message: 'Por favor insira o nome do jogo' }
 
-  if (!genre || genre === '')
-    return { status: 400, message: 'Por favor insira o gênero do jogo' }
-
-  if (!genrePt || genrePt === '')
+  if (!categoryId)
     return { status: 400, message: 'Por favor insira o gênero do jogo' }
 
   if (!price)

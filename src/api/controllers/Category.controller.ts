@@ -15,16 +15,20 @@ export class CategoryController {
   }
 
   public async createMany(req: Request, res: Response) {
-    const { categories } = req.body
+    const categories = req.body
     const { status, message, data } =
       await this.myService.createMany(categories)
 
     return res.status(status).json({ message, data })
   }
 
-  //   public async read(req: Request, res: Response) {}
-  //
+  public async readAll(_req: Request, res: Response) {
+    const { status, message, data } = await this.myService.readAll()
+
+    return res.status(status).json({ message, data })
+  }
+
   //   public async update(req: Request, res: Response) {}
-  //
+
   //   public async delete(req: Request, res: Response) {}
 }

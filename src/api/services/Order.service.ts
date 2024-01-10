@@ -36,10 +36,9 @@ export class OrderService {
         data: {
           products: {
             connect: games.map(
-              ({ name, genre, genrePt, price, image, description }) => ({
+              ({ name, categoryId, price, image, description }) => ({
                 name,
-                genre,
-                genrePt,
+                categoryId,
                 price,
                 image,
                 description,

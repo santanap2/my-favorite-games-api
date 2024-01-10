@@ -5,6 +5,10 @@ export const categoryRouter = Router()
 
 const categoryController = new CategoryController()
 
+categoryRouter.get('/get-categories', (req: Request, res: Response) =>
+  categoryController.readAll(req, res),
+)
+
 categoryRouter.post('/create-category', (req: Request, res: Response) =>
   categoryController.create(req, res),
 )

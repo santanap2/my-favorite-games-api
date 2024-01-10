@@ -6,11 +6,10 @@ export class GameController {
   private myService = new GameService()
 
   public async create(req: Request, res: Response) {
-    const { name, genre, genrePt, price, image, description } = req.body
+    const { name, categoryId, price, image, description } = req.body
     const { status, message, data } = await this.myService.create({
       name,
-      genre,
-      genrePt,
+      categoryId,
       price,
       image,
       description,

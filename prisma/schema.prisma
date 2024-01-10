@@ -25,18 +25,16 @@ model User {
 model Game {
   id          Int      @id @default(autoincrement())
   name        String   @unique
-  genre       String
-  genrePt     String
+  categoryId  Int      @default(1)
   price       Int
   image       String
   description String   @db.VarChar(1000)
   created_at  DateTime @default(now())
 
-  carts      Cart[]
-  orders     Order[]
-  favorites  Favorite[]
-  category   Category   @relation(fields: [categoryId], references: [id])
-  categoryId Int        @default(1)
+  carts     Cart[]
+  orders    Order[]
+  favorites Favorite[]
+  category  Category   @relation(fields: [categoryId], references: [id])
 
   @@map("games")
 }
