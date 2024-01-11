@@ -11,7 +11,7 @@ export class CartService {
       where: { userId: data.id },
       include: {
         user: { select: { id: true, name: true, email: true } },
-        products: true,
+        products: { include: { category: true } },
       },
     })
 

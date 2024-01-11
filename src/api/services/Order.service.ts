@@ -145,7 +145,7 @@ export class OrderService {
         userId: data.id,
         id: Number(id),
       },
-      include: { products: true },
+      include: { products: { include: { category: true } } },
     })
 
     if (result)

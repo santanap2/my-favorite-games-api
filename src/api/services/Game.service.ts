@@ -64,7 +64,10 @@ export class GameService {
   public async readOne(id: number) {
     if (isNaN(id)) return { status: 400, message: 'Insira um ID válido' }
 
-    const result = await prismaClient.game.findUnique({ where: { id } })
+    const result = await prismaClient.game.findUnique({
+      where: { id },
+      include: { category: true },
+    })
 
     if (!result)
       return {
@@ -83,6 +86,7 @@ export class GameService {
 
     const result = await prismaClient.game.findUnique({
       where: { name },
+      include: { category: true },
     })
 
     if (!result)
