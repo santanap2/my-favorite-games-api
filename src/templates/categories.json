@@ -1,0 +1,12 @@
+[
+  { "name": "actionAdventure", "namePt": "Ação e aventura" },
+  { "name": "rpgOpenWorld", "namePt": "RPG de mundo aberto" },
+  { "name": "rpgTurnBased", "namePt": "RPG de turnos" },
+  { "name": "actionTerror", "namePt": "Ação e terror" },
+  { "name": "fps", "namePt": "Tiro em primeira pessoa" },
+  { "name": "survivalHorror", "namePt": "Survival Horror" },
+  { "name": "racing", "namePt": "Corrida" },
+  { "name": "actionRhythm", "namePt": "Ação e ritmo" },
+  { "name": "metroidvania", "namePt": "Metroidvania" },
+  { "name": "souslike", "namePt": "Souslike" }
+]

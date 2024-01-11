@@ -27,8 +27,20 @@ export interface IPayloadJWT {
 export interface IGame {
   id?: number
   name: string
-  genre: string
-  genrePt: string
+  categoryId: number
+  price: number
+  image: string
+  description: string
+}
+
+export interface IGameApi {
+  id: number
+  name: string
+  category: {
+    id: number
+    name: string
+    namePt: string
+  }
   price: number
   image: string
   description: string
@@ -71,4 +83,9 @@ export interface ICardData {
   cardDate: string
   cardCvv: string
   cardPortions: string
+}
+
+export interface ICategory {
+  name: string
+  namePt: string
 }

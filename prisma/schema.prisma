@@ -25,8 +25,7 @@ model User {
 model Game {
   id          Int      @id @default(autoincrement())
   name        String   @unique
-  genre       String
-  genrePt     String
+  categoryId  Int      @default(1)
   price       Int
   image       String
   description String   @db.VarChar(1000)
@@ -35,8 +34,19 @@ model Game {
   carts     Cart[]
   orders    Order[]
   favorites Favorite[]
+  category  Category   @relation(fields: [categoryId], references: [id])
 
   @@map("games")
+}
+
+model Category {
+  id     Int    @id @default(autoincrement())
+  name   String @unique
+  namePt String
+
+  products Game[]
+
+  @@map("categories")
 }
 
 model Cart {
