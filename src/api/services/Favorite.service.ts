@@ -37,7 +37,7 @@ export class FavoritesService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async create(gameId: string, cookie?: string) {
+  public async manageFavorite(gameId: string, cookie?: string) {
     const validation = await validateGame(Number(gameId))
     if (validation) return validation
 
@@ -50,13 +50,36 @@ export class FavoritesService {
     )
 
     if (userFavorites.data?.products && alreadyFavorited) {
-      const removeFavorite = await this.delete(
+      const removedFavorite = await this.delete(
         userFavorites.data?.products,
         gameId,
         cookie,
       )
-      return removeFavorite
+      return removedFavorite
     }
+
+    if (userFavorites.data?.products && !alreadyFavorited) {
+      const favoriteAdded = await this.create(
+        userFavorites.data?.products,
+        gameId,
+        cookie,
+      )
+
+      return favoriteAdded
+    }
+
+    return {
+      status: 500,
+      message: 'Algum erro inesperado ocorreu, tente novamente',
+      data: null,
+    }
+  }
+
+  // ///////////////////////////////////////////////////////////////
+
+  public async create(userFavorites: IGame[], gameId: string, cookie?: string) {
+    const { status, message, data } = await isAuthenticatedValidation(cookie)
+    if (!data) return { status, message }
 
     const result = await prismaClient.favorite.create({
       data: {

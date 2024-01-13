@@ -1,0 +1,10 @@
+#Add a new evaluation
+POST http://localhost:3003/add-evaluation
+Content-Type: application/json
+
+{
+  "description": "produto muito bom, recomendo demais!",
+  "stars": 5,
+  "productId": 10,
+  "userId": 1
+}

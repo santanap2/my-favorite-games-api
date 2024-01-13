@@ -8,6 +8,7 @@ import * as dotenv from 'dotenv'
 import { orderRouter } from './api/routes/Order.routes'
 import { favoritesRouter } from './api/routes/Favorite.routes'
 import { categoryRouter } from './api/routes/Category.routes'
+import { evaluationRouter } from './api/routes/Evaluation.routes'
 
 dotenv.config()
 
@@ -34,5 +35,6 @@ app.use(cartRouter)
 app.use(orderRouter)
 app.use(favoritesRouter)
 app.use(categoryRouter)
+app.use(evaluationRouter)
 
 export default app

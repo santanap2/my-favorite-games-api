@@ -1,0 +1,41 @@
+#Get the user cart
+GET http://localhost:3003/get-user-cart
+Content-Type: application/json
+Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
+###
+
+#Add new item to cart
+POST http://localhost:3003/add-to-cart
+Content-Type: application/json
+Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
+
+{
+  "gameId": 10
+}
+###
+
+#Buy only one item
+PUT http://localhost:3003/buy-one-item
+Content-Type: application/json
+Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
+
+{
+  "gameId": 1
+}
+###
+
+#Remove one item from cart
+PUT http://localhost:3003/remove-from-cart
+Content-Type: application/json
+Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
+
+{
+  "gameId": 1
+}
+###
+
+#Remove all items from cart
+PUT http://localhost:3003/empty-cart
+Content-Type: application/json
+Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
+###

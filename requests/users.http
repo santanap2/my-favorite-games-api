@@ -1,0 +1,37 @@
+#Get user data by token
+GET http://localhost:3003/get-user-by-token
+Content-Type: application/json
+Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
+###
+
+#Get user by email
+GET http://localhost:3003/get-user-by-email/email@email.com
+Content-Type: application/json
+###
+
+#Register new user
+POST http://localhost:3003/register
+Content-Type: application/json
+
+{
+  "email": "email@email.com",
+  "password": "12345678",
+  "name": "New user complete name",
+  "phone": "31999999999"
+}
+###
+
+#Update registered user data
+PUT http://localhost:3003/update-user
+Content-Type: application/json
+Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
+
+{
+  "name": "Pedro Santana",
+  "currentEmail": "pedro@gmail.com",
+  "newEmail": "",
+  "phone": "31998695219",
+  "currentPassword": "02089999",
+  "newPassword": "02089999"
+}
+###

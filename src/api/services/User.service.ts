@@ -6,12 +6,17 @@ import {
   createUserFieldsValidation,
   updateUserFieldsValidation,
 } from '../validations/User'
-import { CartService } from './Cart.service'
 
 export class UserService {
   public async readOne(id: number) {
     const result = await prismaClient.user.findUnique({
       where: { id },
+      include: {
+        cart: { include: { products: true } },
+        evaluations: true,
+        favorites: { include: { products: true } },
+        orders: { include: { products: true } },
+      },
     })
 
     if (!id)
@@ -26,13 +31,7 @@ export class UserService {
     return {
       status: 200,
       message: 'Usuário encontrado com sucesso',
-      data: {
-        id: result.id,
-        email: result.email,
-        name: result.name,
-        phone: result.phone,
-        created_at: result.created_at,
-      },
+      data: result,
     }
   }
 
@@ -49,9 +48,21 @@ export class UserService {
 
     const { status, data, message } = await this.readOne(dataValidation.id)
 
-    const cart = await new CartService().read(cookie)
-
-    return { status, message, data: { ...data, cart: cart.data?.products } }
+    return {
+      status,
+      message,
+      data: {
+        id: data?.id,
+        email: data?.email,
+        name: data?.name,
+        phone: data?.phone,
+        createdAt: data?.created_at,
+        cart: data?.cart,
+        evaluations: data?.evaluations,
+        favorites: data?.favorites,
+        orders: data?.orders,
+      },
+    }
   }
 
   // ///////////////////////////////////////////////////////////////

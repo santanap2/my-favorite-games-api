@@ -9,6 +9,6 @@ favoritesRouter.get('/get-all-favorites', (req: Request, res: Response) =>
   favoritesController.read(req, res),
 )
 
-favoritesRouter.post('/add-to-favorites', (req: Request, res: Response) =>
-  favoritesController.create(req, res),
+favoritesRouter.put('/add-or-remove-favorite', (req: Request, res: Response) =>
+  favoritesController.manageFavorite(req, res),
 )
