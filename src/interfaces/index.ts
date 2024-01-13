@@ -89,3 +89,10 @@ export interface ICategory {
   name: string
   namePt: string
 }
+
+export interface IEvaluation {
+  description?: string
+  stars: number
+  productId: number
+  userId: number
+}

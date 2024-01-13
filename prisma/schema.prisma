@@ -88,7 +88,7 @@ model Favorite {
 model Evaluation {
   id          Int      @id @default(autoincrement())
   stars       Int
-  description String   @db.VarChar(500)
+  description String?  @db.VarChar(500)
   created_at  DateTime @default(now())
 
   userId    Int
