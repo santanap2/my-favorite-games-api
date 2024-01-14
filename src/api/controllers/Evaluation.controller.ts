@@ -24,6 +24,14 @@ export class EvaluationController {
     return res.status(status).json({ message, data })
   }
 
+  public async readUserEvaluations(req: Request, res: Response) {
+    const { userId } = req.params
+    const { status, message, data } =
+      await this.myService.readUserEvaluations(userId)
+
+    return res.status(status).json({ message, data })
+  }
+
   // public async update(req: Request, res: Response) {}
 
   // public async delete(req: Request, res: Response) {}

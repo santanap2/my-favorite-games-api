@@ -7,6 +7,7 @@ import {
   validateEvaluationUser,
   validateProductIsBought,
   validateProductId,
+  validateUserId,
 } from '../validations/Evaluation'
 
 export class EvaluationService {
@@ -84,6 +85,11 @@ export class EvaluationService {
       where: {
         productId: Number(gameId),
       },
+      include: {
+        user: {
+          select: { name: true },
+        },
+      },
     })
 
     if (result.length === 0)
@@ -97,6 +103,47 @@ export class EvaluationService {
       return {
         status: 200,
         message: 'Avaliações do produto encontradas com sucesso',
+        data: result,
+      }
+
+    return {
+      status: 500,
+      message: 'Ocorreu um erro inesperado, tente novamente',
+      data: null,
+    }
+  }
+
+  public async readUserEvaluations(userId: string) {
+    const invalidUserId = validateUserId(userId)
+    if (invalidUserId) return invalidUserId
+
+    const result = await prismaClient.evaluation.findMany({
+      where: {
+        userId: Number(userId),
+      },
+      include: {
+        product: {
+          select: {
+            id: true,
+            name: true,
+            image: true,
+            category: { select: { name: true, namePt: true } },
+          },
+        },
+      },
+    })
+
+    if (result.length === 0)
+      return {
+        status: 404,
+        message: 'O usuário não fez nenhuma avaliação',
+        data: result,
+      }
+
+    if (result)
+      return {
+        status: 200,
+        message: 'Avaliações do usuário encontradas com sucesso',
         data: result,
       }
 

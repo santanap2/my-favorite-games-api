@@ -14,3 +14,8 @@ Content-Type: application/json
 GET http://localhost:3003/get-game-evaluations/82
 Content-Type: application/json
 ###
+
+#Get one user evaluations
+GET http://localhost:3003/get-user-evaluations/1
+Content-Type: application/json
+###

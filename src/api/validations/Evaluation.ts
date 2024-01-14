@@ -109,3 +109,21 @@ export const validateProductId = (gameId: string) => {
 
   return null
 }
+
+export const validateUserId = (userId: string) => {
+  if (!userId)
+    return {
+      status: 400,
+      message: 'Por favor forneça um Id de usuário',
+      data: null,
+    }
+
+  if (typeof userId !== 'string')
+    return {
+      status: 400,
+      message: 'O Id de usuário precisa ser uma string',
+      data: null,
+    }
+
+  return null
+}
