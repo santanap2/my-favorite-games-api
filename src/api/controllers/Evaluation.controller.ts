@@ -16,7 +16,13 @@ export class EvaluationController {
     return res.status(status).json({ message, data })
   }
 
-  // public async read(req: Request, res: Response) {}
+  public async readGameEvaluations(req: Request, res: Response) {
+    const { gameId } = req.params
+    const { status, message, data } =
+      await this.myService.readGameEvaluations(gameId)
+
+    return res.status(status).json({ message, data })
+  }
 
   // public async update(req: Request, res: Response) {}
 

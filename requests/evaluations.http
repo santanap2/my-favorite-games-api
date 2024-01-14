@@ -9,3 +9,8 @@ Content-Type: application/json
   "userId": 1
 }
 ###
+
+#Get one game evaluations
+GET http://localhost:3003/get-game-evaluations/82
+Content-Type: application/json
+###

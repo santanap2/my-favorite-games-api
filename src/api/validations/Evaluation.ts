@@ -91,3 +91,21 @@ export const validateProductIsBought = async (
 
   return null
 }
+
+export const validateProductId = (gameId: string) => {
+  if (!gameId)
+    return {
+      status: 400,
+      message: 'Por favor forneça um Id de produto',
+      data: null,
+    }
+
+  if (isNaN(Number(gameId)))
+    return {
+      status: 400,
+      message: 'O Id de produto precisa ser um número',
+      data: null,
+    }
+
+  return null
+}

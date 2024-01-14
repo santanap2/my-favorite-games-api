@@ -6,6 +6,7 @@ import {
   validateEvaluationProduct,
   validateEvaluationUser,
   validateProductIsBought,
+  validateProductId,
 } from '../validations/Evaluation'
 
 export class EvaluationService {
@@ -75,7 +76,36 @@ export class EvaluationService {
     }
   }
 
-  // public async update(data: any) {}
+  public async readGameEvaluations(gameId: string) {
+    const invalidGameId = validateProductId(gameId)
+    if (invalidGameId) return invalidGameId
+
+    const result = await prismaClient.evaluation.findMany({
+      where: {
+        productId: Number(gameId),
+      },
+    })
+
+    if (result.length === 0)
+      return {
+        status: 404,
+        message: 'Produto sem nenhuma avaliação',
+        data: result,
+      }
+
+    if (result)
+      return {
+        status: 200,
+        message: 'Avaliações do produto encontradas com sucesso',
+        data: result,
+      }
+
+    return {
+      status: 500,
+      message: 'Ocorreu um erro inesperado, tente novamente',
+      data: null,
+    }
+  }
 
   // public async delete(data: any) {}
 }

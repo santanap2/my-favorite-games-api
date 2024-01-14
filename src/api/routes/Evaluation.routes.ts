@@ -8,3 +8,14 @@ const evaluationController = new EvaluationController()
 evaluationRouter.post('/add-evaluation', (req: Request, res: Response) =>
   evaluationController.create(req, res),
 )
+
+evaluationRouter.get(
+  '/get-game-evaluations/:gameId',
+  (req: Request, res: Response) =>
+    evaluationController.readGameEvaluations(req, res),
+)
+
+// evaluationRouter.get(
+//   '/get-user-evaluations/:user',
+//   (req: Request, res: Response) => evaluationController.readUser(req, res),
+// )
