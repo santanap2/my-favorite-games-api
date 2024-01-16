@@ -15,7 +15,13 @@ GET http://localhost:3003/get-game-evaluations/82
 Content-Type: application/json
 ###
 
-#Get one user evaluations
+#Get user evaluations
 GET http://localhost:3003/get-user-evaluations/1
 Content-Type: application/json
+###
+
+#Get one user evaluation
+GET http://localhost:3003/get-user-evaluations/21
+Content-Type: application/json
+Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1Mzc0ODcwLCJleHAiOjE3MDU5Nzk2NzB9.2OYxxP1fmmYygYGDOg29KSd8tTKc3AwFI0o7G2MOH2c
 ###

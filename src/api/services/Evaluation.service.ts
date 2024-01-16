@@ -49,6 +49,8 @@ export class EvaluationService {
     }
   }
 
+  // ///////////////////////////////////////////////////////////////
+
   public async readOne(productId: number, userId: number) {
     const result = await prismaClient.evaluation.findFirst({
       where: {
@@ -77,6 +79,8 @@ export class EvaluationService {
       data: null,
     }
   }
+
+  // ///////////////////////////////////////////////////////////////
 
   public async readGameEvaluations(gameId: string) {
     const invalidGameId = validateProductId(gameId)
@@ -113,6 +117,8 @@ export class EvaluationService {
       data: null,
     }
   }
+
+  // ///////////////////////////////////////////////////////////////
 
   public async readUserEvaluations(cookie?: string) {
     const { status, message, data } = await isAuthenticatedValidation(cookie)
@@ -158,5 +164,37 @@ export class EvaluationService {
     }
   }
 
-  // public async delete(data: any) {}
+  // ///////////////////////////////////////////////////////////////
+
+  public async readOneUserEvaluation(evaluationId: string, cookie?: string) {
+    const { status, message, data } = await isAuthenticatedValidation(cookie)
+    if (!data) return { status, message }
+
+    const result = await prismaClient.evaluation.findUnique({
+      where: {
+        id: Number(evaluationId),
+        userId: data.id,
+      },
+    })
+
+    if (result)
+      return {
+        status: 200,
+        message: 'Avaliação encontrada com sucesso',
+        data: result,
+      }
+
+    if (!result)
+      return {
+        status: 404,
+        message: 'Avaliação não encontrada',
+        data: null,
+      }
+
+    return {
+      status: 500,
+      message: 'Ocorreu um erro inesperado, tente novamente',
+      data: null,
+    }
+  }
 }

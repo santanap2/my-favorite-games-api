@@ -18,3 +18,9 @@ evaluationRouter.get(
 evaluationRouter.get('/get-user-evaluations', (req: Request, res: Response) =>
   evaluationController.readUserEvaluations(req, res),
 )
+
+evaluationRouter.get(
+  '/get-user-evaluations/:evaluationId',
+  (req: Request, res: Response) =>
+    evaluationController.readOneUserEvaluation(req, res),
+)
