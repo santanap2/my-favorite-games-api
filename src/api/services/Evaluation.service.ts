@@ -1,5 +1,6 @@
 import { prismaClient } from '../../database/prismaClient'
 import { IEvaluation } from '../../interfaces'
+import { isAuthenticatedValidation } from '../validations/CookieToken'
 import {
   validateEvaluationFields,
   validateEvaluation,
@@ -113,13 +114,16 @@ export class EvaluationService {
     }
   }
 
-  public async readUserEvaluations(userId: string) {
-    const invalidUserId = validateUserId(userId)
+  public async readUserEvaluations(cookie?: string) {
+    const { status, message, data } = await isAuthenticatedValidation(cookie)
+    if (!data) return { status, message }
+
+    const invalidUserId = validateUserId(data.id)
     if (invalidUserId) return invalidUserId
 
     const result = await prismaClient.evaluation.findMany({
       where: {
-        userId: Number(userId),
+        userId: data.id,
       },
       include: {
         product: {

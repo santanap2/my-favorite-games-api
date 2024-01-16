@@ -96,3 +96,10 @@ export interface IEvaluation {
   productId: number
   userId: number
 }
+
+export interface IGameWithOrderInfo extends IGame {
+  orderInfo: {
+    id: number
+    date: Date
+  }
+}

@@ -3,9 +3,9 @@ POST http://localhost:3003/add-evaluation
 Content-Type: application/json
 
 {
-  "description": "produto muito bom, recomendo demais!",
-  "stars": 5,
-  "productId": 82,
+  "description": "jogo bom mas muito bugado, crasha toda hora",
+  "stars": 2,
+  "productId": 2,
   "userId": 1
 }
 ###

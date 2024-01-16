@@ -40,8 +40,16 @@ export class OrderController {
 
     return res.status(status).json({ message, data })
   }
-  //
-  //   public async update(req: Request, res: Response) {}
-  //
-  //   public async delete(req: Request, res: Response) {}
+
+  // ///////////////////////////////////////////////////////////////
+
+  public async readBoughtProducts(req: Request, res: Response) {
+    const { cookie } = req.headers
+    const { status, message, data } =
+      await this.myService.readBoughtProducts(cookie)
+
+    return res.status(status).json({ message, data })
+  }
+
+  // ///////////////////////////////////////////////////////////////
 }

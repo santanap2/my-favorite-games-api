@@ -1,6 +1,11 @@
 /* eslint-disable camelcase */
 import { prismaClient } from '../../database/prismaClient'
-import { ICardData, IGame, IQueryOrder } from '../../interfaces'
+import {
+  ICardData,
+  IGame,
+  IGameWithOrderInfo,
+  IQueryOrder,
+} from '../../interfaces'
 import { isAuthenticatedValidation } from '../validations/CookieToken'
 import { CartService } from './Cart.service'
 
@@ -161,9 +166,51 @@ export class OrderService {
       data: null,
     }
   }
-  //
-  //
-  //   public async update(data: any) {}
-  //
-  //   public async delete(data: any) {}
+
+  // ///////////////////////////////////////////////////////////////
+
+  public async readBoughtProducts(cookie?: string) {
+    const { status, message, data } = await isAuthenticatedValidation(cookie)
+    if (!data) return { status, message }
+
+    const result = await prismaClient.order.findMany({
+      where: {
+        userId: data.id,
+      },
+      include: {
+        products: {
+          include: { category: true },
+        },
+      },
+    })
+
+    const boughtProducts: IGameWithOrderInfo[] = []
+    result.forEach((order) => {
+      if (order.status === 'concluded') {
+        const productWithOrderInfo = order.products.map((product) => ({
+          ...product,
+          orderInfo: {
+            id: order.id,
+            date: order.created_at,
+          },
+        }))
+        boughtProducts.push(...productWithOrderInfo)
+      }
+    })
+
+    if (result)
+      return {
+        status: 200,
+        message: 'Produtos comprados encontrados com sucesso',
+        data: boughtProducts,
+      }
+
+    return {
+      status: 404,
+      message: 'Pedido não encontrado ou o usuário não possui autorização',
+      data: null,
+    }
+  }
+
+  // ///////////////////////////////////////////////////////////////
 }

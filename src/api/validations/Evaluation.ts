@@ -110,7 +110,7 @@ export const validateProductId = (gameId: string) => {
   return null
 }
 
-export const validateUserId = (userId: string) => {
+export const validateUserId = (userId: number) => {
   if (!userId)
     return {
       status: 400,
@@ -118,10 +118,10 @@ export const validateUserId = (userId: string) => {
       data: null,
     }
 
-  if (typeof userId !== 'string')
+  if (typeof userId !== 'number')
     return {
       status: 400,
-      message: 'O Id de usuário precisa ser uma string',
+      message: 'O usuário está inválido',
       data: null,
     }
 

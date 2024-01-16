@@ -25,9 +25,9 @@ export class EvaluationController {
   }
 
   public async readUserEvaluations(req: Request, res: Response) {
-    const { userId } = req.params
+    const { cookie } = req.headers
     const { status, message, data } =
-      await this.myService.readUserEvaluations(userId)
+      await this.myService.readUserEvaluations(cookie)
 
     return res.status(status).json({ message, data })
   }

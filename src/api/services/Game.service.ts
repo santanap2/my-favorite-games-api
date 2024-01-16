@@ -66,7 +66,10 @@ export class GameService {
 
     const result = await prismaClient.game.findUnique({
       where: { id },
-      include: { category: true },
+      include: {
+        category: true,
+        evaluations: { include: { user: { select: { name: true } } } },
+      },
     })
 
     if (!result)

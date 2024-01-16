@@ -11,11 +11,16 @@ export class UserService {
   public async readOne(id: number) {
     const result = await prismaClient.user.findUnique({
       where: { id },
-      include: {
+      select: {
+        id: true,
+        name: true,
+        email: true,
+        phone: true,
+        created_at: true,
         cart: { include: { products: true } },
-        evaluations: true,
         favorites: { include: { products: true } },
         orders: { include: { products: true } },
+        evaluations: true,
       },
     })
 
@@ -51,17 +56,7 @@ export class UserService {
     return {
       status,
       message,
-      data: {
-        id: data?.id,
-        email: data?.email,
-        name: data?.name,
-        phone: data?.phone,
-        createdAt: data?.created_at,
-        cart: data?.cart,
-        evaluations: data?.evaluations,
-        favorites: data?.favorites,
-        orders: data?.orders,
-      },
+      data,
     }
   }
 

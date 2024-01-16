@@ -16,3 +16,7 @@ orderRouter.get('/get-orders', (req: Request, res: Response) =>
 orderRouter.get('/get-order/:id', (req: Request, res: Response) =>
   orderController.readOne(req, res),
 )
+
+orderRouter.get('/get-bought-products', (req: Request, res: Response) =>
+  orderController.readBoughtProducts(req, res),
+)
