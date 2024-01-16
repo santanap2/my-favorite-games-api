@@ -175,6 +175,7 @@ export class EvaluationService {
         id: Number(evaluationId),
         userId: data.id,
       },
+      include: { product: true },
     })
 
     if (result)

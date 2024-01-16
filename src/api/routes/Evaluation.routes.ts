@@ -20,7 +20,7 @@ evaluationRouter.get('/get-user-evaluations', (req: Request, res: Response) =>
 )
 
 evaluationRouter.get(
-  '/get-user-evaluations/:evaluationId',
+  '/get-user-evaluation/:evaluationId',
   (req: Request, res: Response) =>
     evaluationController.readOneUserEvaluation(req, res),
 )
