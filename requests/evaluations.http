@@ -25,3 +25,15 @@ GET http://localhost:3003/get-user-evaluations/21
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1Mzc0ODcwLCJleHAiOjE3MDU5Nzk2NzB9.2OYxxP1fmmYygYGDOg29KSd8tTKc3AwFI0o7G2MOH2c
 ###
+
+#Update an evaluation
+PUT http://localhost:3003/update-evaluation
+Content-Type: application/json
+Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1Mzc0ODcwLCJleHAiOjE3MDU5Nzk2NzB9.2OYxxP1fmmYygYGDOg29KSd8tTKc3AwFI0o7G2MOH2c
+
+{
+  "evaluationId": 21,
+  "stars": 5,
+  "description": "jogo melhorou muito com a atualizacao 2.0, melhor jogo de 2023 com a phantom liberty"
+}
+###

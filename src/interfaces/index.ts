@@ -103,3 +103,9 @@ export interface IGameWithOrderInfo extends IGame {
     date: Date
   }
 }
+
+export interface IEvaluationUpdate {
+  evaluationId: number
+  stars: number
+  description: string
+}

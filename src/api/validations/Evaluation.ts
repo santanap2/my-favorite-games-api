@@ -127,3 +127,17 @@ export const validateUserId = (userId: number) => {
 
   return null
 }
+
+export const validateStars = (stars: number) => {
+  if (!stars)
+    return { status: 400, message: 'Por favor insira as estrelas', data: null }
+
+  if (isNaN(stars))
+    return {
+      status: 400,
+      message: 'As estrelas precisam ser um número',
+      data: null,
+    }
+
+  return null
+}

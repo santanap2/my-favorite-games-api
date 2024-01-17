@@ -1,5 +1,5 @@
 import { prismaClient } from '../../database/prismaClient'
-import { IEvaluation } from '../../interfaces'
+import { IEvaluation, IEvaluationUpdate } from '../../interfaces'
 import { isAuthenticatedValidation } from '../validations/CookieToken'
 import {
   validateEvaluationFields,
@@ -9,6 +9,7 @@ import {
   validateProductIsBought,
   validateProductId,
   validateUserId,
+  validateStars,
 } from '../validations/Evaluation'
 
 export class EvaluationService {
@@ -198,4 +199,43 @@ export class EvaluationService {
       data: null,
     }
   }
+
+  // ///////////////////////////////////////////////////////////////
+
+  public async update(
+    { evaluationId, stars, description }: IEvaluationUpdate,
+    cookie?: string,
+  ) {
+    const { status, message, data } = await isAuthenticatedValidation(cookie)
+    if (!data) return { status, message }
+
+    const invalidStars = validateStars(stars)
+    if (invalidStars) return invalidStars
+
+    const result = await prismaClient.evaluation.update({
+      where: {
+        id: evaluationId,
+        userId: data.id,
+      },
+      data: {
+        description,
+        stars,
+      },
+    })
+
+    if (result)
+      return {
+        status: 200,
+        message: 'Avaliação atualizada com sucesso',
+        data: result,
+      }
+
+    return {
+      status: 500,
+      message: 'Ocorreu um erro inesperado, tente novamente',
+      data: null,
+    }
+  }
+
+  // ////////////////////////////////////////////////////////////
 }

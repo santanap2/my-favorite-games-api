@@ -24,3 +24,7 @@ evaluationRouter.get(
   (req: Request, res: Response) =>
     evaluationController.readOneUserEvaluation(req, res),
 )
+
+evaluationRouter.put('/update-evaluation', (req: Request, res: Response) =>
+  evaluationController.update(req, res),
+)

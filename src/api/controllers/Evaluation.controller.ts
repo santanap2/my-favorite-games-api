@@ -48,4 +48,23 @@ export class EvaluationController {
   }
 
   // ///////////////////////////////////////////////////////////////
+
+  public async update(req: Request, res: Response) {
+    const { cookie } = req.headers
+    const { evaluationId, stars, description } = req.body
+
+    console.log(cookie)
+    console.log(evaluationId)
+    console.log(stars)
+    console.log(description)
+
+    const { status, message, data } = await this.myService.update(
+      { evaluationId, stars, description },
+      cookie,
+    )
+
+    return res.status(status).json({ message, data })
+  }
+
+  // ///////////////////////////////////////////////////////////////
 }
