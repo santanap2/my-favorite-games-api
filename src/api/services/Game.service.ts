@@ -53,7 +53,7 @@ export class GameService {
       status: 201,
       message:
         result.count === 0
-          ? 'Nenhum jogo adicionado pois já existem no banco de    dados'
+          ? 'Nenhum jogo adicionado pois já existem no banco de dados'
           : `${result.count} Jogos adicionados com sucesso`,
       data: allGames.data,
     }

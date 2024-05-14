@@ -3,11 +3,7 @@ import { EvaluationService } from '../services/Evaluation.service'
 import { GameService } from '../services/Game.service'
 import { UserService } from '../services/User.service'
 
-export const validateEvaluationFields = ({
-  productId,
-  stars,
-  userId,
-}: IEvaluation) => {
+export const validateEvaluationFields = ({ productId, stars }: IEvaluation) => {
   if (stars > 5 || stars < 0) {
     return {
       status: 400,
@@ -23,13 +19,6 @@ export const validateEvaluationFields = ({
     return {
       status: 400,
       message: 'Por favor insira o Id do produto',
-      data: null,
-    }
-
-  if (!userId)
-    return {
-      status: 400,
-      message: 'Por favor insira o Id do usuário',
       data: null,
     }
 

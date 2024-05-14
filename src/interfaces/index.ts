@@ -94,7 +94,6 @@ export interface IEvaluation {
   description?: string
   stars: number
   productId: number
-  userId: number
 }
 
 export interface IGameWithOrderInfo extends IGame {

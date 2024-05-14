@@ -13,31 +13,36 @@ import {
 } from '../validations/Evaluation'
 
 export class EvaluationService {
-  public async create({ description, stars, productId, userId }: IEvaluation) {
+  public async create(
+    { description, stars, productId }: IEvaluation,
+    cookie?: string,
+  ) {
+    const { status, message, data } = await isAuthenticatedValidation(cookie)
+    if (!data) return { status, message }
+
     const fieldsValidationError = validateEvaluationFields({
       stars,
       productId,
-      userId,
     })
     if (fieldsValidationError) return fieldsValidationError
 
-    const userDoesNotExist = await validateEvaluationUser(userId)
+    const userDoesNotExist = await validateEvaluationUser(data.id)
     if (userDoesNotExist) return userDoesNotExist
 
     const productDoesNotExist = await validateEvaluationProduct(productId)
     if (productDoesNotExist) return productDoesNotExist
 
-    const alreadyEvaluated = await validateEvaluation(productId, userId)
+    const alreadyEvaluated = await validateEvaluation(productId, data.id)
     if (alreadyEvaluated) return alreadyEvaluated
 
-    const productIsNotBought = await validateProductIsBought(productId, userId)
+    const productIsNotBought = await validateProductIsBought(productId, data.id)
     if (productIsNotBought) return productIsNotBought
 
     const result = await prismaClient.evaluation.create({
       data: {
         description,
         stars,
-        userId,
+        userId: data.id,
         productId,
       },
     })

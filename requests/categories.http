@@ -57,6 +57,6 @@ Content-Type: application/json
   {
     "name": "souslike",
     "namePt": "Soulslike"
-  },
+  }
 ]
 ###
