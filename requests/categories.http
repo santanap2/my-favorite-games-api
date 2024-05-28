@@ -57,6 +57,10 @@ Content-Type: application/json
   {
     "name": "souslike",
     "namePt": "Soulslike"
+  },
+  {
+  "name": "sports",
+  "namePt": "Esportes"
   }
 ]
 ###
