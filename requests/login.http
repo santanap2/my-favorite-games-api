@@ -1,5 +1,5 @@
 #User login
-POST https://gaming-ecommerce-backend.onrender.com/login
+POST {{DATABASE_URL}}/login
 Content-Type: application/json
 
 {
@@ -9,6 +9,6 @@ Content-Type: application/json
 ###
 
 #User logout
-POST https://gaming-ecommerce-backend.onrender.com/logout
+POST {{DATABASE_URL}}/logout
 Content-Type: application/json
 ###

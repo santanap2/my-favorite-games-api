@@ -19,7 +19,7 @@ app.use(express.static('public'))
 app.use(
   cors({
     credentials: true,
-    origin: 'https://myfavgames.netlify.app',
+    origin: process.env.WEB_APP_URL,
   }),
 )
 

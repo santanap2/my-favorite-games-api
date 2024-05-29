@@ -1,10 +1,11 @@
 #Get all categories
-GET https://gaming-ecommerce-backend.onrender.com/get-categories
+# GET {{DATABASE_URL}}/get-categories
+GET {{DATABASE_URL}}/get-categories
 Content-Type: application/json
 ###
 
 #Add only one category
-POST https://gaming-ecommerce-backend.onrender.com/create-category
+POST {{DATABASE_URL}}/create-category
 Content-Type: application/json
 
 {
@@ -14,7 +15,7 @@ Content-Type: application/json
 ###
 
 #Add many categories
-POST https://gaming-ecommerce-backend.onrender.com/create-categories
+POST {{DATABASE_URL}}/create-categories
 Content-Type: application/json
 
 [

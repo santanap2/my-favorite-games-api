@@ -1,11 +1,11 @@
 #Add only one new game
-POST https://gaming-ecommerce-backend.onrender.com/add-game
+POST {{DATABASE_URL}}/add-game
 Content-Type: application/json
 
 {
   "name": "Call Of Duty: Black Ops 6",
-  "categoryId": 11,
-  "price": 299.9,
+  "categoryId": 5,
+  "price": 349.9,
   "image":
     "https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/hero/bo6/COD-UNREDACTED-004.jpg",
   "description":
@@ -14,7 +14,7 @@ Content-Type: application/json
 ###
 
 #Add many new games
-POST https://gaming-ecommerce-backend.onrender.com/add-many-games
+POST {{DATABASE_URL}}/add-many-games
 Content-Type: application/json
 
 [
@@ -184,21 +184,21 @@ Content-Type: application/json
 ###
 
 #Get all games
-GET https://gaming-ecommerce-backend.onrender.com/get-games
+GET {{DATABASE_URL}}/get-games
 Content-Type: application/json
 ###
 
 #Get games with optional query params 'busca' or '(category=true)'
-GET https://gaming-ecommerce-backend.onrender.com/get-games?busca=forza
+GET {{DATABASE_URL}}/get-games?busca=forza
 Content-Type: application/json
 ###
 
 #Get one game by gameId
-GET https://gaming-ecommerce-backend.onrender.com/get-game/6
+GET {{DATABASE_URL}}/get-game/6
 Content-Type: application/json
 ###
 
 #Get one game by name
-GET https://gaming-ecommerce-backend.onrender.com/get-game-by-name/starfield
+GET {{DATABASE_URL}}/get-game-by-name/starfield
 Content-Type: application/json
 ###
