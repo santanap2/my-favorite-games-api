@@ -19,7 +19,7 @@ app.use(express.static('public'))
 app.use(
   cors({
     credentials: true,
-    allowedHeaders: ['content-type'],
+    allowedHeaders: ['content-type', 'Access-Control-Allow-Origin'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'],
     origin: '*',
     // origin: 'http://192.168.1.15:3000',
