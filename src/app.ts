@@ -19,10 +19,7 @@ app.use(express.static('public'))
 app.use(
   cors({
     credentials: true,
-    allowedHeaders: ['content-type', 'Access-Control-Allow-Origin'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'],
-    origin: 'https://myfavgames.netlify.app/home',
-    // origin: 'http://192.168.1.15:3000',
+    origin: 'https://myfavgames.netlify.app/*',
   }),
 )
 
