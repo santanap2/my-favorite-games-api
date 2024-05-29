@@ -21,8 +21,7 @@ app.use(
     credentials: true,
     allowedHeaders: ['content-type'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'],
-    // origin: process.env.WEB_APP_URL,
-    origin: 'https://myfavgames.netlify.app/',
+    origin: '*',
     // origin: 'http://192.168.1.15:3000',
   }),
 )
