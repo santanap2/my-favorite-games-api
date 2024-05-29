@@ -3,7 +3,7 @@ POST http://localhost:3003/add-game
 Content-Type: application/json
 
 {
-  "name": "EA SPORTS FC 24",
+  "name": "FC 24",
   "categoryId": 11,
   "price": 299.9,
   "image":
@@ -19,7 +19,6 @@ Content-Type: application/json
 
 [
   {
-    "id": 1,
     "name": "Red Dead Redemption 2",
     "categoryId": 1,
     "price": 249,
@@ -28,7 +27,6 @@ Content-Type: application/json
     "created_at": "2024-01-10T17:51:31.809Z"
   },
   {
-    "id": 2,
     "name": "Cyberpunk 2077 Complete Edition",
     "categoryId": 2,
     "price": 299,
@@ -37,7 +35,6 @@ Content-Type: application/json
     "created_at": "2024-01-10T17:51:31.809Z"
   },
   {
-    "id": 3,
     "name": "Baldur's Gate 3",
     "categoryId": 3,
     "price": 199,
@@ -46,7 +43,6 @@ Content-Type: application/json
     "created_at": "2024-01-10T17:51:31.809Z"
   },
   {
-    "id": 4,
     "name": "Dead Space Remake",
     "categoryId": 4,
     "price": 249,
@@ -55,7 +51,6 @@ Content-Type: application/json
     "created_at": "2024-01-10T17:51:31.809Z"
   },
   {
-    "id": 5,
     "name": "Battlefield 2042",
     "categoryId": 5,
     "price": 199,
@@ -64,7 +59,6 @@ Content-Type: application/json
     "created_at": "2024-01-10T17:51:31.809Z"
   },
   {
-    "id": 6,
     "name": "Starfield",
     "categoryId": 2,
     "price": 279,
@@ -73,7 +67,6 @@ Content-Type: application/json
     "created_at": "2024-01-10T17:51:31.809Z"
   },
   {
-    "id": 7,
     "name": "Grand Theft Auto VI",
     "categoryId": 1,
     "price": 349,
@@ -82,7 +75,6 @@ Content-Type: application/json
     "created_at": "2024-01-10T17:51:31.809Z"
   },
   {
-    "id": 8,
     "name": "Call Of Duty: MODERN WARFARE III",
     "categoryId": 5,
     "price": 349,
@@ -91,7 +83,6 @@ Content-Type: application/json
     "created_at": "2024-01-10T17:51:31.809Z"
   },
   {
-    "id": 9,
     "name": "Alan Wake II",
     "categoryId": 6,
     "price": 249,
@@ -100,7 +91,6 @@ Content-Type: application/json
     "created_at": "2024-01-10T17:51:31.809Z"
   },
   {
-    "id": 10,
     "name": "The Witcher 3",
     "categoryId": 2,
     "price": 249,
@@ -109,7 +99,6 @@ Content-Type: application/json
     "created_at": "2024-01-10T17:51:31.809Z"
   },
   {
-    "id": 11,
     "name": "Resident Evil 4 Remake",
     "categoryId": 6,
     "price": 199,
@@ -118,7 +107,6 @@ Content-Type: application/json
     "created_at": "2024-01-10T17:51:31.809Z"
   },
   {
-    "id": 12,
     "name": "Forza Motorsport",
     "categoryId": 7,
     "price": 299,
@@ -127,7 +115,6 @@ Content-Type: application/json
     "created_at": "2024-01-10T17:51:31.809Z"
   },
   {
-    "id": 13,
     "name": "God of War Ragnarok",
     "categoryId": 1,
     "price": 349,
@@ -136,7 +123,6 @@ Content-Type: application/json
     "created_at": "2024-01-10T17:51:31.809Z"
   },
   {
-    "id": 14,
     "name": "Hi-Fi Rush",
     "categoryId": 8,
     "price": 89,
@@ -145,7 +131,6 @@ Content-Type: application/json
     "created_at": "2024-01-10T17:51:31.809Z"
   },
   {
-    "id": 15,
     "name": "Forza Horizon 5",
     "categoryId": 7,
     "price": 249,
@@ -154,7 +139,6 @@ Content-Type: application/json
     "created_at": "2024-01-10T17:51:31.809Z"
   },
   {
-    "id": 16,
     "name": "Horizon Forbidden West",
     "categoryId": 2,
     "price": 299,
@@ -163,26 +147,24 @@ Content-Type: application/json
     "created_at": "2024-01-10T17:51:31.809Z"
   },
   {
-    "id": 81,
     "name": "Ori and the Will of the Wisps",
-    "categoryId": 58,
+    "categoryId": 9,
     "price": 99,
     "image": "https://howlongtobeat.com/games/46428_Ori_and_the_Will_of_the_Wisps.jpg",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     "created_at": "2024-01-10T18:03:05.114Z"
   },
   {
-    "id": 82,
     "name": "Senua's Saga: Hellblade II",
     "categoryId": 1,
-    "price": 299.9,
+    "price": 229.9,
     "image": "https://howlongtobeat.com/games/72854_Senuas_Saga_Hellblade_II.jpg",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     "created_at": "2024-01-10T18:07:47.977Z"
   },
   {
     "name": "Elden Ring",
-    "categoryId": 59,
+    "categoryId": 10,
     "price": 249.9,
     "image":
       "https://howlongtobeat.com/games/68151_Elden_Ring.jpg",
@@ -199,6 +181,11 @@ Content-Type: application/json
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
   }
 ]
+###
+
+#Get all games
+GET http://localhost:3003/get-games
+Content-Type: application/json
 ###
 
 #Get games with optional query params 'busca' or '(category=true)'
