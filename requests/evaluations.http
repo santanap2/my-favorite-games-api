@@ -1,5 +1,5 @@
 #Add a new evaluation
-POST http://localhost:3003/add-evaluation
+POST https://gaming-ecommerce-backend.onrender.com/add-evaluation
 Content-Type: application/json
 
 {
@@ -11,23 +11,23 @@ Content-Type: application/json
 ###
 
 #Get one game evaluations
-GET http://localhost:3003/get-game-evaluations/82
+GET https://gaming-ecommerce-backend.onrender.com/get-game-evaluations/82
 Content-Type: application/json
 ###
 
 #Get user evaluations
-GET http://localhost:3003/get-user-evaluations/1
+GET https://gaming-ecommerce-backend.onrender.com/get-user-evaluations/1
 Content-Type: application/json
 ###
 
 #Get one user evaluation
-GET http://localhost:3003/get-user-evaluations/21
+GET https://gaming-ecommerce-backend.onrender.com/get-user-evaluations/21
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1Mzc0ODcwLCJleHAiOjE3MDU5Nzk2NzB9.2OYxxP1fmmYygYGDOg29KSd8tTKc3AwFI0o7G2MOH2c
 ###
 
 #Update an evaluation
-PUT http://localhost:3003/update-evaluation
+PUT https://gaming-ecommerce-backend.onrender.com/update-evaluation
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1Mzc0ODcwLCJleHAiOjE3MDU5Nzk2NzB9.2OYxxP1fmmYygYGDOg29KSd8tTKc3AwFI0o7G2MOH2c
 

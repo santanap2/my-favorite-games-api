@@ -1,5 +1,5 @@
 #User login
-POST http://localhost:3003/login
+POST https://gaming-ecommerce-backend.onrender.com/login
 Content-Type: application/json
 
 {
@@ -9,6 +9,6 @@ Content-Type: application/json
 ###
 
 #User logout
-POST http://localhost:3003/logout
+POST https://gaming-ecommerce-backend.onrender.com/logout
 Content-Type: application/json
 ###

@@ -1,11 +1,11 @@
 #Get the user cart
-GET http://localhost:3003/get-user-cart
+GET https://gaming-ecommerce-backend.onrender.com/get-user-cart
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
 ###
 
 #Add new item to cart
-POST http://localhost:3003/add-to-cart
+POST https://gaming-ecommerce-backend.onrender.com/add-to-cart
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
 
@@ -15,7 +15,7 @@ Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1h
 ###
 
 #Buy only one item
-PUT http://localhost:3003/buy-one-item
+PUT https://gaming-ecommerce-backend.onrender.com/buy-one-item
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
 
@@ -25,7 +25,7 @@ Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1h
 ###
 
 #Remove one item from cart
-PUT http://localhost:3003/remove-from-cart
+PUT https://gaming-ecommerce-backend.onrender.com/remove-from-cart
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
 
@@ -35,7 +35,7 @@ Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1h
 ###
 
 #Remove all items from cart
-PUT http://localhost:3003/empty-cart
+PUT https://gaming-ecommerce-backend.onrender.com/empty-cart
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
 ###

@@ -1,10 +1,10 @@
 #Get all categories
-GET http://localhost:3003/get-categories
+GET https://gaming-ecommerce-backend.onrender.com/get-categories
 Content-Type: application/json
 ###
 
 #Add only one category
-POST http://localhost:3003/create-category
+POST https://gaming-ecommerce-backend.onrender.com/create-category
 Content-Type: application/json
 
 {
@@ -14,7 +14,7 @@ Content-Type: application/json
 ###
 
 #Add many categories
-POST http://localhost:3003/create-categories
+POST https://gaming-ecommerce-backend.onrender.com/create-categories
 Content-Type: application/json
 
 [

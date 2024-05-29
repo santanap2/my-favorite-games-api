@@ -1,16 +1,16 @@
 #Get user data by token
-GET http://localhost:3003/get-user-by-token
+GET https://gaming-ecommerce-backend.onrender.com/get-user-by-token
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
 ###
 
 #Get user by email
-GET http://localhost:3003/get-user-by-email/email@email.com
+GET https://gaming-ecommerce-backend.onrender.com/get-user-by-email/email@email.com
 Content-Type: application/json
 ###
 
 #Register new user
-POST http://localhost:3003/register
+POST https://gaming-ecommerce-backend.onrender.com/register
 Content-Type: application/json
 
 {
@@ -22,7 +22,7 @@ Content-Type: application/json
 ###
 
 #Update registered user data
-PUT http://localhost:3003/update-user
+PUT https://gaming-ecommerce-backend.onrender.com/update-user
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
 

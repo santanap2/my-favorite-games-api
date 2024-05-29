@@ -1,20 +1,20 @@
 #Add only one new game
-POST http://localhost:3003/add-game
+POST https://gaming-ecommerce-backend.onrender.com/add-game
 Content-Type: application/json
 
 {
-  "name": "FC 24",
+  "name": "Call Of Duty: Black Ops 6",
   "categoryId": 11,
   "price": 299.9,
   "image":
-    "https://howlongtobeat.com/games/131658_EA_Sports_FC_24.jpg",
+    "https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/hero/bo6/COD-UNREDACTED-004.jpg",
   "description":
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 }
 ###
 
 #Add many new games
-POST http://localhost:3003/add-many-games
+POST https://gaming-ecommerce-backend.onrender.com/add-many-games
 Content-Type: application/json
 
 [
@@ -184,21 +184,21 @@ Content-Type: application/json
 ###
 
 #Get all games
-GET http://localhost:3003/get-games
+GET https://gaming-ecommerce-backend.onrender.com/get-games
 Content-Type: application/json
 ###
 
 #Get games with optional query params 'busca' or '(category=true)'
-GET http://localhost:3003/get-games?busca=forza
+GET https://gaming-ecommerce-backend.onrender.com/get-games?busca=forza
 Content-Type: application/json
 ###
 
 #Get one game by gameId
-GET http://localhost:3003/get-game/6
+GET https://gaming-ecommerce-backend.onrender.com/get-game/6
 Content-Type: application/json
 ###
 
 #Get one game by name
-GET http://localhost:3003/get-game-by-name/starfield
+GET https://gaming-ecommerce-backend.onrender.com/get-game-by-name/starfield
 Content-Type: application/json
 ###
