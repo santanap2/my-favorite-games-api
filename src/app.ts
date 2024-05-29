@@ -21,7 +21,7 @@ app.use(
     credentials: true,
     allowedHeaders: ['content-type', 'Access-Control-Allow-Origin'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'],
-    origin: '*',
+    origin: 'https://myfavgames.netlify.app/home',
     // origin: 'http://192.168.1.15:3000',
   }),
 )
