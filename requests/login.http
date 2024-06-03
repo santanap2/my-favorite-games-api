@@ -1,5 +1,5 @@
 #User login
-POST {{DATABASE_URL}}/login
+POST {{API_URL}}/login
 Content-Type: application/json
 
 {
@@ -9,6 +9,6 @@ Content-Type: application/json
 ###
 
 #User logout
-POST {{DATABASE_URL}}/logout
+POST {{API_URL}}/logout
 Content-Type: application/json
 ###

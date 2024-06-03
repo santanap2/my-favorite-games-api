@@ -1,11 +1,11 @@
 #Get all categories
-# GET {{DATABASE_URL}}/get-categories
-GET {{DATABASE_URL}}/get-categories
+# GET {{API_URL}}/get-categories
+GET {{API_URL}}/get-categories
 Content-Type: application/json
 ###
 
 #Add only one category
-POST {{DATABASE_URL}}/create-category
+POST {{API_URL}}/create-category
 Content-Type: application/json
 
 {
@@ -15,7 +15,7 @@ Content-Type: application/json
 ###
 
 #Add many categories
-POST {{DATABASE_URL}}/create-categories
+POST {{API_URL}}/create-categories
 Content-Type: application/json
 
 [

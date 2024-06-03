@@ -1,11 +1,11 @@
 #Get the user cart
-GET {{DATABASE_URL}}/get-user-cart
+GET {{API_URL}}/get-user-cart
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
 ###
 
 #Add new item to cart
-POST {{DATABASE_URL}}/add-to-cart
+POST {{API_URL}}/add-to-cart
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
 
@@ -15,7 +15,7 @@ Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1h
 ###
 
 #Buy only one item
-PUT {{DATABASE_URL}}/buy-one-item
+PUT {{API_URL}}/buy-one-item
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
 
@@ -25,7 +25,7 @@ Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1h
 ###
 
 #Remove one item from cart
-PUT {{DATABASE_URL}}/remove-from-cart
+PUT {{API_URL}}/remove-from-cart
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
 
@@ -35,7 +35,7 @@ Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1h
 ###
 
 #Remove all items from cart
-PUT {{DATABASE_URL}}/empty-cart
+PUT {{API_URL}}/empty-cart
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
 ###

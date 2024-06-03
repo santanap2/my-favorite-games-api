@@ -1,5 +1,5 @@
 #Create new user order
-POST {{DATABASE_URL}}/create-order
+POST {{API_URL}}/create-order
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
 
@@ -11,19 +11,19 @@ Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1h
 ###
 
 #Get all user orders
-GET {{DATABASE_URL}}/get-orders
+GET {{API_URL}}/get-orders
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
 ###
 
 #Get only one user order by Id
-GET {{DATABASE_URL}}/get-order/1
+GET {{API_URL}}/get-order/1
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
 ###
 
 #Get all products bought by the user
-GET {{DATABASE_URL}}/get-products-bought
+GET {{API_URL}}/get-products-bought
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1MDY4MDkwLCJleHAiOjE3MDU2NzI4OTB9.mTYrsZqR5NOXblevIbkjcAYd55nPM2pcwzmVp9o6eYk
 ###
