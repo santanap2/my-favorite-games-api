@@ -48,6 +48,7 @@ export class UserService {
       message: messageValidation,
       data: dataValidation,
     } = await isAuthenticatedValidation(cookie)
+
     if (!dataValidation)
       return { status: statusValidation, message: messageValidation }
 
@@ -75,17 +76,13 @@ export class UserService {
 
     if (!result) return { status: 404, message: 'Usuário não cadastrado' }
 
+    const { status, data, message } = await this.readOne(result.id)
+
     await prismaClient.$disconnect()
     return {
-      status: 200,
-      message: 'Usuário encontrado com sucesso',
-      data: {
-        id: result.id,
-        email: result.email,
-        name: result.name,
-        phone: result.phone,
-        created_at: result.created_at,
-      },
+      status,
+      message,
+      data,
     }
   }
 
