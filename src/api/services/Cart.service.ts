@@ -1,19 +1,11 @@
 import { prismaClient } from '../../database/prismaClient'
 import { validateGame } from '../validations/Cart'
-import { isAuthenticatedValidation } from '../validations/CookieToken'
+import { UserService } from './User.service'
 
 export class CartService {
-  public async read(cookie?: string) {
-    //     const parsedCookie = parseCookie(cookie)
-    //     if (!parsedCookie)
-    //       return {
-    //         status: 400,
-    //         message: 'Ocorreu um erro de autenticação, tente novamente',
-    //       }
-    //
-    //     const sessionToken = parsedCookie['authjs.session-token']
-
-    const { status, message, data } = await isAuthenticatedValidation(cookie)
+  public async read(email: string) {
+    const user = new UserService()
+    const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
 
     const result = await prismaClient.cart.findUnique({
@@ -46,14 +38,15 @@ export class CartService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async create(gameId: string, cookie?: string) {
+  public async create({ gameId, email }: { email: string; gameId: string }) {
     const validation = await validateGame(Number(gameId))
     if (validation) return validation
 
-    const { status, message, data } = await isAuthenticatedValidation(cookie)
+    const user = new UserService()
+    const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
 
-    const cartExists = await new CartService().read(cookie)
+    const cartExists = await this.read(email)
 
     if (cartExists.status === 200) {
       const result = await prismaClient.cart.update({
@@ -99,17 +92,18 @@ export class CartService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async buyOne(gameId: string, cookie?: string) {
+  public async buyOne({ gameId, email }: { email: string; gameId: string }) {
     const validation = await validateGame(Number(gameId))
     if (validation) return validation
 
-    const { status, message, data } = await isAuthenticatedValidation(cookie)
+    const user = new UserService()
+    const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
 
-    const cartExists = await new CartService().read(cookie)
+    const cartExists = await new CartService().read(email)
 
     if (cartExists.status === 200) {
-      await this.emptyCart(cookie)
+      await this.emptyCart(email)
 
       const result = await prismaClient.cart.update({
         where: { userId: data.id },
@@ -154,14 +148,21 @@ export class CartService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async removeItemCart(gameId: string, cookie?: string) {
+  public async removeItemCart({
+    gameId,
+    email,
+  }: {
+    email: string
+    gameId: string
+  }) {
     const validation = await validateGame(Number(gameId))
     if (validation) return validation
 
-    const { status, message, data } = await isAuthenticatedValidation(cookie)
+    const user = new UserService()
+    const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
 
-    const cart = await this.read(cookie)
+    const cart = await this.read(email)
 
     if (cart?.data?.products) {
       const filteredGames = cart.data.products.filter(
@@ -202,11 +203,12 @@ export class CartService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async emptyCart(cookie?: string) {
-    const { status, message, data } = await isAuthenticatedValidation(cookie)
+  public async emptyCart(email: string) {
+    const user = new UserService()
+    const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
 
-    const cart = await this.read(cookie)
+    const cart = await this.read(email)
 
     if (cart?.data?.products) {
       await prismaClient.cart.update({

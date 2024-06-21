@@ -35,7 +35,7 @@ export class GameController {
       req.query,
     )
 
-    return res.status(status).json({ message, data })
+    return res.status(status).json({ message, games: data })
   }
 
   // ///////////////////////////////////////////////////////////////
@@ -44,7 +44,7 @@ export class GameController {
     const { id } = req.params
     const { status, message, data } = await this.myService.readOne(Number(id))
 
-    return res.status(status).json({ message, data })
+    return res.status(status).json({ message, game: data })
   }
 
   // ///////////////////////////////////////////////////////////////

@@ -5,14 +5,16 @@ export class OrderController {
   private myService = new OrderService()
 
   public async create(req: Request, res: Response) {
-    const { cookie } = req.headers
+    const { email } = req.query as {
+      email: string
+    }
     const {
       data: { paymentMethod, cardData },
     } = req.body
     const { status, message, data } = await this.myService.create(
       paymentMethod,
       cardData,
-      cookie,
+      email,
     )
 
     return res.status(status).json({ message, data })

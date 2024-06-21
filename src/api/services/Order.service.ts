@@ -9,9 +9,10 @@ export class OrderService {
   public async create(
     paymentMethod: string,
     cardData: ICardData,
-    cookie?: string,
+    email: string,
   ) {
-    const { status, message, data } = await isAuthenticatedValidation(cookie)
+    const user = new UserService()
+    const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
 
     if (!paymentMethod)
@@ -20,7 +21,7 @@ export class OrderService {
         message: 'Por favor informe o método de pagamento',
       }
 
-    const { data: cart } = await new CartService().read(cookie)
+    const { data: cart } = await new CartService().read(email)
 
     if (cart?.products && cart.products.length === 0)
       return {
@@ -54,7 +55,7 @@ export class OrderService {
         include: { products: true },
       })
 
-      await new CartService().emptyCart(cookie)
+      await new CartService().emptyCart(email)
       await prismaClient.$disconnect()
       return { status: 201, message: 'Pedido feito com sucesso', data: result }
     }
@@ -76,7 +77,6 @@ export class OrderService {
     filter?: string | null
   }) {
     const user = new UserService()
-
     const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
 
