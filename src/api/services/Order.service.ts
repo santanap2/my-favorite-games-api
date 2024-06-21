@@ -1,13 +1,9 @@
 /* eslint-disable camelcase */
 import { prismaClient } from '../../database/prismaClient'
-import {
-  ICardData,
-  IGame,
-  IGameWithOrderInfo,
-  IQueryOrder,
-} from '../../interfaces'
+import { ICardData, IGame, IGameWithOrderInfo } from '../../interfaces'
 import { isAuthenticatedValidation } from '../validations/CookieToken'
 import { CartService } from './Cart.service'
+import { UserService } from './User.service'
 
 export class OrderService {
   public async create(
@@ -72,8 +68,16 @@ export class OrderService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async read(cookie?: string, queryParam?: IQueryOrder) {
-    const { status, message, data } = await isAuthenticatedValidation(cookie)
+  public async read({
+    email,
+    filter,
+  }: {
+    email: string
+    filter?: string | null
+  }) {
+    const user = new UserService()
+
+    const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
 
     const result = await prismaClient.order.findMany({
@@ -81,7 +85,7 @@ export class OrderService {
       include: { products: true },
     })
 
-    if (!queryParam?.status) {
+    if (!filter) {
       if (!result)
         return {
           status: 500,
@@ -99,7 +103,7 @@ export class OrderService {
       }
     }
 
-    if (queryParam.status === 'all') {
+    if (filter === 'all') {
       if (result.length === 0)
         return {
           status: 200,
@@ -114,13 +118,11 @@ export class OrderService {
       }
     }
 
-    const filteredOrders = result.filter(
-      (order) => order.status === queryParam.status,
-    )
+    const filteredOrders = result.filter((order) => order.status === filter)
 
     if (filteredOrders.length === 0)
       return {
-        status: 404,
+        status: 200,
         message: 'Não há nenhum pedido de acordo com os filtros',
         data: filteredOrders,
       }

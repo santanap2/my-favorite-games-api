@@ -21,14 +21,17 @@ export class OrderController {
   // ///////////////////////////////////////////////////////////////
 
   public async read(req: Request, res: Response) {
-    const queryParam = req.query
-    const { cookie } = req.headers
-    const { status, message, data } = await this.myService.read(
-      cookie,
-      queryParam,
-    )
+    const { email, filter } = req.query as {
+      email: string
+      filter?: string | null
+    }
 
-    return res.status(status).json({ message, data })
+    const { status, message, data } = await this.myService.read({
+      email,
+      filter,
+    })
+
+    return res.status(status).json({ message, orders: data })
   }
 
   // ///////////////////////////////////////////////////////////////
