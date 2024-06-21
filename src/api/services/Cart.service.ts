@@ -4,6 +4,15 @@ import { isAuthenticatedValidation } from '../validations/CookieToken'
 
 export class CartService {
   public async read(cookie?: string) {
+    //     const parsedCookie = parseCookie(cookie)
+    //     if (!parsedCookie)
+    //       return {
+    //         status: 400,
+    //         message: 'Ocorreu um erro de autenticação, tente novamente',
+    //       }
+    //
+    //     const sessionToken = parsedCookie['authjs.session-token']
+
     const { status, message, data } = await isAuthenticatedValidation(cookie)
     if (!data) return { status, message }
 

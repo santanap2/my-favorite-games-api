@@ -10,25 +10,19 @@ export class LoginService {
   private userService = new UserService()
 
   public async signIn({ email, password }: IUser) {
-    const { status, data } = await this.userService.readByEmail(email)
-    if (!data) return { status, message: 'As credenciais estão incorretas' }
+    const { data } = await this.userService.readByEmail(email)
+    if (!data)
+      return { status: 401, message: 'As credenciais estão incorretas' }
 
     const user = await this.userService.readPassword(email)
     if (!user || !user.data?.password)
-      return { status: 400, message: 'As credenciais estão incorretas' }
+      return { status: 401, message: 'As credenciais estão incorretas' }
 
     const passwordsCheck = await comparePasswords(password, user.data?.password)
     if (!passwordsCheck)
-      return { status: 400, message: 'As credenciais estão incorretas' }
+      return { status: 401, message: 'As credenciais estão incorretas' }
 
     if (passwordsCheck) {
-      // const token = await generateToken({
-      //   id: data.id,
-      //   email: data.email,
-      //   name: data.name,
-      //   phone: data.phone,
-      // })
-
       await prismaClient.$disconnect()
       return {
         status: 200,

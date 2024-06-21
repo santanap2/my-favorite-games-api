@@ -1,6 +1,5 @@
 import { Request, Response } from 'express'
 import { LoginService } from '../services/Login.service'
-// import { setCookie } from 'nookies'
 
 export class LoginController {
   private myService = new LoginService()
@@ -11,14 +10,6 @@ export class LoginController {
       email,
       password,
     })
-
-    // if (token) {
-    //   setCookie({ res }, 'gamingPlatformAuth', token, {
-    //     maxAge: 60 * 60 * 24, // 24 hours
-    //     httpOnly: true,
-    //     path: '/',
-    //   })
-    // }
 
     return res.status(status).json({ message, userData })
   }

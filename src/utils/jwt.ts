@@ -20,7 +20,6 @@ export const verifyToken = (token: string): IPayloadJWT | null => {
     const decoded = jwt.verify(token, secretKey) as IPayloadJWT
     return decoded
   } catch (error) {
-    console.error(error)
     return null
   }
 }

@@ -8,7 +8,7 @@ export class UserController {
     const { cookie } = req.headers
     const { message, status, data } = await this.userService.readByToken(cookie)
 
-    return res.status(status).json({ message, data })
+    return res.status(status).json({ message, user: data })
   }
 
   // ///////////////////////////////////////////////////////////////
@@ -17,7 +17,7 @@ export class UserController {
     const { email } = req.params
 
     const { status, message, data } = await this.userService.readByEmail(email)
-    return res.status(status).json({ message, data })
+    return res.status(status).json({ message, user: data })
   }
 
   // ///////////////////////////////////////////////////////////////
