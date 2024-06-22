@@ -143,8 +143,9 @@ export class OrderService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async readOne(id: string, cookie?: string) {
-    const { status, message, data } = await isAuthenticatedValidation(cookie)
+  public async readOne(id: string, email: string) {
+    const user = new UserService()
+    const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
 
     const result = await prismaClient.order.findUnique({

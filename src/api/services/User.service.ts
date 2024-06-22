@@ -74,7 +74,7 @@ export class UserService {
       where: { email },
     })
 
-    if (!result) return { status: 404, message: 'Usuário não cadastrado' }
+    if (!result) return { status: 200, message: 'Usuário não cadastrado' }
 
     const { status, data, message } = await this.readOne(result.id)
 

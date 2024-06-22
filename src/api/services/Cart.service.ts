@@ -18,7 +18,7 @@ export class CartService {
 
     if (!result)
       return {
-        status: 404,
+        status: 200,
         message: 'Carrinho não encontrado',
       }
 
@@ -48,7 +48,7 @@ export class CartService {
 
     const cartExists = await this.read(email)
 
-    if (cartExists.status === 200) {
+    if (cartExists.message === 'Carrinho encontrado com sucesso') {
       const result = await prismaClient.cart.update({
         where: { userId: data.id },
         data: {

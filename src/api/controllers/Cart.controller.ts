@@ -8,7 +8,7 @@ export class CartController {
     const { email } = req.query as { email: string }
     const { status, message, data } = await this.myService.read(email)
 
-    return res.status(status).json({ message, data })
+    return res.status(status).json({ message, cart: data })
   }
 
   // ///////////////////////////////////////////////////////////////
