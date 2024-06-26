@@ -31,15 +31,16 @@ export class UserController {
 
   public async update(req: Request, res: Response) {
     const {
-      name,
-      currentEmail,
-      newEmail,
-      phone,
-      currentPassword,
-      newPassword,
+      userData: {
+        name,
+        currentEmail,
+        newEmail,
+        phone,
+        currentPassword,
+        newPassword,
+      },
+      userEmail,
     } = req.body
-
-    const { cookie } = req.headers
 
     const { status, message, data } = await this.userService.update(
       {
@@ -50,7 +51,7 @@ export class UserController {
         currentPassword,
         newPassword,
       },
-      cookie,
+      userEmail,
     )
     return res.status(status).json({ message, data })
   }

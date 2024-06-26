@@ -14,11 +14,11 @@ export class FavoritesController {
   // ///////////////////////////////////////////////////////////////
 
   public async manageFavorite(req: Request, res: Response) {
-    const { gameId } = req.body
-    const { cookie } = req.headers
+    const { gameId, email } = req.body
+
     const { status, message } = await this.myService.manageFavorite(
       gameId,
-      cookie,
+      email,
     )
 
     return res.status(status).json({ message })

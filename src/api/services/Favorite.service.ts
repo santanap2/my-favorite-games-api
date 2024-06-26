@@ -2,6 +2,7 @@ import { prismaClient } from '../../database/prismaClient'
 import { IGame } from '../../interfaces'
 import { validateGame } from '../validations/Cart'
 import { isAuthenticatedValidation } from '../validations/CookieToken'
+import { UserService } from './User.service'
 
 export class FavoritesService {
   public async read(cookie?: string) {
@@ -37,34 +38,26 @@ export class FavoritesService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async manageFavorite(gameId: string, cookie?: string) {
+  public async manageFavorite(gameId: string, email: string) {
     const validation = await validateGame(Number(gameId))
     if (validation) return validation
 
-    const { status, message, data } = await isAuthenticatedValidation(cookie)
+    const user = new UserService()
+    const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
+    const userFavorites = data.favorites.map((item) => item.products[0])
 
-    const userFavorites = await this.read(cookie)
-    const alreadyFavorited = userFavorites.data?.products.some(
-      (product) => Number(product.id) === Number(gameId),
+    const alreadyFavorited = userFavorites.some(
+      (products) => Number(products.id) === Number(gameId),
     )
 
-    if (userFavorites.data?.products && alreadyFavorited) {
-      const removedFavorite = await this.delete(
-        userFavorites.data?.products,
-        gameId,
-        cookie,
-      )
+    if (userFavorites && alreadyFavorited) {
+      const removedFavorite = await this.delete(userFavorites, gameId, email)
       return removedFavorite
     }
 
-    if (userFavorites.data?.products && !alreadyFavorited) {
-      const favoriteAdded = await this.create(
-        userFavorites.data?.products,
-        gameId,
-        cookie,
-      )
-
+    if (userFavorites && !alreadyFavorited) {
+      const favoriteAdded = await this.create(gameId, email)
       return favoriteAdded
     }
 
@@ -77,8 +70,9 @@ export class FavoritesService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async create(userFavorites: IGame[], gameId: string, cookie?: string) {
-    const { status, message, data } = await isAuthenticatedValidation(cookie)
+  public async create(gameId: string, email: string) {
+    const user = new UserService()
+    const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
 
     const result = await prismaClient.favorite.create({
@@ -104,8 +98,9 @@ export class FavoritesService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async delete(userFavorites: IGame[], gameId: string, cookie?: string) {
-    const { status, message, data } = await isAuthenticatedValidation(cookie)
+  public async delete(userFavorites: IGame[], gameId: string, email: string) {
+    const user = new UserService()
+    const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
 
     const result = await prismaClient.favorite.deleteMany({

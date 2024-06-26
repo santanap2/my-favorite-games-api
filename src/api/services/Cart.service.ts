@@ -64,7 +64,7 @@ export class CartService {
 
       return {
         status: 200,
-        message: 'Carrinho atualizado com sucesso',
+        message: 'Item adicionado ao carrinho com sucesso.',
         data: { user: result.user, products: result.products },
       }
     }
@@ -85,7 +85,7 @@ export class CartService {
     await prismaClient.$disconnect()
     return {
       status: 201,
-      message: 'Carrinho criado e item adicionado com sucesso',
+      message: 'Item adicionado ao carrinho com sucesso.',
       data: { user: result.user, products: result.products },
     }
   }
@@ -120,7 +120,7 @@ export class CartService {
 
       return {
         status: 200,
-        message: 'Carrinho atualizado com sucesso',
+        message: 'Item adicionado ao carrinho com sucesso.',
         data: { user: result.user, products: result.products },
       }
     }
@@ -141,7 +141,7 @@ export class CartService {
     await prismaClient.$disconnect()
     return {
       status: 201,
-      message: 'Carrinho criado e item adicionado com sucesso',
+      message: 'Item adicionado ao carrinho com sucesso.',
       data: { user: result.user, products: result.products },
     }
   }

@@ -152,12 +152,12 @@ export class UserService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async update(userData: IUpdateUser, cookie?: string) {
+  public async update(userData: IUpdateUser, email: string) {
     const {
+      data: dataValidation,
       status: statusValidation,
       message: messageValidation,
-      data: dataValidation,
-    } = await isAuthenticatedValidation(cookie)
+    } = await this.readByEmail(email)
 
     if (!dataValidation)
       return { status: statusValidation, message: messageValidation }
