@@ -3,10 +3,11 @@ POST {{API_URL}}/add-evaluation
 Content-Type: application/json
 
 {
-  "description": "jogo bom mas muito bugado, crasha toda hora",
+  "description": "jogo bom mas muito bugado, crasha toda hora quando to jogando essa bosta, to ficando irritado com isso, parece brincadeira uma coisa dessas namoral, vtnc cd projekt red empresa mercenaria",
   "stars": 2,
-  "productId": 2,
-  "userId": 1
+  "productId": 5,
+  "userId": 1,
+  "email": "pedro@gmail.com"
 }
 ###
 
@@ -16,7 +17,7 @@ Content-Type: application/json
 ###
 
 #Get user evaluations
-GET {{API_URL}}/get-user-evaluations/1
+GET {{API_URL}}/get-user-evaluations?email=pedro@gmail.com
 Content-Type: application/json
 ###
 

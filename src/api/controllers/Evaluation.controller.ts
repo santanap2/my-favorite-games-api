@@ -5,11 +5,10 @@ export class EvaluationController {
   private myService = new EvaluationService()
 
   public async create(req: Request, res: Response) {
-    const { cookie } = req.headers
-    const { description, stars, productId } = req.body
+    const { description, stars, productId, email } = req.body
     const { status, message, data } = await this.myService.create(
       { description, stars, productId },
-      cookie,
+      email,
     )
 
     return res.status(status).json({ message, data })
@@ -28,11 +27,12 @@ export class EvaluationController {
   // ///////////////////////////////////////////////////////////////
 
   public async readUserEvaluations(req: Request, res: Response) {
-    const { cookie } = req.headers
-    const { status, message, data } =
-      await this.myService.readUserEvaluations(cookie)
+    const { email } = req.query
+    const { status, message, data } = await this.myService.readUserEvaluations(
+      email as string,
+    )
 
-    return res.status(status).json({ message, data })
+    return res.status(status).json({ message, evaluations: data })
   }
 
   // ///////////////////////////////////////////////////////////////

@@ -5,16 +5,12 @@ export class OrderController {
   private myService = new OrderService()
 
   public async create(req: Request, res: Response) {
-    const { email } = req.query as {
-      email: string
-    }
-    const {
-      data: { paymentMethod, cardData },
-    } = req.body
+    const { paymentMethod, cardData, email } = req.body
+
     const { status, message, data } = await this.myService.create(
+      email,
       paymentMethod,
       cardData,
-      email,
     )
 
     return res.status(status).json({ message, data })
@@ -49,11 +45,12 @@ export class OrderController {
   // ///////////////////////////////////////////////////////////////
 
   public async readBoughtProducts(req: Request, res: Response) {
-    const { cookie } = req.headers
-    const { status, message, data } =
-      await this.myService.readBoughtProducts(cookie)
+    const { email } = req.query
+    const { status, message, data } = await this.myService.readBoughtProducts(
+      email as string,
+    )
 
-    return res.status(status).json({ message, data })
+    return res.status(status).json({ message, boughtGames: data })
   }
 
   // ///////////////////////////////////////////////////////////////

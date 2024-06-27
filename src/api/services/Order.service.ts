@@ -1,15 +1,14 @@
-/* eslint-disable camelcase */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { prismaClient } from '../../database/prismaClient'
 import { ICardData, IGame, IGameWithOrderInfo } from '../../interfaces'
-import { isAuthenticatedValidation } from '../validations/CookieToken'
 import { CartService } from './Cart.service'
 import { UserService } from './User.service'
 
 export class OrderService {
   public async create(
+    email: string,
     paymentMethod: string,
     cardData: ICardData,
-    email: string,
   ) {
     const user = new UserService()
     const { status, message, data } = await user.readByEmail(email)
@@ -172,8 +171,9 @@ export class OrderService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async readBoughtProducts(cookie?: string) {
-    const { status, message, data } = await isAuthenticatedValidation(cookie)
+  public async readBoughtProducts(email: string) {
+    const user = new UserService()
+    const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
 
     const result = await prismaClient.order.findMany({
@@ -209,7 +209,7 @@ export class OrderService {
       }
 
     return {
-      status: 404,
+      status: 200,
       message: 'Pedido não encontrado ou o usuário não possui autorização',
       data: null,
     }
