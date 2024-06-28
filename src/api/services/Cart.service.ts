@@ -46,32 +46,9 @@ export class CartService {
     const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
 
-    const cartExists = await this.read(email)
-
-    if (cartExists.message === 'Carrinho encontrado com sucesso') {
-      const result = await prismaClient.cart.update({
-        where: { userId: data.id },
-        data: {
-          products: {
-            connect: { id: Number(gameId) },
-          },
-        },
-        include: {
-          user: { select: { id: true, name: true, email: true } },
-          products: true,
-        },
-      })
-
-      return {
-        status: 200,
-        message: 'Item adicionado ao carrinho com sucesso.',
-        data: { user: result.user, products: result.products },
-      }
-    }
-
-    const result = await prismaClient.cart.create({
+    const result = await prismaClient.cart.update({
+      where: { userId: data.id },
       data: {
-        userId: data.id,
         products: {
           connect: { id: Number(gameId) },
         },
@@ -82,11 +59,18 @@ export class CartService {
       },
     })
 
+    if (result)
+      return {
+        status: 200,
+        message: 'Item adicionado ao carrinho com sucesso.',
+        data: { user: result.user, products: result.products },
+      }
+
     await prismaClient.$disconnect()
     return {
-      status: 201,
-      message: 'Item adicionado ao carrinho com sucesso.',
-      data: { user: result.user, products: result.products },
+      status: 500,
+      message: 'Ocorreu um erro inesperado, tente novamente.',
+      data: null,
     }
   }
 

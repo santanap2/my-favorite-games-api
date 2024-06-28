@@ -136,6 +136,16 @@ export class UserService {
       },
     })
 
+    await prismaClient.cart.create({
+      data: {
+        user: {
+          connect: {
+            id: result.id,
+          },
+        },
+      },
+    })
+
     if (!result)
       return {
         status: 500,
