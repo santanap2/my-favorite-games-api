@@ -1,12 +1,12 @@
 export const parseCookie = (cookie?: string) => {
   if (cookie) {
-    const keyValuePairs = cookie.split('&')
+    const cookiePairs = cookie.split('; ')
 
     const result: { [key: string]: string } = {}
 
-    keyValuePairs.forEach((keyValue) => {
-      const [key, value] = keyValue.split('=')
-      result[key] = value
+    cookiePairs.forEach((pair) => {
+      const [key, value] = pair.split('=')
+      result[key] = decodeURIComponent(value)
     })
 
     return result

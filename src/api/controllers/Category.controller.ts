@@ -25,7 +25,7 @@ export class CategoryController {
   public async readAll(_req: Request, res: Response) {
     const { status, message, data } = await this.myService.readAll()
 
-    return res.status(status).json({ message, data })
+    return res.status(status).json({ message, categories: data })
   }
 
   //   public async update(req: Request, res: Response) {}

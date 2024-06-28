@@ -73,10 +73,6 @@ export interface IQueryObject {
   maxPrice?: string | null
 }
 
-export interface IQueryOrder {
-  status?: string | null
-}
-
 export interface ICardData {
   cardNumber: string
   cardName: string

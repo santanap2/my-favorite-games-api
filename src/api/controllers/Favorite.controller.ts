@@ -5,20 +5,20 @@ export class FavoritesController {
   private myService = new FavoritesService()
 
   public async read(req: Request, res: Response) {
-    const { cookie } = req.headers
-    const { status, message, data } = await this.myService.read(cookie)
+    const { email } = req.query
+    const { status, message, data } = await this.myService.read(email as string)
 
-    return res.status(status).json({ message, data })
+    return res.status(status).json({ message, favorites: data })
   }
 
   // ///////////////////////////////////////////////////////////////
 
   public async manageFavorite(req: Request, res: Response) {
-    const { gameId } = req.body
-    const { cookie } = req.headers
+    const { gameId, email } = req.body
+
     const { status, message } = await this.myService.manageFavorite(
       gameId,
-      cookie,
+      email,
     )
 
     return res.status(status).json({ message })

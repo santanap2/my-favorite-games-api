@@ -5,13 +5,21 @@ import { UserService } from '../services/User.service'
 export const isAuthenticatedValidation = async (cookie?: string) => {
   if (!cookie || cookie === '')
     return {
-      status: 401,
-      message: 'Usuário não autenticado',
+      status: 400,
+      message: 'Ocorreu um erro de autenticação, tente novamente',
       data: null,
     }
 
   const parsedCookie = parseCookie(cookie)
-  const payload = verifyToken(parsedCookie?.gamingPlatformAuth || '')
+
+  if (!parsedCookie)
+    return {
+      status: 400,
+      message: 'Ocorreu um erro de autenticação, tente novamente',
+      data: null,
+    }
+
+  const payload = verifyToken(parsedCookie['authjs.session-token'])
 
   if (!payload)
     return {

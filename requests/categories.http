@@ -1,10 +1,11 @@
 #Get all categories
-GET http://localhost:3003/get-categories
+# GET {{API_URL}}/get-categories
+GET {{API_URL}}/get-categories
 Content-Type: application/json
 ###
 
 #Add only one category
-POST http://localhost:3003/create-category
+POST {{API_URL}}/create-category
 Content-Type: application/json
 
 {
@@ -14,7 +15,7 @@ Content-Type: application/json
 ###
 
 #Add many categories
-POST http://localhost:3003/create-categories
+POST {{API_URL}}/create-categories
 Content-Type: application/json
 
 [

@@ -48,6 +48,7 @@ export class UserService {
       message: messageValidation,
       data: dataValidation,
     } = await isAuthenticatedValidation(cookie)
+
     if (!dataValidation)
       return { status: statusValidation, message: messageValidation }
 
@@ -73,19 +74,15 @@ export class UserService {
       where: { email },
     })
 
-    if (!result) return { status: 404, message: 'Usuário não cadastrado' }
+    if (!result) return { status: 200, message: 'Usuário não cadastrado' }
+
+    const { status, data, message } = await this.readOne(result.id)
 
     await prismaClient.$disconnect()
     return {
-      status: 200,
-      message: 'Usuário encontrado com sucesso',
-      data: {
-        id: result.id,
-        email: result.email,
-        name: result.name,
-        phone: result.phone,
-        created_at: result.created_at,
-      },
+      status,
+      message,
+      data,
     }
   }
 
@@ -139,6 +136,16 @@ export class UserService {
       },
     })
 
+    await prismaClient.cart.create({
+      data: {
+        user: {
+          connect: {
+            id: result.id,
+          },
+        },
+      },
+    })
+
     if (!result)
       return {
         status: 500,
@@ -155,12 +162,12 @@ export class UserService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async update(userData: IUpdateUser, cookie?: string) {
+  public async update(userData: IUpdateUser, email: string) {
     const {
+      data: dataValidation,
       status: statusValidation,
       message: messageValidation,
-      data: dataValidation,
-    } = await isAuthenticatedValidation(cookie)
+    } = await this.readByEmail(email)
 
     if (!dataValidation)
       return { status: statusValidation, message: messageValidation }

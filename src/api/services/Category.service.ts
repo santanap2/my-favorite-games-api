@@ -9,8 +9,12 @@ export class CategoryService {
       return { status: validation.status, message: validation.message }
 
     const { data } = await this.readByName({ name, namePt })
+
     if (data)
-      return { status: 400, message: 'Jogo já adicionado no banco de dados' }
+      return {
+        status: 400,
+        message: 'Categoria já adicionada no banco de dados',
+      }
 
     const result = await prismaClient.category.create({
       data: {

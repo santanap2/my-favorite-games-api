@@ -119,7 +119,7 @@ export class GameService {
         }
 
       if (allGames.length === 0)
-        return { status: 404, message: 'Sem jogos adicionados' }
+        return { status: 200, message: 'Sem jogos adicionados' }
 
       return {
         status: 200,
@@ -135,7 +135,7 @@ export class GameService {
 
       if (filteredByName.length === 0)
         return {
-          status: 404,
+          status: 200,
           message: 'Nenhum jogo encontrado',
           data: filteredByName,
         }

@@ -1,21 +1,17 @@
-/* eslint-disable camelcase */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { prismaClient } from '../../database/prismaClient'
-import {
-  ICardData,
-  IGame,
-  IGameWithOrderInfo,
-  IQueryOrder,
-} from '../../interfaces'
-import { isAuthenticatedValidation } from '../validations/CookieToken'
+import { ICardData, IGame, IGameWithOrderInfo } from '../../interfaces'
 import { CartService } from './Cart.service'
+import { UserService } from './User.service'
 
 export class OrderService {
   public async create(
+    email: string,
     paymentMethod: string,
     cardData: ICardData,
-    cookie?: string,
   ) {
-    const { status, message, data } = await isAuthenticatedValidation(cookie)
+    const user = new UserService()
+    const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
 
     if (!paymentMethod)
@@ -24,7 +20,7 @@ export class OrderService {
         message: 'Por favor informe o método de pagamento',
       }
 
-    const { data: cart } = await new CartService().read(cookie)
+    const { data: cart } = await new CartService().read(email)
 
     if (cart?.products && cart.products.length === 0)
       return {
@@ -58,7 +54,7 @@ export class OrderService {
         include: { products: true },
       })
 
-      await new CartService().emptyCart(cookie)
+      await new CartService().emptyCart(email)
       await prismaClient.$disconnect()
       return { status: 201, message: 'Pedido feito com sucesso', data: result }
     }
@@ -72,8 +68,15 @@ export class OrderService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async read(cookie?: string, queryParam?: IQueryOrder) {
-    const { status, message, data } = await isAuthenticatedValidation(cookie)
+  public async read({
+    email,
+    filter,
+  }: {
+    email: string
+    filter?: string | null
+  }) {
+    const user = new UserService()
+    const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
 
     const result = await prismaClient.order.findMany({
@@ -81,7 +84,7 @@ export class OrderService {
       include: { products: true },
     })
 
-    if (!queryParam?.status) {
+    if (!filter) {
       if (!result)
         return {
           status: 500,
@@ -99,7 +102,7 @@ export class OrderService {
       }
     }
 
-    if (queryParam.status === 'all') {
+    if (filter === 'all') {
       if (result.length === 0)
         return {
           status: 200,
@@ -114,13 +117,11 @@ export class OrderService {
       }
     }
 
-    const filteredOrders = result.filter(
-      (order) => order.status === queryParam.status,
-    )
+    const filteredOrders = result.filter((order) => order.status === filter)
 
     if (filteredOrders.length === 0)
       return {
-        status: 404,
+        status: 200,
         message: 'Não há nenhum pedido de acordo com os filtros',
         data: filteredOrders,
       }
@@ -141,8 +142,9 @@ export class OrderService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async readOne(id: string, cookie?: string) {
-    const { status, message, data } = await isAuthenticatedValidation(cookie)
+  public async readOne(id: string, email: string) {
+    const user = new UserService()
+    const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
 
     const result = await prismaClient.order.findUnique({
@@ -161,7 +163,7 @@ export class OrderService {
       }
 
     return {
-      status: 404,
+      status: 400,
       message: 'Pedido não encontrado ou o usuário não possui autorização',
       data: null,
     }
@@ -169,8 +171,9 @@ export class OrderService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async readBoughtProducts(cookie?: string) {
-    const { status, message, data } = await isAuthenticatedValidation(cookie)
+  public async readBoughtProducts(email: string) {
+    const user = new UserService()
+    const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
 
     const result = await prismaClient.order.findMany({
@@ -206,7 +209,7 @@ export class OrderService {
       }
 
     return {
-      status: 404,
+      status: 200,
       message: 'Pedido não encontrado ou o usuário não possui autorização',
       data: null,
     }

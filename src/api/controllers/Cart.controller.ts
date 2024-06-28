@@ -5,22 +5,21 @@ export class CartController {
   private myService = new CartService()
 
   public async read(req: Request, res: Response) {
-    const { cookie } = req.headers
-    const { status, message, data } = await this.myService.read(cookie)
+    const { email } = req.query as { email: string }
+    const { status, message, data } = await this.myService.read(email)
 
-    return res.status(status).json({ message, data })
+    return res.status(status).json({ message, cart: data })
   }
 
   // ///////////////////////////////////////////////////////////////
 
   public async create(req: Request, res: Response) {
-    const { gameId } = req.body
-    const { cookie } = req.headers
+    const { gameId, email } = req.body
 
-    const { status, message, data } = await this.myService.create(
+    const { status, message, data } = await this.myService.create({
       gameId,
-      cookie,
-    )
+      email,
+    })
 
     return res.status(status).json({ message, data })
   }
@@ -28,13 +27,12 @@ export class CartController {
   // ///////////////////////////////////////////////////////////////
 
   public async buyOne(req: Request, res: Response) {
-    const { gameId } = req.body
-    const { cookie } = req.headers
+    const { gameId, email } = req.body
 
-    const { status, message, data } = await this.myService.buyOne(
+    const { status, message, data } = await this.myService.buyOne({
       gameId,
-      cookie,
-    )
+      email,
+    })
 
     return res.status(status).json({ message, data })
   }
@@ -42,12 +40,11 @@ export class CartController {
   // ///////////////////////////////////////////////////////////////
 
   public async removeItemCart(req: Request, res: Response) {
-    const { gameId } = req.body
-    const { cookie } = req.headers
-    const { message, status, data } = await this.myService.removeItemCart(
+    const { gameId, email } = req.body
+    const { message, status, data } = await this.myService.removeItemCart({
       gameId,
-      cookie,
-    )
+      email,
+    })
 
     return res.status(status).json({ message, data })
   }
@@ -55,8 +52,8 @@ export class CartController {
   // ///////////////////////////////////////////////////////////////
 
   public async emptyCart(req: Request, res: Response) {
-    const { cookie } = req.headers
-    const { message, status } = await this.myService.emptyCart(cookie)
+    const { email } = req.body
+    const { message, status } = await this.myService.emptyCart(email)
 
     return res.status(status).json({ message, status })
   }

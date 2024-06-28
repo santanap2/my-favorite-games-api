@@ -1,33 +1,34 @@
 #Add a new evaluation
-POST http://localhost:3003/add-evaluation
+POST {{API_URL}}/add-evaluation
 Content-Type: application/json
 
 {
-  "description": "jogo bom mas muito bugado, crasha toda hora",
+  "description": "jogo bom mas muito bugado, crasha toda hora quando to jogando essa bosta, to ficando irritado com isso, parece brincadeira uma coisa dessas namoral, vtnc cd projekt red empresa mercenaria",
   "stars": 2,
-  "productId": 2,
-  "userId": 1
+  "productId": 5,
+  "userId": 1,
+  "email": "pedro@gmail.com"
 }
 ###
 
 #Get one game evaluations
-GET http://localhost:3003/get-game-evaluations/82
+GET {{API_URL}}/get-game-evaluations/82
 Content-Type: application/json
 ###
 
 #Get user evaluations
-GET http://localhost:3003/get-user-evaluations/1
+GET {{API_URL}}/get-user-evaluations?email=pedro@gmail.com
 Content-Type: application/json
 ###
 
 #Get one user evaluation
-GET http://localhost:3003/get-user-evaluations/21
+GET {{API_URL}}/get-user-evaluations/21
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1Mzc0ODcwLCJleHAiOjE3MDU5Nzk2NzB9.2OYxxP1fmmYygYGDOg29KSd8tTKc3AwFI0o7G2MOH2c
 ###
 
 #Update an evaluation
-PUT http://localhost:3003/update-evaluation
+PUT {{API_URL}}/update-evaluation
 Content-Type: application/json
 Cookie: gamingPlatformAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJuYW1lIjoiUGVkcm8gU2FudGFuYSIsInBob25lIjoiKDMxKSA5OTg2OS01MjE5IiwiaWF0IjoxNzA1Mzc0ODcwLCJleHAiOjE3MDU5Nzk2NzB9.2OYxxP1fmmYygYGDOg29KSd8tTKc3AwFI0o7G2MOH2c
 
