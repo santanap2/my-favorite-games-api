@@ -163,7 +163,7 @@ export class OrderService {
       }
 
     return {
-      status: 404,
+      status: 400,
       message: 'Pedido não encontrado ou o usuário não possui autorização',
       data: null,
     }

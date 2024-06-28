@@ -37,6 +37,7 @@ export class OrderController {
   public async readOne(req: Request, res: Response) {
     const { id } = req.params
     const { email } = req.query as { email: string }
+
     const { status, message, data } = await this.myService.readOne(id, email)
 
     return res.status(status).json({ message, order: data })

@@ -5,9 +5,9 @@ export class EvaluationController {
   private myService = new EvaluationService()
 
   public async create(req: Request, res: Response) {
-    const { description, stars, productId, email } = req.body
+    const { evaluation, email } = req.body
     const { status, message, data } = await this.myService.create(
-      { description, stars, productId },
+      evaluation,
       email,
     )
 
@@ -38,24 +38,25 @@ export class EvaluationController {
   // ///////////////////////////////////////////////////////////////
 
   public async readOneUserEvaluation(req: Request, res: Response) {
-    const { cookie } = req.headers
     const { evaluationId } = req.params
-    const { status, message, data } =
-      await this.myService.readOneUserEvaluation(evaluationId, cookie)
+    const { email } = req.query
 
-    return res.status(status).json({ message, data })
+    const { status, message, data } =
+      await this.myService.readOneUserEvaluation(evaluationId, email as string)
+
+    return res.status(status).json({ message, evaluation: data })
   }
 
   // ///////////////////////////////////////////////////////////////
 
   public async update(req: Request, res: Response) {
-    const { cookie } = req.headers
-    const { evaluationId, stars, description } = req.body
+    const { evaluationUpdate, email } = req.body
+    console.log(email)
 
-    const { status, message, data } = await this.myService.update(
-      { evaluationId, stars, description },
-      cookie,
-    )
+    const { status, message, data } = await this.myService.update({
+      evaluationUpdate,
+      email,
+    })
 
     return res.status(status).json({ message, data })
   }

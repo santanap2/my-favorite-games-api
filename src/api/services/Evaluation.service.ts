@@ -1,6 +1,5 @@
 import { prismaClient } from '../../database/prismaClient'
 import { IEvaluation, IEvaluationUpdate } from '../../interfaces'
-import { isAuthenticatedValidation } from '../validations/CookieToken'
 import {
   validateEvaluationFields,
   validateEvaluation,
@@ -154,7 +153,7 @@ export class EvaluationService {
 
     if (result.length === 0)
       return {
-        status: 404,
+        status: 200,
         message: 'O usuário não fez nenhuma avaliação',
         data: result,
       }
@@ -175,8 +174,9 @@ export class EvaluationService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async readOneUserEvaluation(evaluationId: string, cookie?: string) {
-    const { status, message, data } = await isAuthenticatedValidation(cookie)
+  public async readOneUserEvaluation(evaluationId: string, email: string) {
+    const user = new UserService()
+    const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
 
     const result = await prismaClient.evaluation.findUnique({
@@ -196,7 +196,7 @@ export class EvaluationService {
 
     if (!result)
       return {
-        status: 404,
+        status: 200,
         message: 'Avaliação não encontrada',
         data: null,
       }
@@ -210,11 +210,16 @@ export class EvaluationService {
 
   // ///////////////////////////////////////////////////////////////
 
-  public async update(
-    { evaluationId, stars, description }: IEvaluationUpdate,
-    cookie?: string,
-  ) {
-    const { status, message, data } = await isAuthenticatedValidation(cookie)
+  public async update({
+    evaluationUpdate: { stars, evaluationId, description },
+    email,
+  }: {
+    evaluationUpdate: IEvaluationUpdate
+    email: string
+  }) {
+    console.log('BODY UPDATE', { stars, evaluationId, description, email })
+    const user = new UserService()
+    const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
 
     const invalidStars = validateStars(stars)
