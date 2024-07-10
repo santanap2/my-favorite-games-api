@@ -1,14 +1,3 @@
-#Add only one new game
-POST {{API_URL}}/add-game
-Content-Type: application/json
-
-{}
-###
-
-#Add many new games
-POST {{API_URL}}/add-many-games
-Content-Type: application/json
-
 [
   {
     "name": "Assassins Creed: Origins",
@@ -459,24 +448,3 @@ Content-Type: application/json
     "description": "Marvel Rivals é um jogo de tiro JxJ em equipe com Super-Heróis! \n Reúna um grupo de estrelas da Marvel, crie estratégias e combine seus poderes para executar poderosas habilidades de equipe. Lute em cenários destrutíveis e campos de batalha dinâmicos pelo universo Marvel em constante evolução. \n Elenco Extenso e Variado de Personagens da Marvel \n Escolha entre vários Super-Heróis e Supervilões favoritos dos fãs. como os Vingadores, os Guardiões da Galáxia, os X-Men e muitos outros de todo o Multiverso Marvel. O Teste Alfa começará em maio, quando os jogadores terão acesso a vários Super-Heróis e Supervilões jogáveis, incluindo personagens icônicos como Pantera Negra, Homem-Aranha, Magneto e Magia. \n Partidas Dinâmicas com Ação 6x6 Ágil e Divertida \n Com ambientes detalhados, jogabilidade ágil e campos de batalha sempre dinâmicos, emoção é o que não vai faltar em Marvel Rivals! Lute como Super-Heróis e Supervilões com habilidades extraordinárias e combine esses poderes para criar resultados divertidos e inesperados no campo de batalha. \n Sinergia Entre os Heróis \n Coordene as habilidades dos personagens para criar combinações únicas e ativar habilidades de equipe surpreendentes! Libere a sinergia entre os poderes e crie novas táticas que podem mudar os rumos do combate. Por exemplo, suba nas costas do Groot como Rocket Racoon e forme uma dupla letal para detonar os inimigos, ou use os raios gamas liberados pelo Hulk para carregar a armadura do Homem de Ferro e causar um dano devastador, entre muitos outros! \n Destrua o Cenário com Criatividade \n Abra caminho através do cenário destrutível em vários mundos icônicos da Marvel. De Asgard a Tóquio de 2099, use seus superpoderes e altere o ambiente. Modifique o terreno e crie vantagens estratégicas no campo de batalha! Use o cenário como cobertura para evitar ataques ou como arma improvisada para derrubar inimigos. Há mil e uma maneiras de usar o ambiente para conquistar a vitória. \n Universo em Constante Evolução e Robustas Atualizações Pós-lançamento \n No Multiverso Marvel, as possibilidades são infinitas! Cada temporada vai trazer novos Super-Heróis ao campo de batalha, além de mapas diversos e desafiadores! Desbloqueie novos conteúdos e use-os estrategicamente nos vários modos de jogo. Viva a ação frenética e as possibilidades sem fim em ousadas batalhas em equipe!"
   }
 ]
-###
-
-#Get all games
-GET {{API_URL}}/get-games
-Content-Type: application/json
-###
-
-#Get games with optional query params 'busca' or '(category=true)'
-GET {{API_URL}}/get-games?busca=forza
-Content-Type: application/json
-###
-
-#Get one game by gameId
-GET {{API_URL}}/get-game/6
-Content-Type: application/json
-###
-
-#Get one game by name
-GET {{API_URL}}/get-game-by-name/starfield
-Content-Type: application/json
-###

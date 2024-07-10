@@ -9,8 +9,8 @@ POST {{API_URL}}/create-category
 Content-Type: application/json
 
 {
-  "name": "sports",
-  "namePt": "Esportes"
+  "name": "fighting",
+  "namePt": "Luta"
 }
 ###
 
@@ -24,16 +24,8 @@ Content-Type: application/json
     "namePt": "Ação e aventura"
   },
   {
-    "name": "rpgOpenWorld",
-    "namePt": "RPG de mundo aberto"
-  },
-  {
-    "name": "rpgTurnBased",
-    "namePt": "RPG de turnos"
-  },
-  {
-    "name": "actionTerror",
-    "namePt": "Ação e terror"
+    "name": "actionRpg",
+    "namePt": "RPG de ação"
   },
   {
     "name": "fps",
@@ -48,10 +40,6 @@ Content-Type: application/json
     "namePt": "Corrida"
   },
   {
-    "name": "actionRhythm",
-    "namePt": "Ação e ritmo"
-  },
-  {
     "name": "metroidvania",
     "namePt": "Metroidvania"
   },
@@ -62,6 +50,18 @@ Content-Type: application/json
   {
   "name": "sports",
   "namePt": "Esportes"
+  },
+  {
+  "name": "roguelike",
+  "namePt": "Roguelike"
+  },
+  {
+  "name": "tps",
+  "namePt": "Tiro em terceira pessoa"
+  },
+  {
+  "name": "fighting",
+  "namePt": "Luta"
   }
 ]
 ###
