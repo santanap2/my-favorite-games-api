@@ -15,7 +15,13 @@ dotenv.config()
 const app = express()
 
 app.use(express.json())
-app.use(express.static('public'))
+app.use(
+  express.static('public', {
+    setHeaders: (res) => {
+      res.setHeader('Access-Control-Allow-Origin', '*')
+    },
+  }),
+)
 app.use(
   cors({
     credentials: true,

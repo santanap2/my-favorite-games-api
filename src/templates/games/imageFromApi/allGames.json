@@ -1,21 +1,431 @@
-#Add only one new game
-POST {{API_URL}}/add-game
-Content-Type: application/json
-
-{
-  "name": "Call Of Duty: Black Ops 6",
-  "categoryId": 3,
-  "price": 349.9,
-  "image": "{{API_URL}}/games/images/",
-  "description": "Enquanto a Guerra do Golfo toma conta dos holofotes globais, uma sombria força clandestina se infiltrou nos níveis mais altos da CIA, marcando como traidores todos os que resistem. Exilados de sua agência e do país que um dia os aclamou como heróis, o veterano das Black Ops, Frank Woods, e sua equipe se veem perseguidos pela máquina militar que os criou."
-}
-###
-
-#Add many new games
-POST {{API_URL}}/add-many-games
-Content-Type: application/json
-
 [
+  {
+    "name": "Call Of Duty: MODERN WARFARE III",
+    "categoryId": 3,
+    "price": 349,
+    "image": "{{API_URL}}/games/images/Call_of_Duty_Modern_Warfare_III.jpg",
+    "description": "Na sequência direta do recordista Call of Duty: Modern Warfare II, o Capitão Price e a Força-Tarefa 141 enfrentam a ameaça definitiva.O ultranacionalista e criminoso de guerra, Vladimir Makarov, está estendendo seu domínio por todo o mundo, fazendo com que a Força-Tarefa 141 lute como nunca antes."
+  },
+  {
+    "name": "Call Of Duty: Black Ops 6",
+    "categoryId": 3,
+    "price": 349.9,
+    "image": "{{API_URL}}/games/images/Call_of_Duty_Black_Ops_6.jpg",
+    "description": "Enquanto a Guerra do Golfo toma conta dos holofotes globais, uma sombria força clandestina se infiltrou nos níveis mais altos da CIA, marcando como traidores todos os que resistem. Exilados de sua agência e do país que um dia os aclamou como heróis, o veterano das Black Ops, Frank Woods, e sua equipe se veem perseguidos pela máquina militar que os criou."
+  },
+  {
+    "name": "Hellblade: Senua's Sacrifice",
+    "categoryId": 1,
+    "price": 59,
+    "image": "{{API_URL}}/games/images/Hellblade_Senua's_Sacrifice.jpg",
+    "description": "Dos criadores de Heavenly Sword, Enslaved: Odyssey to the West e DmC: Devil May Cry, chega-nos a viagem brutal de uma guerreira até ao mito e à loucura. \n No tempo dos vikings, uma guerreira celta parte numa demanda visionária arrepiante até ao inferno viking para lutar pela arma do seu falecido amado. \n Criado em colaboração com neurocientistas e pessoas que sofreram de psicoses, Hellblade: Senua’s Sacrifice vai arrastar-te para as profundezas da fúria melancólica da mente despedaçada da Senua."
+  },
+  {
+    "name": "Senua's Saga: Hellblade II",
+    "categoryId": 1,
+    "price": 229.9,
+    "image": "{{API_URL}}/games/images/Senua's_Saga_Hellblade_II.jpg",
+    "description": "A sequência do premiado Hellblade: Senua's Sacrifice, Senua retorna em uma jornada brutal de sobrevivência através do mito e tormento da Islândia Viking. Com a intenção de salvar aqueles que foram vítimas dos horrores da tirania, Senua enfrenta uma batalha de superação das trevas internas e externas. \n Mergulhe no próximo capítulo da história de Senua, uma experiência cuidadosamente trabalhada contada através da imersão cinematográfica, visuais lindamente realizados e som encapsulante."
+  },
+  {
+    "name": "Grand Theft Auto IV: The Complete Edition",
+    "categoryId": 10,
+    "price": 99,
+    "image": "{{API_URL}}/games/images/Grand_Theft_Auto_IV_The_Complete_Edition.jpg",
+    "description": "O quê que o sonho americano significa hoje em dia? Para Niko Bellic, que acaba de desembarcar de um navio vindo da Europa, é a esperança de escapar do seu passado. Para seu primo, Roman, é a visão de que juntos eles podem ficar ricos em Liberty City, a porta para a terra das oportunidades. À medida que adquirem dívidas e são arrastados para o mundo perverso do crime por uma série de trapaceiros, ladrões e sociopatas, eles descobrem que a realidade é muito diferente do sonho em uma cidade que cultua dinheiro e status e que é o paraíso para quem tem essas coisas, mas um pesadelo para quem não têm."
+  },
+  {
+    "name": "Grand Theft Auto V",
+    "categoryId": 10,
+    "price": 81.49,
+    "image": "{{API_URL}}/games/images/Grand_Theft_Auto_V.jpg",
+    "description": "Quando um tratante inexperiente, um ladrão de bancos aposentado e um psicopata aterrorizante se envolvem com algumas das figuras mais assustadoras e problemáticas do submundo do crime, do governo dos EUA e da indústria do entretenimento, eles precisam realizar uma série de golpes ousados para sobreviver em uma cidade implacável onde não podem confiar em ninguém, nem mesmo um no outro. \n Os jogadores poderão transferir o progresso do Modo História do GTAV e os personagens e progresso atuais do GTA Online para o PS5 e o Xbox Series X|S com uma migração única."
+  },
+  {
+    "name": "Grand Theft Auto VI",
+    "categoryId": 10,
+    "price": 349.9,
+    "image": "{{API_URL}}/games/images/Grand_Theft_Auto_VI.jpg",
+    "description": "Grand Theft Auto VI vai para o estado de Leonida, que abriga as ruas iluminadas pelas luzes neon de Vice City e arredores, na maior e mais imersiva evolução da franquia Grand Theft Auto. Disponível em 2025 para PlayStation 5 e Xbox Series X|S."
+  },
+  {
+    "name": "Red Dead Redemption 2",
+    "categoryId": 1,
+    "price": 129.9,
+    "image": "{{API_URL}}/games/images/Red_Dead_Redemption_2.jpg",
+    "description": "Estados Unidos, 1899. Arthur Morgan e a gangue Van der Linde são forçados a fugir. Com agentes federais e os melhores caçadores de recompensas no seu encalço, a gangue precisa roubar, assaltar e lutar para sobreviver no impiedoso coração dos Estados Unidos. Conforme divisões internas profundas ameaçam despedaçar a gangue, Arthur deve fazer uma escolha entre os seus próprios ideais e a lealdade à gangue que o criou. \n Red Dead Redemption 2 também inclui o mundo compartilhado de Red Dead Online – trilhe seu próprio caminho enquanto enfrenta autoridades, gangues fora da lei e animais selvagens ferozes para construir uma vida na fronteira dos Estados Unidos. Monte um acampamento, cavalgue com ou sem um bando e explore tudo, das montanhas nevadas no norte aos pântanos do sul, de postos remotos a fazendas agitadas e cidades vibrantes. Vá atrás de recompensas, cace, pesque e negocie, procure tesouros exóticos, toque sua própria destilaria clandestina de Moonshine ou se torne Naturalista para aprender os segredos do reino animal e muito mais num mundo rico em detalhes. Inclui todos os recursos, conteúdos e melhorias adicionados desde o lançamento."
+  },
+  {
+    "name": "Cyberpunk 2077 Ultimate Edition",
+    "categoryId": 2,
+    "price": 299,
+    "image": "{{API_URL}}/games/images/Cyberpunk_2077_Ultimate_Edition.jpg",
+    "description": "Cyberpunk 2077 é um jogo de ação e aventura em mundo aberto do estúdio CD Projekt Red, criador de The Witcher 3: Wild Hunt. \n O jogo acontece em Night City, uma megalópole obcecada pelo poder, glamour e modificações biológicas. Você controla V, um mercenário fora da lei em busca de um implante sem igual, que carrega o segredo da imortalidade. \n  Atualizado para a nova geração e com conteúdo adicional grátis, personalize seu personagem e estilo de jogo enquanto aceita serviços, constrói uma reputação e desbloqueia melhorias. \n Seus relacionamentos e decisões definem a história e o mundo à sua volta. As lendas nascem aqui. Qual será a sua?"
+  },
+  {
+    "name": "Diablo IV",
+    "categoryId": 2,
+    "price": 349.9,
+    "image": "{{API_URL}}/games/images/Diablo_IV.jpg",
+    "description": "Diablo® IV é a experiência suprema de RPG de ação com infinitos males para matar, inúmeras habilidades para dominar, masmorras horripilantes e tesouros lendários. Embarque na campanha épica sozinho ou com amigos e conheça personagens memoráveis em uma história eletrizante situada em um belo mundo sombrio, ou explore um fim de jogo vasto: lute pelo primeiro lugar nas classificações do Desafio, reaja ao ataque do Inferno nas Marés Infernais, domine a Forja para criar suas armas supremas e crie personagens poderosos, com jogo e progressão multiplataforma em todas as plataformas disponíveis."
+  },
+  {
+    "name": "Baldur's Gate 3",
+    "categoryId": 2,
+    "price": 199.9,
+    "image": "{{API_URL}}/games/images/Baldur's_Gate_3.jpg",
+    "description": "Refém, à deriva e a perder o controlo. Estás a transformar-te num monstro, mas à medida que a corrupção se alastra dentro de ti, também o teu poder cresce. Forja uma história de amizade e traição, sacrifício e sobrevivência e de fascínio pelo poder absoluto. Tu e o teu grupo veem-se envolvidos num conflito entre demónios, divindades e forças sobrenaturais sinistras que ditará o destino dos Forgotten Realms. \n A DERRADEIRA EXPERIÊNCIA DE D&D \n Cria a tua personagem através de um vasto leque de raças e classes de D&D, ou vive a história cuidadosamente criada de uma personagem original. Desfruta da aventura, do saque, da batalha e do romance enquanto exploras os Forgotten Realms e mais além. Joga a solo ou num grupo para até quatro jogadores no modo multijogador, mas escolhe os seus membros a com cuidado. \n ALTERNA FACILMENTE ENTRE OS MODOS PARA UM JOGADOR E MULTIJOGADOR \n Cada personagem tem a sua história, a solo ou em grupo. Junta forças em combate e separa-te do grupo na hora de seguir a tua jornada e agenda próprias. Tece, em conjunto, a estratégia perfeita, ou então... espalha o caos quando os teus amigos menos esperarem. Baldur's Gate 3 dá-te um modo cooperativo em ecrã dividido para até dois jogadores na PlayStation®5, e modo online para até quatro jogadores, fazendo dele uma aventura perfeita para jogar tanto a solo como com amigos. \n NÃO HÁ AVENTURAS IGUAIS \n Os Forgotten Realms são um mundo vasto, detalhado, diverso e repleto de segredos, obrigando-te a explorar em todas as direções, até verticalmente. Esgueira-te, mergulha, empurra, trepa e salta ao longo da tua jornada desde as profundezas do Underdark aos telhados reluzentes de Upper City. Decide como sobreviver e deixar a tua marca no mundo. \n UMA NARRATIVA ÉPICA E CINEMATOGRÁFICA \n Forjado com o novo motor Divinity 4.0, Baldur's Gate 3 dá-te uma liberdade sem igual para explorar, experimentar e interagir com um mundo que reage às tuas escolhas. A narrativa enorme e cinematográfica cria uma ligação inigualável às personagens enquanto embarcas na nossa maior aventura até à data. Apaixona-te, mente, ajuda, cria obstáculos e cresce lado a lado com os teus amigos, graças ao motor de nova geração da Larian."
+  },
+  {
+    "name": "Hogwarts Legacy",
+    "categoryId": 1,
+    "price": 299.9,
+    "image": "{{API_URL}}/games/images/Hogwarts_Legacy.jpg",
+    "description": "Hogwarts Legacy é um RPG de ação e mundo aberto ambientado no mundo apresentado nos livros de Harry Potter. Agora você pode assumir o controle da ação e criar sua própria aventura. Descubra a sensação de viver em Hogwarts enquanto faz aliados, luta contra bruxos das trevas e, por fim, decide o destino do mundo bruxo. Seu legado é o que você faz dele."
+  },
+  {
+    "name": "Black Myth Wukong",
+    "categoryId": 7,
+    "price": 299,
+    "image": "{{API_URL}}/games/images/Black_Myth_Wukong.jpg",
+    "description": "Black Myth: Wukong é um RPG de ação inspirado na mitologia da China e baseado em 'Jornada para o Oeste', um dos quatro grandes romances clássicos da literatura chinesa. \n No papel do Predestinado, você partirá numa aventura repleta de desafios e maravilhas para descobrir a verdade obscura por trás de uma lenda gloriosa do passado. \n Como o Predestinado, você enfrentará inimigos poderosos e rivais dignos no decorrer da jornada. Trave batalhas épicas nas quais render-se não é uma opção. \n Além de dominar diversas técnicas com o bastão, você terá liberdade para combinar diferentes feitiços, habilidades, armas e equipamentos para encontrar a estratégia vencedora mais adequada ao seu estilo de combate. "
+  },
+  {
+    "name": "Ori and the Blind Forest",
+    "categoryId": 6,
+    "price": 99,
+    "image": "{{API_URL}}/games/images/Ori_and_the_Blind_Forest.jpg",
+    "description": "A floresta de Nibel está morrendo. Após uma grande tempestade colocar em andamento uma série de eventos devastadores, Ori deve viajar em busca da coragem para confrontar um inimigo sombrio e salvar a floresta de Nibel. “Ori and the Blind Forest” conta a história de um jovem órfão destinado ao heroísmo, em um jogo de Ação em Plataformas com visual incrível criado pela Moon Studios. Apresentando artes pintadas à mão, personagens animados meticulosamente, uma trilha sonora totalmente orquestral e dezenas de novos recursos na Definitive Edition, “Ori and the Blind Forest” explora uma história profundamente emocional sobre amor e sacrifício e sobre a esperança que existe em todos nós. \n NOVIDADES DA DEFINITIVE EDITION \n • Recheada de conteúdos novos e adicionais: Novas áreas, novos segredos, novas habilidades, mais sequências da história, vários níveis de dificuldade, suporte total a retornos e muito mais! \n • Descobra o passado de Naru em dois ambientes totalmente novos. \n • Domine duas novas habilidades poderosas – Impulso e Explosão de Luz. \n • Encontre novas áreas secretas e explore Nibel mais rápido teletransportando-se entre as Fontes Espirituais."
+  },
+  {
+    "name": "Ori and the Will of the Wisps",
+    "categoryId": 6,
+    "price": 99,
+    "image": "{{API_URL}}/games/images/Ori_and_the_Will_of_the_Wisps.jpg",
+    "description": "Descubra o verdadeiro destino de Ori \n Embarque em uma jornada em um mundo vasto e exótico, com inimigos gigantescos e quebra-cabeças desafiadores nesta sequência imperdível, totalmente otimizada para Xbox Series X e Xbox Series S. \n Ori, o pequeno espírito, já enfrentou muitos perigos, mas quando um voo fatídico ameaça a corujinha Kun, será necessário mais do que apenas coragem para reunir uma família, curar uma terra despedaçada e descobrir seu verdadeiro destino. Dos criadores do aclamado jogo de ação e plataforma Ori and the Blind Forest, chega uma nova aventura em um mundo vasto repleto de amigos e inimigos trazidos à vida por um deslumbrante trabalho artístico pintado à mão. Com uma trilha sonora original inteiramente orquestrada, Ori and the Will of the Wisps mantém a tradição da Moon Studios de criar jogos de ação e plataforma detalhados e narrativas profundamente emocionantes."
+  },
+  {
+    "name": "God of War",
+    "categoryId": 1,
+    "price": 249,
+    "image": "{{API_URL}}/games/images/God_of_War.jpg",
+    "description": "Kratos é pai novamente. Como mentor e protetor de Atreus, um filho determinado a ganhar seu respeito, ele é forçado a encarar e controlar a fúria que há muito tempo o define enquanto viaja por um mundo ameaçador com o seu filho. \n Com a vingança contra os deuses do Olimpo no passado, Kratos agora vive no reino das divindades e monstros nórdicos. \n É nesse mundo duro e impiedoso que ele deve lutar para sobreviver enquanto ensina seu filho a fazer o mesmo e tenta impedi-lo de repetir os erros cruéis do Fantasma de Esparta. \n Esta impressionante repaginação de God of War reúne todas as características marcantes dessa famosa franquia — combate brutal, lutas épicas contra chefes e uma grandiosidade de tirar o fôlego — e as mescla a uma narrativa poderosa e emocionante que reestabelece o mundo de Kratos. "
+  },
+  {
+    "name": "God of War Ragnarok",
+    "categoryId": 1,
+    "price": 249.9,
+    "image": "{{API_URL}}/games/images/God_of_War_Ragnarok.jpg",
+    "description": "Do Santa Monica Studio, esta é a sequência da aclamada versão de 2018 de God of War. O Fimbulwinter já começou. Kratos e Atreus devem viajar pelos Nove Reinos em busca de respostas enquanto as forças asgardianas se preparam para uma batalha profetizada que causará o fim do mundo. Nessa jornada, eles explorarão paisagens míticas impressionantes e enfrentarão inimigos aterradores: deuses nórdicos e monstros. A ameaça do Ragnarök se aproxima. Kratos e Atreus terão de escolher entre a segurança deles próprios e a dos reinos."
+  },
+  {
+    "name": "Starfield",
+    "categoryId": 2,
+    "price": 279,
+    "image": "{{API_URL}}/games/images/Starfield.jpg",
+    "description": "Starfield é o primeiro universo novo em mais de 25 anos da Bethesda Game Studios, os premiados criadores de The Elder Scrolls V: Skyrim e Fallout 4. Neste RPG para a nova geração em meio às estrelas, crie o personagem que você quiser e explore com liberdade inigualável enquanto embarca em uma jornada épica para desvendar o maior mistério da humanidade. \n No ano de 2330, a humanidade já se aventurou para além do nosso sistema solar, colonizando planetas novos, e agora habita o espaço. Você passará a integrar a Constelação – o último grupo de exploradores espaciais em busca de artefatos raros pela galáxia – e navegará pela vastidão do espaço no maior e mais ambicioso jogo da Bethesda Game Studios."
+  },
+  {
+    "name": "Marvel's Spider-Man",
+    "categoryId": 1,
+    "price": 249,
+    "image": "{{API_URL}}/games/images/Marvel's_Spider_Man.jpg",
+    "description": "Esse não é o Spider-Man que você conheceu ou viu. No Marvel’s Spider-Man Remasterizado, encontramos um Peter Parker experiente e mais preparado para enfrentar a onda de crimes de Nova York. Em contrapartida, ele luta para conciliar o caos em sua vida pessoal e carreira enquanto o destino da Nova York da Marvel pesa sobre seus ombros. \n Descubra a história completa do teioso com Marvel's Spider-Man: Miles Morales Ultimate Edition. Este pacote imperdível vem com um código do voucher** para Marvel’s Spider-Man Remasterizado, que inclui o premiado Marvel's Spider-Man remasterizado e aprimorado para console PS5 e os três capítulos de DLC de A Cidade que Nunca Dorme da aventura. "
+  },
+  {
+    "name": "Marvel's Spider-Man Miles Morales",
+    "categoryId": 1,
+    "price": 249,
+    "image": "{{API_URL}}/games/images/Marvel's_Spider-Man_Miles_Morales.jpg",
+    "description": "Na mais nova aventura do universo de Marvel's Spider-Man, o adolescente Miles Morales está se adaptando a um novo lar enquanto segue os passos de seu mentor, Peter Parker, como novo Spider-Man. \n Mas quando uma violenta disputa de forças ameaça destruir sua vizinhança, o aspirante a herói percebe que com grandes poderes também vêm grandes responsabilidades. Para salvar a Nova York da Marvel, Miles deve reconhecer e assumir o título de Spider-Man."
+  },
+  {
+    "name": "Marvel's Spider-Man 2",
+    "categoryId": 1,
+    "price": 249.9,
+    "image": "{{API_URL}}/games/images/Marvel's_Spider_Man_2.jpg",
+    "description": "Os Spiders Peter Parker e Miles Morales estão de volta em mais uma aventura eletrizante da famosa franquia Marvel's Spider-Man para PS5. \n Pendure-se, pule e plane com as novas Asas de Teia para percorrer a Nova York da Marvel. Alterne rapidamente entre Peter Parker e Miles Morales para jogar histórias diferentes e usar novos poderes épicos enquanto o infame vilão Venom ameaça a vida deles, das pessoas próximas a eles e toda a cidade."
+  },
+  {
+    "name": "Halo: The Master Chief Collection",
+    "categoryId": 3,
+    "price": 199,
+    "image": "{{API_URL}}/games/images/Halo_The_Master_Chief_Collection.jpg",
+    "description": "Aprimorada, atualizada e melhor do que nunca, agora a história completa do Master Chief está otimizada para o Xbox Series X|S. Aproveite recursos de próxima geração como carregamento rápido, cross-play multigeração, ajuste do campo de visão, experiência com tela dividida aprimorada e resolução de até 4K a 120FPS. \n Homenageando o herói lendário e sua jornada épica, a coletânea Halo: The Master Chief Collection reúne a história completa do Master Chief. Halo: Combat Evolved Anniversary, Halo 2: Anniversary, Halo 3, Halo 4, e agora Halo: Reach e Halo 3 ODST, foram incluídos e integrados em uma experiência única. \n O Pacote Digital da Master Chief Collection é a maior experiência de Halo já lançada, com um total de 67 missões de campanha, mais de 120 mapas multijogador (incluindo os mapas originais de Halo Combat Evolved), mapas Spartan Ops e inúmeras maneiras de jogar os conteúdos criados pela comunidade com a Forge. Agora atualizada com aprimoramentos para o Xbox Series X, esta é a coletânea dos sonhos de todo fã de Halo!*"
+  },
+  {
+    "name": "Halo Infinite",
+    "categoryId": 3,
+    "price": 299,
+    "image": "{{API_URL}}/games/images/Halo_Infinite.jpg",
+    "description": "Quando toda a esperança está perdida e o destino da humanidade está em jogo, o Master Chief está pronto para enfrentar o inimigo mais implacável que já enfrentou. Entre na armadura do maior herói da humanidade para vivenciar uma aventura épica de mundo aberto e explorar a grande escala do anel Halo. \n Com a Campanha Cooperativa e o Replay de Missões, você pode rever seus momentos preferidos, descobrir colecionáveis e explorar as maravilhas de Zeta Halo por conta própria ou com até três outros membros da esquadra."
+  },
+  {
+    "name": "Ghost Of Tsushima: Director's Cut",
+    "categoryId": 1,
+    "price": 249.9,
+    "image": "{{API_URL}}/games/images/Ghost_Of_Tsushima_Director's_Cut.jpg",
+    "description": "Descubra as maravilhas ocultas de Tsushima nesse jogo de ação e aventura em mundo aberto da Sucker Punch Productions e do PlayStation Studios, disponível para PS5 e PS4. \n Forje um novo caminho e trave uma guerra atípica pela liberdade de Tsushima. Desafie oponentes com sua katana, domine o arco para eliminar ameaças distantes, desenvolva táticas furtivas para emboscar inimigos e explore uma nova história na Ilha Iki. \n A Versão do Diretor inclui todo o conteúdo adicional lançado até agora e novos conteúdos: \n Jogo completo. \n  Expansão Ilha Iki: História inédita, novos minijogos, tipos de inimigos e muito mais. \n * Modo cooperativo online, Lendas.** \n  Minilivro de Arte Digital. \n  Um Ponto de Técnica.* \n  Amuleto das Graças de Hachiman.* \n  Conjunto de Visuais do Herói de Tsushima: Máscara Dourada, Kit de Espadas, Cavalo e Sela.* \n  Comentários do Diretor: A equipe criativa conversa com um renomado historiador japonês para examinar e comparar o mundo de Ghost of Tsushima aos eventos reais que o inspiraram."
+  },
+  {
+    "name": "Assassins Creed: Origins",
+    "categoryId": 2,
+    "price": 99,
+    "image": "{{API_URL}}/games/images/Assassins_Creed_Origins.jpg",
+    "description": "ASSASSIN'S CREED® ORIGINS É UM NOVO COMEÇO \n Antigo Egito, uma terra de nobreza e intriga, está desaparecendo em uma luta implacável pelo poder. Desvende segredos obscuros e mitos esquecidos enquanto você retorna ao momento fundador: A Origem da Irmandade dos Assassinos. \n UM PAÍS PARA DESCOBRIR \n Navegue pelo Nilo, descubra os mistérios das pirâmides ou lute contra perigosas facções antigas e bestas selvagens enquanto você explora essa terra gigantesca e imprevisível. \n UMA NOVA HISTÓRIA CADA VEZ QUE VOCÊ JOGA \n Participe de diversas missões e histórias emocionantes enquanto você cruza seu caminhos com personagens fortes e memoráveis, desde os mais ricos bem-nascidos até marginais perdidos e desesperados. \n NOVO ESTILO DE RPG DE AÇÃO \n Experimente uma maneira completamente nova de lutar. Saqueie e use dezenas de armas com diferentes características e níveis de raridade. Explore a profunda mecânica de progressão e desafie suas habilidades contra chefões únicos e poderosos."
+  },
+  {
+    "name": "Assassins Creed: Odyssey",
+    "categoryId": 2,
+    "price": 99,
+    "image": "{{API_URL}}/games/images/Assassins_Creed_Odyssey.jpg",
+    "description": "Escreva sua própria odisseia épica para se tornar um herói lendário de Esparta. Lute pelo seu destino num mundo prestes a ruir. Influencie como a história se desenrola num mundo em constante mudança, moldado por suas escolhas. HERÓI LENDÁRIO DE ESPARTA \n Embarque na sua jornada desde pária até herói lendário de Esparta. A GRÉCIA ANTIGA ESPERA POR VOCÊ \n Explore um país inteiro repleto de encontros inesperados em ambientes selvagens e cidades antigas movimentadas. ESCOLHA O SEU CAMINHO \n Suas escolhas moldam o mundo à sua volta. Jogue num mundo vivo que reage constantemente a todas as suas decisões. LUTE EM BATALHAS ÉPICAS \n Ataque em conflitos épicos entre Esparta e Atenas em batalhas com 150 soldados de cada lado.VELEJE PELO MAR EGEU \n Recrute a tripulação e personalize seu navio para explorar e batalhar pelo seu caminho nos mares abertos."
+  },
+  {
+    "name": "Assassins Creed: Valhalla",
+    "categoryId": 2,
+    "price": 99,
+    "image": "{{API_URL}}/games/images/Assassins_Creed_Valhalla.jpg",
+    "description": "A viagem de Eivor vai chegar ao fim no Assassin's Creed Valhalla: The Last Chapter, um novo pack de história grátis que coloca um ponto final na saga do Wolf-Kissed. \n Shared History é uma nova missão grátis para todos os jogadores do Assassin's Creed Valhalla e conta com Roshan, do Assassin's Creed Mirage. \n Cria a tua lenda viking a 60 fps e em resolução 4K na Xbox Series X. \n Parte numa missão épica em busca de glória na pele de Eivor, uma lenda viking. Explora Inglaterra durante a Idade das Trevas e ataca os teus inimigos, cria a tua povoação e aumenta o teu poder político para tentares conquistar um lugar entre os deuses em Valhalla. \n - Lidera incursões viking épicas contra fortalezas e soldados saxões. \n - Equipa-te com uma arma poderosa em cada mão e sente na pele o estilo de combate visceral dos vikings. \n - Coloca-te à prova com a série de inimigos mais variada de sempre de Assassin's Creed. \n - Molda a tua personagem e a povoação do teu clã a cada escolha. \n - Explora um mundo aberto durante a Idade das Trevas, desde as costas inóspitas da Noruega até aos fabulosos reinos de Inglaterra."
+  },
+  {
+    "name": "Assassins Creed: Mirage",
+    "categoryId": 2,
+    "price": 199,
+    "image": "{{API_URL}}/games/images/Assassins_Creed_Mirage.jpg",
+    "description": "Vivencie a história de Basim, um ladrão de rua astuto em busca de respostas e justiça, enquanto percorre as agitadas ruas de Bagdá do século IX. Por meio de uma antiga e misteriosa organização, conhecida como Ocultos, ele se tornará um Mestre Assassino mortal e transformará seu destino de maneiras que ele nunca poderia imaginar. \n - Experimente uma visão moderna da jogabilidade e dos recursos icônicos que definiram a franquia por 15 anos. \n - Passeie de forma fluida pela cidade e elimine inimigos furtivamente com assassinatos ainda mais viscerais. \n - Explore uma cidade bastante populosa e agitada, cujos habitantes reagem a cada movimento seu, e revele os segredos de quatro distritos peculiares, enquanto se aventura pela Era Dourada de Bagdá."
+  },
+  {
+    "name": "Assassins Creed: Shadows",
+    "categoryId": 2,
+    "price": 349.9,
+    "image": "{{API_URL}}/games/images/Assassins_Creed_Shadows.jpg",
+    "description": "Viva uma história épica de ação e aventura ambientada no Japão feudal! Torne-se uma assassina shinobi letal e um poderoso samurai lendário enquanto explora um mundo aberto maravilhoso em tempos caóticos. Jogue com dois aliados improváveis enquanto desvenda uma história em comum. Domine estilos de jogo complementares, crie sua liga shinobi, personalize seu esconderijo e traga uma nova era ao Japão. \n – Explore o mundo aberto cativante do Japão feudal, de castelos espetaculares e portos movimentados a santuários pacíficos e paisagens devastadas pela guerra. Aventure-se em climas imprevisíveis, mudanças de estação e ambientes reativos. \n – Jogue com Naoe, uma assassina shinobi, e Yasuke, um samurai lendário, enquanto vivencia suas histórias fascinantes e domina seus estilos de luta complementares. Como Naoe, use a furtividade para não ser detectada e a agilidade para confundir seus inimigos. Como Yasuke, ataque seus adversários com poder e precisão letais. Desbloqueie novas habilidades e equipamentos, e progrida de forma independente com cada personagem. \n – Faça da informação a sua arma enquanto explora o mundo e constrói sua própria rede de espiões para ter olhos e ouvidos por todos os cantos e encontrar seus próximos alvos. Ao longo de sua jornada, recrute novos aliados com habilidades exclusivas que vão ajudar a cumprir suas missões. \n – Crie um esconderijo totalmente personalizado para treinar sua liga shinobi, fabricar novos equipamentos e interagir com personagens importantes, e escolha a disposição, decorações e acessórios de sua base."
+  },
+  {
+    "name": "Gears of War: Ultimate Edition",
+    "categoryId": 10,
+    "price": 99.9,
+    "image": "{{API_URL}}/games/images/Gears_of_War_Ultimate_Edition.jpg",
+    "description": "Uma vez que a compra estiver concluída, baixe este jogo selecionando o botão `Gerenciar` na página de detalhes do produto, no seu console. \n O Gears of War original, marco na história dos jogos de ação, retorna brilhantemente remasterizado e modernizado para Xbox One. Inclui o jogo original, o pacote de Skins Especiais para Armas e o personagem Aaron Griffin para serem usados em partidas multijogador."
+  },
+  {
+    "name": "Gears of War 2",
+    "categoryId": 10,
+    "price": 69.9,
+    "image": "{{API_URL}}/games/images/Gears_Of_War_2.jpg",
+    "description": "O inverno se aproxima. A guerra continua. Cidades inteiras estão afundando, engolidas por uma nova ameaça vinda de baixo. Em breve a humanidade não terá mais nada para defender. Resta apenas uma opção: um ataque total à Locust Horde. • O novo padrão da HD Gaming Controles inovadores e intensidade incomparável fizeram de Gears of War® um dos jogos Xbox 360® mais vendidos de todos os tempos. Avanços revolucionários no Unreal® Engine 3 elevam o padrão novamente. • Uma experiência de grande sucesso Use inimigos como escudos, lute em duelos de motosserra e descubra novos monstros, armas e veículos em uma campanha emocionante de perdas e retribuição."
+  },
+  {
+    "name": "Gears of War 3",
+    "categoryId": 10,
+    "price": 69.9,
+    "image": "{{API_URL}}/games/images/Gears_of_War_3.jpg",
+    "description": "Gears of War 3 é a espetacular conclusão de uma das mais memoráveis e celebradas sagas da história dos videogames. Desenvolvido pela Epic Games exclusivamente para o Xbox 360, Gears of War 3 mergulha os jogadores em um angustiante conto de esperança, sobrevivência e fraternidade.Em Gears of War 3, os jogadores lutam com Marcus Fenix, o grisalho herói de guerra e líder do Esquadrão Delta. Dezoito meses após a queda da última cidade humana, a guerra contra os Locust continua. Enquanto isso, muito abaixo da superfície, uma terrível nova ameaça está infectando o planeta de dentro para fora. Com os sobreviventes dispersos e a civilização em ruínas, o tempo está se esgotando para Marcus e seus companheiros à medida que lutam para salvar a raça humana."
+  },
+  {
+    "name": "Gears of War: Judgment",
+    "categoryId": 10,
+    "price": 69.9,
+    "image": "{{API_URL}}/games/images/Gears_of_War_Judgment.jpg",
+    "description": "Logo após o Dia da Emergência, o destino do mundo se apoia nos ombros do jovem tenente da CGO, Damon Baird, e sua equipe: a Esquadra Kilo. Enquanto o mundo de Sera é destruído a oseu redor, Kilo precisa assumir sua posição, quebrar as regras e entrar em combate com um novo e terrível inimigo neste episódio de introdução de enorme sucesso de uma das franquias mais celebradas da história dos jogos."
+  },
+  {
+    "name": "Gears of War: 4",
+    "categoryId": 10,
+    "price": 99,
+    "image": "{{API_URL}}/games/images/Gears_of_War_4.jpg",
+    "description": "Começa a nova saga de uma das franquias de videogame mais aclamadas da história. Depois de escapar por pouco de um ataque ao seu vilarejo, JD Fenix e seus amigos Kait e Del, devem resgatar seus entes queridos e descobrir a origem de um novo e monstruoso inimigo. \n Nunca lute sozinho: jogue a Campanha com seus amigos no modo cooperativo para dois jogadores com tela dividida ou pelo Xbox Live. O segundo jogador pode escolher Kait ou Del para jogar. Horda 3.0: alie-se a outros 4 jogadores e enfrente ondas consecutivas de inimigos cada vez mais difíceis. Escolha sua classe de combate, aumente o nível de suas habilidades e instale fortificações em qualquer lugar do mapa. Modos Multijogador Versus explosivos: enfrente outros jogadores online em modos de jogo clássicos e inéditos com a fluidez de 60 quadros por segundo e em servidores dedicados. Um novo sistema de classificação por ranking visível possibilita organizar partidas de forma mais justa para jogadores casuais, competitivos e até profissionais."
+  },
+  {
+    "name": "Gears 5",
+    "categoryId": 10,
+    "price": 199.9,
+    "image": "{{API_URL}}/games/images/Gears_5.jpg",
+    "description": "De uma das sagas mais aclamadas dos jogos, a renomada campanha e o multijogador atualizado de Gears 5 estão totalmente otimizados com novos recursos para a atualização do Xbox Series X|S. \n Campanha: com a guerra de todas as frentes em andamento, Kait Diaz foge para entender sua conexão com o inimigo e descobre quem representa um verdadeiro perigo para Sera: ela mesma. Os novos recursos de campanha permitem que você desfrute das suas skins de personagens e armas em novas experiências de jogo, além de dispor de dificuldades e modificadores bônus. \n JxJ: que vença a melhor equipe! Com novos modos e conteúdo desde o lançamento, o modo Versus recompensa todos os estilos de competição, do casual ao profissional. \n JxA: lute pela sobrevivência cooperativamente. Escolha seu personagem e sua classe e enfrente Hordas ou execute sua Fuga."
+  },
+  {
+    "name": "Horizon Zero Dawn",
+    "categoryId": 2,
+    "price": 99,
+    "image": "{{API_URL}}/games/images/Horizon_Zero_Dawn.jpg",
+    "description": "Em uma era na qual máquinas vagam livremente e a humanidade deixou de ser a espécie dominante, uma jovem caçadora chamada Aloy inicia uma jornada na qual desvendará o seu destino. \n Em um mundo pós-apocalíptico exuberante, onde a natureza retomou as ruínas de uma civilização esquecida, pequenos grupos de pessoas vivem em tribos primitivas de caçadores e coletores. O domínio delas sobre esse novo ambiente selvagem foi usurpado pelas máquinas, terríveis criaturas mecânicas de origem desconhecida."
+  },
+  {
+    "name": "Horizon Forbidden West",
+    "categoryId": 2,
+    "price": 299,
+    "image": "{{API_URL}}/games/images/Horizon_Forbidden_West.jpg",
+    "description": "Explore terras distantes, enfrente máquinas maiores e mais imponentes, e encontre novas tribos incríveis ao retornar o futuro distante e pós-apocalíptico de Horizon. \n A terra está morrendo! Tempestades implacáveis e uma praga incontrolável devastam o que sobrou da humanidade enquanto máquinas assustadoras vagam por territórios próximos. A vida na Terra segue rumo à outra extinção, e ninguém sabe o porquê. \n Cabe a Aloy descobrir os segredos por trás dessas ameaças e restaurar a ordem e equilíbrio ao mundo. Ao longo do caminho, ela reencontrará velhos amigos, forjará alianças com novas facções e descobrirá o legado do passado antigo enquanto tenta se manter um passo à frente de um novo inimigo."
+  },
+  {
+    "name": "NBA 2K24",
+    "categoryId": 8,
+    "price": 249.9,
+    "image": "{{API_URL}}/games/images/NBA_2K24.jpg",
+    "description": "Jogue com suas equipes favoritas da NBA e WNBA em NBA 2K24, com elencos totalmente atualizados e times históricos e lendários. \n Mostre seu complexo arsenal de habilidades, com controles de combo para drible e defesa interna reformulados para uma jogabilidade mais reativa e gratificante. \n Escolha sua equipe e curta a ação pura e realista nas quadras numa série de modos, incluindo as inúmeras opções personalizadas e sem limites de MyPLAYER em MyCAREER. Colecione uma série incrível de lendas e monte sua escalação perfeita em MyTEAM e muito mais, incluindo novos desafios MAMBA MOMENTS™. \n A gente se vê nas quadras."
+  },
+  {
+    "name": "EA SPORTS: FC 24",
+    "categoryId": 8,
+    "price": 249.9,
+    "image": "{{API_URL}}/games/images/EA_Sports_FC_24.jpg",
+    "description": "EA SPORTS FC™ 24 marca o início do futuro do futebol. Feito com base em inovação e autenticidade, o jogo vai deixar você mais perto dos gramados, na experiência futebolística mais fiel já vista, com os melhores jogadores dos maiores times, ligas e competições pelo mundo. \n Experimente um realismo sem igual em cada partida, tudo graças a três tecnologias de ponta: HyperMotionV, PlayStyles otimizado por Opta e a engine Frostbite™ aprimorada. \n Com mais de 19 mil jogadores totalmente licenciados, 700 times e 30 ligas — incluindo as Champions League masculina e feminina da UEFA —, EA SPORTS FC 24 traz uma autenticidade sem igual aos gramados."
+  },
+  {
+    "name": "Forza Horizon 3",
+    "categoryId": 5,
+    "price": 149,
+    "image": "{{API_URL}}/games/images/Forza_Horizon_3.jpg",
+    "description": "ESTE É O SEU HORIZON \n Você está no comando do Festival Horizon. Personalize tudo, contrate e demita seus amigos e explore a Austrália em mais de 350 dos melhores carros do mundo. Torne seu Horizon a celebração suprema de carros, música e liberdade nas estradas. Como chegar lá? Isso é com você. \n EXPLORE A AUSTRÁLIA, O MAIOR MUNDO HORIZON DE TODOS OS TEMPOS \n Cruze vastos desertos e desfiladeiros pedregosos indo do Outback até as florestas, passando pelas praias e arranha-céus da costa dourada da Austrália. \n ESCOLHA ENTRE 350 DOS MELHORES CARROS DO MUNDO \n Cada carro foi recriado com os detalhes do ForzaVista™, incluindo a visão no cockpit, luzes e limpadores de para-brisa funcionais e os novos tipos de pneus que darão uma sensação de pilotagem jamais vista antes no Forza. \n DESCUBRA NOVAS FORMAS DE PILOTAGEM \n Saltos em locais de perigo, Comboios e Áreas de Drift são apenas alguns dos novos desafios emocionantes que o aguardam. Você também será a estrela em Eventos de Exibição espetaculares que o colocarão contra uma frota de lanchas e até um zepelim gigante!"
+  },
+  {
+    "name": "Forza Horizon 4",
+    "categoryId": 5,
+    "price": 199,
+    "image": "{{API_URL}}/games/images/Forza_Horizon_4.jpg",
+    "description": "Estações dinâmicas mudam tudo no maior festival automotivo do mundo. Participe sozinho ou junte os amigos para explorar a linda e histórica Grã-Bretanha num mundo aberto compartilhado. Colete, modifique e pilote mais de 450 carros. Corra, faça proeza, crie e explore. Escolha seu caminho para se tornar um superastro do Horizon."
+  },
+  {
+    "name": "Forza Horizon 5",
+    "categoryId": 5,
+    "price": 249,
+    "image": "{{API_URL}}/games/images/Forza_Horizon_5.jpg",
+    "description": "Sua maior aventura Horizon te espera! Lidere impressionantes expedições pelo mundo aberto vibrante e em constante evolução nas terras mexicanas. Participe de corridas divertidas e sem limites enquanto pilota centenas dos melhores carros do mundo."
+  },
+  {
+    "name": "Forza Motorsport",
+    "categoryId": 5,
+    "price": 299,
+    "image": "{{API_URL}}/games/images/Forza_Motorsport.jpg",
+    "description": "• Mergulhe em mais de 500 carros reais por 20 pistas mundialmente famosas, incluindo alguns dos locais e layouts de pistas mais queridos dos fãs, cada um apresentando horários dinâmicos específicos, com clima e condições de pilotagem únicas. \n • Supere os adversários usando mais de 800 aprimoramentos de desempenho na nova, divertida e gratificante experiência para um jogador, o Modo Carreira da Copa dos Construtores. \n • Corra ao lado de seus amigos em eventos multijogador* com estratégias de pneus e combustível, uma estrutura inspirada nos grandes eventos de corrida e novas classificações de pilotos e segurança. \n • Corra contra oponentes de IA de ponta, com física avançada, assistências poderosas, novos sistemas de acumulação de dano e terra e visuais fotorrealistas com traçado de raio em tempo real na pista. \n • Corra com mais de 500 carros do mundo real, incluindo carros de corrida modernos e mais de 100 carros novos no Forza Motorsport. Faça cada volta valer a pena em 20 ambientes com locais favoritos dos fãs e vários traçados de pista para dominar, cada um com pontuação ao vivo na pista, horários e clima totalmente dinâmicos e condições de pilotagem únicas, que garantem que duas voltas nunca vão ser iguais. \n Experimente uma simulação de ponta com visuais fotorrealistas incríveis que oferecem traçado em tempo real na pista, novos sistemas de acúmulo de danos e terra e física extremamente aprimorada, com assistências poderosas e uma melhoria de 48x na fidelidade dos pneus. \n Supere os adversários ganhando mais de 800 aprimoramentos de desempenho e enfrente nossos oponentes de IA mais avançados em uma campanha para um jogador totalmente nova, divertida e recompensadora, o Modo Carreira da Copa dos Construtores. \n Dispute o pódio em eventos Multijogador* em Destaque com uma estrutura inspirada nos grandes eventos de corrida ou crie a corrida que você e seus amigos desejarem no Jogo Livre. As corridas online são mais seguras, divertidas e competitivas com as Regras de Corrida do Forza aprimoradas por IA, estratégias de pneus e combustível e novas classificações de pilotos e segurança.  \n Mergulhe em um mundo em expansão no automobilismo. Novos campeonatos de carreira e eventos online serão apresentados regularmente, oferecendo desafios exclusivos, novos carros e pistas incríveis e novas experiências de jogo emocionantes nos próximos anos."
+  },
+  {
+    "name": "Divinity: Original Sin II",
+    "categoryId": 2,
+    "price": 199,
+    "image": "{{API_URL}}/games/images/Divinity_Original_Sin_II.jpg",
+    "description": "Só pode haver apenas um Deus. \n O Divino está morto. O Vazio se aproxima. E os poderes até então adormecidos dentro de você estão prestes a despertar. A batalha pelo Divino começou. Escolha com sabedoria e confie com cautela; a escuridão espreita em todos os corações. Domine um combate complexo e tático. Junte-se a outros 3 jogadores, mas saiba que apenas um de vocês terá a chance de tornar-se um Deus no premiado RPG Divinity: Original Sin 2. \n - Escolha entre 5 raças e 6 personagens originais únicos, ou crie o seu. \n - Liberdade ilimitada para explorar e experimentar com amigos ou companheiros IA. \n - Suporte para multijogador com tela dividida para dois jogadores ou jogo online para até quatro amigos. \n - Centenas de ajustes e mudanças adicionais inclusas na Edição Definitiva"
+  },
+  {
+    "name": "The Elder Scrolls V: Skyrim",
+    "categoryId": 2,
+    "price": 89,
+    "image": "{{API_URL}}/games/images/The_Elder_Scrolls_V_Skyrim.jpg",
+    "description": "A Bethesda Game Studios, premiada criadora de Fallout 76 e The Elder Scrolls V: Skyrim, lhe convida a explorar a Comunidade de Fallout 4, um grande mundo aberto com centenas de lugares, personagens e missões. \n Só você saiu com vida do Refúgio 111, e só você pode reconstruir e decidir o destino dos Ermos. Junte-se a diversas facções que disputam o poder ou avance por sua conta; cada escolha é inteiramente sua. \n Com o sistema S.P.E.C.I.A.L. de personagem, você é livre para ser desde um soldado com Armadura Potente até um ás da malandragem, e as centenas de vantagens se adaptam ao seu estilo de jogo. \n Lute em 1ª ou 3ª pessoa com o Verificador Auxiliar de Tática Subterrânea da Vault-Tec, ou V.A.T.S., que garante superioridade tática e carnificina cinematográfica! \n Obtenha, aprimore e construa milhares de itens com o sistema de criação de Fallout 4. Armas, armaduras, alimentos e até assentamentos inteiros; tudo é possível com os componentes certos. Retorne ao lar."
+  },
+  {
+    "name": "The Witcher 3 Complete Edition",
+    "categoryId": 2,
+    "price": 249,
+    "image": "{{API_URL}}/games/images/The_Witcher_3_Complete_Edition.jpg",
+    "description": "O JOGO MAIS PREMIADO DE UMA GERAÇÃO \n AGORA APERFEIÇOADA PARA A PRÓXIMA \n SOBRE O JOGO \n Você é Geralt de Rívia, mercenário matador de monstros. O lugar é um continente devastado pela guerra e infestado de monstros que você pode explorar à vontade. Seu contrato atual? Encontrar Ciri, a Criança da Profecia — uma arma viva que pode alterar a forma do mundo. \n A Complete Edition contém o jogo-base, com uma enorme aventura de mundo aberto com mais de cem horas de duração, além das duas grandes expansões da história: Hearts of Stone e Blood and Wine, com mais cinquenta horas de jogo! \n Ele também vem com todos os conteúdos adicionais lançados para o jogo, além de novos itens, incluindo espadas, armaduras, aparências alternativas inspiradas na série The Witcher da Netflix e muito mais! \n Contemple o mundo sombrio de fantasia do Continente como nunca antes! A versão Xbox Series X|S de The Witcher 3: Wild Hunt foi aprimorada com inúmeras melhorias visuais e técnicas, inclusive com nível de detalhes elaborado, tempos de carregamento mais curtos, uma variedade de modificações criadas e recém-desenvolvidas pela comunidade para o jogo, traçado de raios em tempo real e muito mais — especialmente para o desempenho dos novos consoles — além do Modo Fotografia integrado. \n JOGUE COMO UM MERCENÁRIO MATADOR DE MONSTROS ALTAMENTE TREINADO \n Treinados desde a infância e transformados para ganhar habilidades, força e reflexos sobre-humanos, os bruxos se contrapõem a um mundo infestado de monstros. \n • Destrua totalmente os inimigos como um caçador de monstros profissional armado com uma variedade de armas melhoráveis, poções mutantes e magia de combate. \n • Cace uma grande variedade de monstros exóticos, desde feras selvagens à espreita nas passagens montanhosas até astutos predadores sobrenaturais em emboscadas nos becos sombrios de cidades densamente povoadas.• Invista suas recompensas para melhorar seu armamento e comprar armaduras personalizadas — ou gaste-as em corridas de cavalos, jogos de cartas, lutas e outros prazeres mundanos. \n EXPLORE UM MUNDO ABERTO DE FANTASIA MORALMENTE AMBÍGUO \n Concebido para uma aventura sem fim, o enorme mundo aberto de The Witcher estabelece novos padrões em termos de tamanho, profundidade e complexidade. \n • Atravesse um mundo aberto fantástico: explore ruínas esquecidas, cavernas e naufrágios, negocie com mercadores e ferreiros anões nas cidades e cace em planícies abertas, mares e montanhas.• Lide com generais traidores, bruxas desonestas e nobres corruptos para fornecer serviços sombrios e perigosos. \n • Faça escolhas que vão além do bem e do mal e enfrente suas duradouras consequências. \n BUSQUE A CRIANÇA DA PROFECIA \n Assuma o contrato mais importante de sua vida: rastrear a criança da profecia — a chave para salvar ou destruir o mundo. \n • Em tempos de guerra, persiga a criança da profecia — uma arma viva prevista em antigas lendas élficas. \n • Lute contra governantes atrozes, espíritos selvagens e até uma ameaça de além do véu — todos determinados a controlar este mundo. \n • Defina o seu destino num mundo que talvez não valha a pena salvar."
+  },
+  {
+    "name": "Hades",
+    "categoryId": 9,
+    "price": 49.9,
+    "image": "{{API_URL}}/games/images/Hades.jpg",
+    "description": "LUTA PARA SAÍRES DO INFERNO \n Na pele do Príncipe imortal do Submundo, empunhas os poderes e as armas míticas do Olimpo para te libertares das garras do deus dos mortos, ao mesmo tempo que te tornas mais forte e desvendas mais da história com cada tentativa de fuga única. \n LIBERTA A FÚRIA DO OLIMPO \n Os deuses do Olimpo ajudam-te! Conhece Zeus, Atenas, Poseidon e muitos mais, e escolhe entre dezenas de poderosos Boons que melhoram as tuas habilidades. Existem milhares de configurações viáveis de personagens para descobrires à medida que avanças. \n FAZ AMIGOS ENTRE DEUSES, FANTASMAS E MONSTROS \n Vais conhecer uma diversidade de personagens com vozes emocionantes e carismáticas! Desenvolve as tuas relações com as personagens, e vive milhares de eventos únicos da história à medida que descobres o que está realmente em jogo para esta família enorme e disfuncional. \n CONCEBIDO PARA JOGAR VÁRIAS VEZES \n Novas surpresas esperam por ti sempre que mergulhares no Submundo em constante mudança, cujos vilões guardiães se lembrarão de ti. Utiliza o poderoso Mirror of Night para te tornares permanentemente mais forte e teres uma vantagem da próxima vez que fugires de casa. \n ESTILO CARATERÍSTICO DA SUPERGIANT \n  O ambiente rico e atmosférico e a combinação única de jogabilidade e narrativa que têm sido o pilar dos jogos da Supergiant estão aqui representados em plena força: ambientes espetaculares pintados à mão e uma banda sonora original rítmica que dá vida ao Submundo."
+  },
+  {
+    "name": "Hades II",
+    "categoryId": 9,
+    "price": 99.9,
+    "image": "{{API_URL}}/games/images/Hades_II.jpg",
+    "description": "A primeira sequência da Supergiant Games baseia-se nos melhores aspectos do rastreador de masmorras rogue-like original, semelhante a um deus, em uma experiência totalmente nova, cheia de ação e infinitamente reproduzível, enraizada no submundo do mito grego e em suas conexões profundas com o alvorecer da bruxaria. \n BATALHA ALÉM DO SUB MUNDO \n Como a imortal Princesa do Submundo, você explorará um mundo mítico maior e mais profundo, derrotando as forças do Titã do Tempo com todo o poder do Olimpo atrás de você, em uma história arrebatadora que se desenrola continuamente através de cada contratempo e conquista. \n DOMINE A FEITIÇARIA E A FEITIÇARIA ESCURA \n Infunda suas lendárias armas da Noite com magia antiga, para que ninguém fique no seu caminho. Torne-se ainda mais forte com benefícios poderosos de mais de uma dúzia de deuses do Olimpo, de Apolo a Zeus. Existem maneiras quase ilimitadas de desenvolver suas habilidades."
+  },
+  {
+    "name": "Batman Arkham Asylum",
+    "categoryId": 1,
+    "price": 89.9,
+    "image": "{{API_URL}}/games/images/Batman_Arkham_Asylum.jpg",
+    "description": "Aclamado pela crítica, Batman: Arkham Asylum retorna com uma edição remasterizada do Jogo do Ano, com 4 mapas de desafio extras. Os mapas de desafio adicionais são Crime Alley; Pesadelo do Espantalho; Totally Insane e Nocturnal Hunter (ambos do Insane Night Map Pack). \n Utilize o sistema de combate exclusivo FreeFlow™ para encadear combos ilimitados perfeitamente e lutar contra enormes grupos de capangas do Coringa em brigas corpo a corpo brutais \n Investigue como Batman, O MAIOR DETETIVE DO MUNDO, resolvendo quebra-cabeças complexos com a ajuda de ferramentas forenses de ponta, incluindo varredura de raios X, leitura de impressões digitais, spray Amido Black e um rastreador de feromônios \n Enfrente os maiores vilões de Gotham, incluindo o Coringa, HARLEY QUINN, POISON IVY e KILLER CROC \n Torne-se o Predador Invisível™ com as eliminações do medo do Batman e o sistema exclusivo de pontos de vista para se mover sem ser visto e caçar inimigos \n Escolha vários métodos de queda, incluindo voar do céu e quebrar paredes. \n Explore cada centímetro do Arkham Asylum e vagueie livremente pela infame ilha, apresentada pela primeira vez em sua totalidade realista e corajosa \n Experimente como é ser o BATMAN usando BATARANGS, aerossol de gel explosivo, Batclaw, ressonador de sonar e lançador de linha \n Desbloqueie mais segredos completando desafios ocultos no mundo e desenvolva e personalize equipamentos ganhando pontos de experiência \n Desfrute de total liberdade de super-herói no ambiente com o uso da arma de arpão do Batman para chegar a qualquer lugar que você possa ver, pular de qualquer altura e deslizar em qualquer direção"
+  },
+  {
+    "name": "Batman Arkham City",
+    "categoryId": 1,
+    "price": 89.9,
+    "image": "{{API_URL}}/games/images/Batman_Arkham_City.jpg",
+    "description": "Batman: Arkham City manda jogadores voando até Arkham City - uma prisão altamente fortificada no coração de Gotham City. Batman: Arkham City introduz uma nova história com os famosos e clássicos personagens e vilões assassinos do universo do Batman."
+  },
+  {
+    "name": "Batman Arkham Knight",
+    "categoryId": 1,
+    "price": 89.9,
+    "image": "{{API_URL}}/games/images/Batman_Arkham_Knight.jpg",
+    "description": "No explosivo último capítulo da série Arkham, o Espantalho retorna para reunir um grupo impressionante de supervilões, incluindo o Pinguim, o Duas Caras e a Arlequina. Batman: Arkham Knight apresenta o Batmóvel criado pela Rocksteady. O jogador poderá dirigi-lo pela primeira vez na franquia. O veículo lendário, combinado com a aclamada jogabilidade da série Batman Arkham, oferece aos jogadores uma experiência definitiva com o Batman ao percorrer Gotham City."
+  },
+  {
+    "name": "Battlefield 3",
+    "categoryId": 3,
+    "price": 79.9,
+    "image": "{{API_URL}}/games/images/Battlefield_3.jpg",
+    "description": "Battlefield 3 supera todos os outros jogos no mercado com o recurso ao Frostbite™ 2, o novo motor de jogo da DICE. Esta tecnologia de ponta é base do desenvolvimento do Battlefield 3, apresentando uma qualidade visual superior, uma grande noção de escala, destruição em massa, áudio dinâmico e animações das personagens incrivelmente realistas. À medida que as balas assobiam, as paredes caiem, e as explosões o atiram ao chão, sente-se o pulsar do campo de batalha como nunca antes aconteceu. No Battlefield 3, os jogadores assumem o papel dos Marines dos Estados Unidos. Marines que vão participar em entusiasmantes missões para um jogador e em competitivas acções multijogador em diversos locais do mundo, como Paris, Teerão e Nova Iorque."
+  },
+  {
+    "name": "Battlefield 4",
+    "categoryId": 3,
+    "price": 89.9,
+    "image": "{{API_URL}}/games/images/Battlefield_4.jpg",
+    "description": "Battlefield 4™ é o divisor de águas no gênero da ação, proporcionando momentos que ficam no limiar entre o jogo e a glória. Contando com o poder e a fidelidade de última geração da tecnologia Frostbite™ 3, Battlefield 4 apresenta uma experiência visceral e dramática como nunca vista antes. \n Somente em Battlefield você é capaz de explodir a estrutura de uma represa, transformar um arranha-céu em escombros e liderar um ataque naval em uma canhoneira. Battlefield lhe dá a liberdade de fazer muito mais, enquanto você demonstra suas forças e trilha seu caminho para a vitória. \n Além do aclamado modo multijogador, Battlefield 4 conta com uma campanha dramática e intensa, que começa com o resgate de VIPs Americanos em Xangai e acompanha a luta da sua equipe para encontrar o caminho de casa. \n Nada se compara a isso. Mergulhe no glorioso caos da guerra, encontrado apenas em Battlefield."
+  },
+  {
+    "name": "Battlefield 1",
+    "categoryId": 3,
+    "price": 89.9,
+    "image": "{{API_URL}}/games/images/Battlefield_1.jpg",
+    "description": "Viva o alvorecer de uma guerra total, somente no Battlefield™ 1. \n Lute em meio a batalhas épicas desde combates urbanos em uma cidade francesa sob cerco até os fortes pesadamente defendidos nos Alpes italianos, ou combates frenéticos nos desertos árabes. Descubra um mundo em guerra em uma campanha cheia de aventura, ou junte-se a partidas multiplayer épicas com até 64 jogadores e adapte suas táticas à destruição e ao clima dinâmico ao seu redor. Lute como parte da infantaria. Lidere investidas a cavalo ou controle veículos impressionantes em terra, céu e mar, de tanques a bimotores e os enormes Veículos Colossais, alguns dos veículos na história de Battlefield."
+  },
+  {
+    "name": "Battlefield V",
+    "categoryId": 3,
+    "price": 99,
+    "image": "{{API_URL}}/games/images/Battlefield_V.jpg",
+    "description": "Entre no maior conflito da humanidade com Battlefield™ V com a série retornando às suas raízes em uma representação nunca antes vista da 2ª Guerra Mundial. Encare a guerra física total no multiplayer com seu pelotão em modos como o vasto Operações Grandiosas e o cooperativo Armas Combinadas, ou testemunhe o sofrimento humano com o combate global em Histórias de Guerra para um jogador. Enquanto você luta em locais épicos e inesperados do planeta, aproveite o Battlefield mais rico e imersivo já feito. Agora inclui Fogo Cruzado - o Battle Royale reinventado para o Battlefield."
+  },
+  {
+    "name": "Battlefield 2042",
+    "categoryId": 3,
+    "price": 199,
+    "image": "{{API_URL}}/games/images/Battlefield_2042.jpg",
+    "description": "Battlefield 2042 é um jogo de tiro em primeira pessoa emocionante que marca o retorno da guerra dinâmica que é marca registrada da franquia. \n Ambientado no futuro próximo de um mundo transformado pela desordem, você terá que se adaptar e superar campos de batalha dinâmicos com a ajuda do seu esquadrão e um arsenal de armas e veículos de ponta. \n Com suporte para 128 jogadores no PlayStation 5*, Battlefield 2042 apresenta dimensões nunca antes vistas, com campos de batalha vastos pelo mundo todo. Participe de experiências gigantescas, desde modos multijogador atualizados como Conquest e Breakthrough até o inédito Hazard Zone."
+  },
+  {
+    "name": "Avowed",
+    "categoryId": 2,
+    "price": 299.9,
+    "image": "{{API_URL}}/games/images/Avowed.jpg",
+    "description": "Bem-vindo às Living Lands, uma ilha misteriosa repleta de aventura e perigo. Você conseguirá salvar a ilha e sua alma das forças que ameaçam destruí-las? \n Ambientado no mundo fictício de Eora, que foi apresentado aos jogadores pela primeira vez na franquia Pillars of Eternity, Avowed é um RPG de ação de fantasia em primeira pessoa da premiada equipe da Obsidian Entertainment."
+  },
+  {
+    "name": "Lies of P",
+    "categoryId": 7,
+    "price": 249.9,
+    "image": "{{API_URL}}/games/images/Lies_of_P.jpg",
+    "description": "Lies of P é um soulslike emocionante que pega a história de Pinóquio, vira-a de ponta-cabeça e coloca-a num cenário sombrio e elegante da era belle époque. \n Você é um títere criado por Geppetto, preso numa teia de mentiras com monstros inimagináveis e figuras pouco confiáveis que ficarão entre você e os eventos no mundo de Lies of P. \n Uma voz misteriosa desperta você e guia seus passos pela atormentada cidade de Krat — um lugar outrora animado que foi envenenado pela loucura e sede de sangue. Em nosso soulslike, você deve adaptar suas armas e seu personagem para enfrentar horrores incalculáveis, desvendar os segredos insondáveis das elites da cidade e escolher entre confrontar as dificuldades com a verdade ou tecer mentiras para superá-las na jornada para encontrar a si mesmo. \n ・ UM MUNDO SOMBRIAMENTE ELEGANTE E CRUEL \n Descubra os segredos da cidade de Krat — um lugar imerso no estilo da era belle époque que já prosperou devido à sua indústria de títeres e agora se encontra com as ruas cobertas de sangue. \n ・LUTE COM INSTRUMENTOS PERVERSOS \n Desenvolva um estilo de combate único para combater inimigos e terrenos cruéis, com combinações de armas dinâmicas, o uso de Braço Legionário e a ativação de novas habilidades. \n ・O QUE HÁ EM MENTIR? \n Haverá momentos em que você será confrontado com escolhas nas quais poderá mentir para confortar outras pessoas em sofrimento ou desespero… ou poderá optar por dizer a verdade. \n Trace seu próprio caminho. \n ・UM CLÁSSICO REINVENTADO \n Experimente o amado conto de fadas de Pinóquio reinterpretado como uma narrativa sombria que permite aos jogadores descobrir os segredos e símbolos escondidos no mundo de Lies of P."
+  },
+  {
+    "name": "Avatar: Frontiers Of Pandora",
+    "categoryId": 1,
+    "price": 299,
+    "image": "{{API_URL}}/games/images/Avatar_Frontiers_of_Pandora.jpg",
+    "description": "Avatar: Frontiers of Pandora™ é um jogo de ação e aventura em primeira pessoa ambientado na desconhecida Fronteira Ocidental de Pandora. A corporação militarista humana conhecida como RDA capturou, treinou e moldou você, na'vi, para servir aos propósitos dela. Quinze anos depois, você está livre, mas acabou se tornando uma figura desconhecida na sua terra natal. Resgate seu passado perdido, descubra o verdadeiro significado de ser na'vi e junte-se a outros clãs para proteger Pandora contra a RDA. \n EXPLORE UM MUNDO DE MARAVILHAS E PERIGOS \n Experimente as maravilhas épicas da Fronteira Ocidental, um continente nunca antes visto de Pandora. Viaje por belas e imprevisíveis regiões de mundo aberto, onde baixar a guarda pode resultar em erros fatais. \n TORNE-SE NA'VI \n Tire proveito de suas incríveis força e agilidade ao elaborar seu personagem; fabrique equipamentos novos e aprimore habilidades e armas para se adequar a seu estilo de jogo. \n ALCE VOO PELOS CÉUS \n Ligue-se à sua própria banshee para ter vantagem em combates aéreos e viajar pela vastidão da Fronteira Ocidental. \n DOMINE VÁRIOS ESTILOS DE COMBATE \n Adote a precisão das armas na'vi tradicionais, incluindo o arco e o propulsor de lança, ou aproveite seu treinamento junto aos humanos e use armas mais destrutivas, como fuzis de assalto ou escopetas, para enfrentar os perigos de Pandora. \n COMPARTILHE A AVENTURA NUMA CAMPANHA TOTALMENTE COOPERATIVA \n Jogue a campanha inteira da história individualmente ou com um amigo pela internet no modo cooperativo para dois jogadores."
+  },
+  {
+    "name": "Dark Souls: Remastered",
+    "categoryId": 7,
+    "price": 199.9,
+    "image": "{{API_URL}}/games/images/Dark_Souls_Remastered.jpg",
+    "description": "Mas então, fez-se o fogo. Experimente novamente o jogo aclamado pela crítica e definidor de gênero que foi o início tudo. Belamente remasterizado, volte a Lordran com detalhes em alta definição a 60fps. \n DARK SOULS: REMASTERED inclui o jogo principal e o DLC `Artorias do Abismo`."
+  },
+  {
+    "name": "Dark Souls II: Deluxe Edition",
+    "categoryId": 7,
+    "price": 199.9,
+    "image": "{{API_URL}}/games/images/Dark Souls_II_Deluxe_Edition.jpg",
+    "description": "Dark Souls III Deluxe Edition inclui o jogo completo e o passe de temporada. O primeiro pacote de conteúdo para baixar chega na primavera de 2016. Expanda a sua experiência com o passe de temporada, com novos mapas, chefões, inimigos, armas e conjuntos de armaduras. \n Vencedor do prêmio de `Melhor RPG` na Gamescom 2015 e com mais de 35 prêmios e nominações na E3 2015, Dark Souls III continua expandindo os limites com o mais novo e ambicioso capítulo da série aclamada pela crítica e que redefiniu o gênero. \n À medida que o fogo desvanece e o mundo vai à ruína, mergulhe em um universo repleto de cenários e inimigos colossais. Tanto fãs da série quanto novatos se perderão em sua jogabilidade recompensadora e gráficos imersivos. \n Agora só restam brasas... Prepare-se mais uma vez e entregue-se à escuridão!"
+  },
   {
     "name": "Dark Souls III",
     "categoryId": 7,
@@ -444,24 +854,3 @@ Content-Type: application/json
     "description": "Reúna a sua equipe de Freegunners para competir com equipes rivais em um FPS 5x5 focaado nos personagens para PlayStation® 5 e PC1. \n Ambientado em um universo original e vibrante de ficção científica, Concord é um novo jogo de tiro em equipes onde você controla os integrantes da tripulação da Estrela-do-Norte, um grupo de desajustados, fora da lei e aventureiros que trabalham como pistoleiros de aluguel. \n Escolha a dedo o seu esquadrão pessoal de Freegunners e jogue com amigos e colegas mercenários online para enfrentar equipes rivais nos mundos espetaculares do Bravio do espaço em uma variedade de modos baseados em objetivos e ressurgimento."
   }
 ]
-###
-
-#Get all games
-GET {{API_URL}}/get-games
-Content-Type: application/json
-###
-
-#Get games with optional query params 'busca' or '(category=true)'
-GET {{API_URL}}/get-games?busca=forza
-Content-Type: application/json
-###
-
-#Get one game by gameId
-GET {{API_URL}}/get-game/6
-Content-Type: application/json
-###
-
-#Get one game by name
-GET {{API_URL}}/get-game-by-name/starfield
-Content-Type: application/json
-###
