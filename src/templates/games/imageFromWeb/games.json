@@ -1,0 +1,416 @@
+[
+  {
+    "name": "Call Of Duty: Black Ops 6",
+    "categoryId": 3,
+    "price": 349.9,
+    "image": "https://howlongtobeat.com/games/151245_Call_of_Duty_Black_Ops_6.jpg",
+    "description": "Enquanto a Guerra do Golfo toma conta dos holofotes globais, uma sombria força clandestina se infiltrou nos níveis mais altos da CIA, marcando como traidores todos os que resistem. Exilados de sua agência e do país que um dia os aclamou como heróis, o veterano das Black Ops, Frank Woods, e sua equipe se veem perseguidos pela máquina militar que os criou."
+  },
+  {
+    "name": "Senua's Saga: Hellblade II",
+    "categoryId": 1,
+    "price": 229.9,
+    "image": "https://howlongtobeat.com/games/72854_Senuas_Saga_Hellblade_II.jpg",
+    "description": "A sequência do premiado Hellblade: Senua's Sacrifice, Senua retorna em uma jornada brutal de sobrevivência através do mito e tormento da Islândia Viking. Com a intenção de salvar aqueles que foram vítimas dos horrores da tirania, Senua enfrenta uma batalha de superação das trevas internas e externas. \n Mergulhe no próximo capítulo da história de Senua, uma experiência cuidadosamente trabalhada contada através da imersão cinematográfica, visuais lindamente realizados e som encapsulante."
+  },
+  {
+    "name": "Spider-Man 2",
+    "categoryId": 1,
+    "price": 249.9,
+    "image": " https://howlongtobeat.com/games/79769_Marvels_Spider-Man_2.jpg",
+    "description": "Os Spiders Peter Parker e Miles Morales estão de volta em mais uma aventura eletrizante da famosa franquia Marvel's Spider-Man para PS5. \n Pendure-se, pule e plane com as novas Asas de Teia para percorrer a Nova York da Marvel. Alterne rapidamente entre Peter Parker e Miles Morales para jogar histórias diferentes e usar novos poderes épicos enquanto o infame vilão Venom ameaça a vida deles, das pessoas próximas a eles e toda a cidade."
+  },
+  {
+    "name": "Grand Theft Auto V",
+    "categoryId": 10,
+    "price": 81.49,
+    "image": "https://howlongtobeat.com/games/4064_Grand_Theft_Auto_V.jpg",
+    "description": "Quando um tratante inexperiente, um ladrão de bancos aposentado e um psicopata aterrorizante se envolvem com algumas das figuras mais assustadoras e problemáticas do submundo do crime, do governo dos EUA e da indústria do entretenimento, eles precisam realizar uma série de golpes ousados para sobreviver em uma cidade implacável onde não podem confiar em ninguém, nem mesmo um no outro. \n Os jogadores poderão transferir o progresso do Modo História do GTAV e os personagens e progresso atuais do GTA Online para o PS5 e o Xbox Series X|S com uma migração única."
+  },
+  {
+    "name": "Grand Theft Auto VI",
+    "categoryId": 10,
+    "price": 349.9,
+    "image": "https://howlongtobeat.com/games/104609_Grand_Theft_Auto_VI.png",
+    "description": "Grand Theft Auto VI vai para o estado de Leonida, que abriga as ruas iluminadas pelas luzes neon de Vice City e arredores, na maior e mais imersiva evolução da franquia Grand Theft Auto. Disponível em 2025 para PlayStation 5 e Xbox Series X|S."
+  },
+  {
+    "name": "Red Dead Redemption 2",
+    "categoryId": 1,
+    "price": 129.9,
+    "image": "https://howlongtobeat.com/games/27100_Red_Dead_Redemption_2.jpg",
+    "description": "Estados Unidos, 1899. Arthur Morgan e a gangue Van der Linde são forçados a fugir. Com agentes federais e os melhores caçadores de recompensas no seu encalço, a gangue precisa roubar, assaltar e lutar para sobreviver no impiedoso coração dos Estados Unidos. Conforme divisões internas profundas ameaçam despedaçar a gangue, Arthur deve fazer uma escolha entre os seus próprios ideais e a lealdade à gangue que o criou. \n Red Dead Redemption 2 também inclui o mundo compartilhado de Red Dead Online – trilhe seu próprio caminho enquanto enfrenta autoridades, gangues fora da lei e animais selvagens ferozes para construir uma vida na fronteira dos Estados Unidos. Monte um acampamento, cavalgue com ou sem um bando e explore tudo, das montanhas nevadas no norte aos pântanos do sul, de postos remotos a fazendas agitadas e cidades vibrantes. Vá atrás de recompensas, cace, pesque e negocie, procure tesouros exóticos, toque sua própria destilaria clandestina de Moonshine ou se torne Naturalista para aprender os segredos do reino animal e muito mais num mundo rico em detalhes. Inclui todos os recursos, conteúdos e melhorias adicionados desde o lançamento."
+  },
+  {
+    "name": "Diablo IV",
+    "categoryId": 2,
+    "price": 349.9,
+    "image": "https://howlongtobeat.com/games/71960_Diablo_IV.jpg",
+    "description": "Diablo® IV é a experiência suprema de RPG de ação com infinitos males para matar, inúmeras habilidades para dominar, masmorras horripilantes e tesouros lendários. Embarque na campanha épica sozinho ou com amigos e conheça personagens memoráveis em uma história eletrizante situada em um belo mundo sombrio, ou explore um fim de jogo vasto: lute pelo primeiro lugar nas classificações do Desafio, reaja ao ataque do Inferno nas Marés Infernais, domine a Forja para criar suas armas supremas e crie personagens poderosos, com jogo e progressão multiplataforma em todas as plataformas disponíveis."
+  },
+  {
+    "name": "God of War Ragnarok",
+    "categoryId": 1,
+    "price": 249.9,
+    "image": "https://howlongtobeat.com/games/83146_God_of_War_Ragnark.jpg",
+    "description": "Do Santa Monica Studio, esta é a sequência da aclamada versão de 2018 de God of War. O Fimbulwinter já começou. Kratos e Atreus devem viajar pelos Nove Reinos em busca de respostas enquanto as forças asgardianas se preparam para uma batalha profetizada que causará o fim do mundo. Nessa jornada, eles explorarão paisagens míticas impressionantes e enfrentarão inimigos aterradores: deuses nórdicos e monstros. A ameaça do Ragnarök se aproxima. Kratos e Atreus terão de escolher entre a segurança deles próprios e a dos reinos."
+  },
+  {
+    "name": "Hogwarts Legacy",
+    "categoryId": 1,
+    "price": 299.9,
+    "image": "https://howlongtobeat.com/games/83145_Hogwarts_Legacy.jpg",
+    "description": "Hogwarts Legacy é um RPG de ação e mundo aberto ambientado no mundo apresentado nos livros de Harry Potter. Agora você pode assumir o controle da ação e criar sua própria aventura. Descubra a sensação de viver em Hogwarts enquanto faz aliados, luta contra bruxos das trevas e, por fim, decide o destino do mundo bruxo. Seu legado é o que você faz dele."
+  },
+  {
+    "name": "Baldur's Gate 3",
+    "categoryId": 2,
+    "price": 199.9,
+    "image": "https://howlongtobeat.com/games/68033_Baldurs_Gate_3.jpg",
+    "description": "Refém, à deriva e a perder o controlo. Estás a transformar-te num monstro, mas à medida que a corrupção se alastra dentro de ti, também o teu poder cresce. Forja uma história de amizade e traição, sacrifício e sobrevivência e de fascínio pelo poder absoluto. Tu e o teu grupo veem-se envolvidos num conflito entre demónios, divindades e forças sobrenaturais sinistras que ditará o destino dos Forgotten Realms. \n A DERRADEIRA EXPERIÊNCIA DE D&D \n Cria a tua personagem através de um vasto leque de raças e classes de D&D, ou vive a história cuidadosamente criada de uma personagem original. Desfruta da aventura, do saque, da batalha e do romance enquanto exploras os Forgotten Realms e mais além. Joga a solo ou num grupo para até quatro jogadores no modo multijogador, mas escolhe os seus membros a com cuidado. \n ALTERNA FACILMENTE ENTRE OS MODOS PARA UM JOGADOR E MULTIJOGADOR \n Cada personagem tem a sua história, a solo ou em grupo. Junta forças em combate e separa-te do grupo na hora de seguir a tua jornada e agenda próprias. Tece, em conjunto, a estratégia perfeita, ou então... espalha o caos quando os teus amigos menos esperarem. Baldur's Gate 3 dá-te um modo cooperativo em ecrã dividido para até dois jogadores na PlayStation®5, e modo online para até quatro jogadores, fazendo dele uma aventura perfeita para jogar tanto a solo como com amigos. \n NÃO HÁ AVENTURAS IGUAIS \n Os Forgotten Realms são um mundo vasto, detalhado, diverso e repleto de segredos, obrigando-te a explorar em todas as direções, até verticalmente. Esgueira-te, mergulha, empurra, trepa e salta ao longo da tua jornada desde as profundezas do Underdark aos telhados reluzentes de Upper City. Decide como sobreviver e deixar a tua marca no mundo. \n UMA NARRATIVA ÉPICA E CINEMATOGRÁFICA \n Forjado com o novo motor Divinity 4.0, Baldur's Gate 3 dá-te uma liberdade sem igual para explorar, experimentar e interagir com um mundo que reage às tuas escolhas. A narrativa enorme e cinematográfica cria uma ligação inigualável às personagens enquanto embarcas na nossa maior aventura até à data. Apaixona-te, mente, ajuda, cria obstáculos e cresce lado a lado com os teus amigos, graças ao motor de nova geração da Larian."
+  },
+  {
+    "name": "Cyberpunk 2077 Ultimate Edition",
+    "categoryId": 2,
+    "price": 299,
+    "image": "https://howlongtobeat.com/games/Cyberpunk-2077-2.jpg",
+    "description": "Cyberpunk 2077 é um jogo de ação e aventura em mundo aberto do estúdio CD Projekt Red, criador de The Witcher 3: Wild Hunt. \n O jogo acontece em Night City, uma megalópole obcecada pelo poder, glamour e modificações biológicas. Você controla V, um mercenário fora da lei em busca de um implante sem igual, que carrega o segredo da imortalidade. \n  Atualizado para a nova geração e com conteúdo adicional grátis, personalize seu personagem e estilo de jogo enquanto aceita serviços, constrói uma reputação e desbloqueia melhorias. \n Seus relacionamentos e decisões definem a história e o mundo à sua volta. As lendas nascem aqui. Qual será a sua?"
+  },
+  {
+    "name": "Ori and the Will of the Wisps",
+    "categoryId": 6,
+    "price": 99,
+    "image": "https://howlongtobeat.com/games/46428_Ori_and_the_Will_of_the_Wisps.jpg",
+    "description": "Descubra o verdadeiro destino de Ori \n Embarque em uma jornada em um mundo vasto e exótico, com inimigos gigantescos e quebra-cabeças desafiadores nesta sequência imperdível, totalmente otimizada para Xbox Series X e Xbox Series S. \n Ori, o pequeno espírito, já enfrentou muitos perigos, mas quando um voo fatídico ameaça a corujinha Kun, será necessário mais do que apenas coragem para reunir uma família, curar uma terra despedaçada e descobrir seu verdadeiro destino. Dos criadores do aclamado jogo de ação e plataforma Ori and the Blind Forest, chega uma nova aventura em um mundo vasto repleto de amigos e inimigos trazidos à vida por um deslumbrante trabalho artístico pintado à mão. Com uma trilha sonora original inteiramente orquestrada, Ori and the Will of the Wisps mantém a tradição da Moon Studios de criar jogos de ação e plataforma detalhados e narrativas profundamente emocionantes."
+  },
+  {
+    "name": "Hollow Knight",
+    "categoryId": 6,
+    "price": 79.9,
+    "image": "https://howlongtobeat.com/games/Hollow_Knight_collection_branding.jpg",
+    "description": "Desça no mundo de Hollow Knight! O premiado jogo de ação e aventura de insetos e heróis. Explore cavernas serpenteantes, cidades antigas e ermos mortais. Lute contra criaturas malignas, alie-se a insetos bizarros. Descubra a história antiga e solucione mistérios enterrados no centro do reino. \n Hollow Knight Edição Coração Vazio inclui: \n • O premiado jogo de ação e aventura. \n • 4 Pacotes de Conteúdo gigantes, embutidos no lançamento, expandindo o jogo com novas missões, lutas contra chefes aterrorizantes e novas habilidades surpreendentes. \n Características do jogo \n • Ação 2D clássica, com todos os ajustes modernos. \n • Forje seu caminho! O mundo de Hallownest é expansivo e aberto. \n • Evolua com novas habilidades e perícias poderosas! \n • Um enorme elenco de personagens fofos e assustadores trazidos à vida por animações tradicionais 2D quadro a quadro. \n • Uma trilha orquestral, com mais de 40 músicas! \n • Mais de 150 inimigos com 40 chefes épicos!"
+  },
+  {
+    "name": "Avowed",
+    "categoryId": 2,
+    "price": 299.9,
+    "image": "https://howlongtobeat.com/games/81115_Avowed.jpg",
+    "description": "Bem-vindo às Living Lands, uma ilha misteriosa repleta de aventura e perigo. Você conseguirá salvar a ilha e sua alma das forças que ameaçam destruí-las? \n Ambientado no mundo fictício de Eora, que foi apresentado aos jogadores pela primeira vez na franquia Pillars of Eternity, Avowed é um RPG de ação de fantasia em primeira pessoa da premiada equipe da Obsidian Entertainment."
+  },
+  {
+    "name": "Ghost Of Tsushima: Director's Cut",
+    "categoryId": 1,
+    "price": 249.9,
+    "image": "https://howlongtobeat.com/games/51225_Ghost_of_Tsushima.jpg",
+    "description": "Descubra as maravilhas ocultas de Tsushima nesse jogo de ação e aventura em mundo aberto da Sucker Punch Productions e do PlayStation Studios, disponível para PS5 e PS4. \n Forje um novo caminho e trave uma guerra atípica pela liberdade de Tsushima. Desafie oponentes com sua katana, domine o arco para eliminar ameaças distantes, desenvolva táticas furtivas para emboscar inimigos e explore uma nova história na Ilha Iki. \n A Versão do Diretor inclui todo o conteúdo adicional lançado até agora e novos conteúdos: \n Jogo completo. \n  Expansão Ilha Iki: História inédita, novos minijogos, tipos de inimigos e muito mais. \n * Modo cooperativo online, Lendas.** \n  Minilivro de Arte Digital. \n  Um Ponto de Técnica.* \n  Amuleto das Graças de Hachiman.* \n  Conjunto de Visuais do Herói de Tsushima: Máscara Dourada, Kit de Espadas, Cavalo e Sela.* \n  Comentários do Diretor: A equipe criativa conversa com um renomado historiador japonês para examinar e comparar o mundo de Ghost of Tsushima aos eventos reais que o inspiraram."
+  },  
+  {
+    "name": "Dead Space Remake",
+    "categoryId": 4,
+    "price": 249,
+    "image": "https://howlongtobeat.com/games/95927_Dead_Space.jpg",
+    "description": "Dead Space™, o clássico de terror de sobrevivência e ficção científica, está de volta totalmente reformulado para oferecer uma experiência mais profunda e imersiva. O remake tem uma fidelidade visual impressionante, áudio atmosférico e aprimoramentos na jogabilidade, ao mesmo tempo em que se mantém fiel à emocionante visão do jogo original. \n Isaac Clarke é um engenheiro comum com a missão de consertar uma imensa nave de mineração, a USG Ishimura. Porém, logo vê que há algo terrivelmente errado. A tripulação foi massacrada e a amada parceira de Isaac, Nicole, está perdida em algum lugar da nave. \n Agora sozinho, armado apenas com suas ferramentas e habilidades de engenharia, Isaac apressa-se para desvendar o horripilante mistério do que aconteceu a bordo da Ishimura, na esperança de encontrar Nicole. Preso com criaturas hostis, chamadas necromorfos, Isaac entra em uma batalha pela sobrevivência, não só contra os horrores que o cercam, mas também contra a perda da própria sanidade. \n MERGULHE NO TERROR DE FICÇÃO CIENTÍFICA DA PRÓXIMA GERAÇÃO \n Um clássico de terror de sobrevivência e ficção científica está de volta totalmente reformulado, com fidelidade visual elevada e áudio 3D atmosférico. Desde as salas e estações de trabalho de uma tripulação massacrada de maneira assustadoramente detalhada aos sons arrepiantes e atmosféricos de uma nave abandonada, você irá explorar um cenário de ficção científica incrível e repleto de momentos imprevisíveis e tensos, sem qualquer interrupção. \n DESVENDE O MISTÉRIO A BORDO DA USG ISHIMURA \n O que começa como uma missão de reparo de rotina para o engenheiro Isaac Clarke e a tripulação da USG Kellion rapidamente se torna uma batalha pela sobrevivência, enquanto a verdade por trás dos terrores a bordo começam a ser descobertos. Ao vivenciar uma experiência de narrativa expandida, desvende os segredos sombrios por trás dos eventos na USG Ishimura por meio de registros finais da tripulação desafortunada e seus encontros com o baixo número de sobreviventes. \n IMPROVISE PARA SOBREVIVER \n Confronte o pesadelo dentro da USG Ishimura com a jogabilidade estratégica que definiu o gênero. Adapte e melhore as ferramentas de engenharia do Isaac para derrotar oponentes de forma criativa e com precisão."
+  },
+  {
+    "name": "Starfield",
+    "categoryId": 2,
+    "price": 279,
+    "image": "https://howlongtobeat.com/games/57445_Starfield.jpg",
+    "description": "Starfield é o primeiro universo novo em mais de 25 anos da Bethesda Game Studios, os premiados criadores de The Elder Scrolls V: Skyrim e Fallout 4. Neste RPG para a nova geração em meio às estrelas, crie o personagem que você quiser e explore com liberdade inigualável enquanto embarca em uma jornada épica para desvendar o maior mistério da humanidade. \n No ano de 2330, a humanidade já se aventurou para além do nosso sistema solar, colonizando planetas novos, e agora habita o espaço. Você passará a integrar a Constelação – o último grupo de exploradores espaciais em busca de artefatos raros pela galáxia – e navegará pela vastidão do espaço no maior e mais ambicioso jogo da Bethesda Game Studios."
+  },
+  {
+    "name": "Battlefield™ 2042",
+    "categoryId": 3,
+    "price": 199,
+    "image": "https://howlongtobeat.com/games/93426_Battlefield_2042.jpg",
+    "description": "Battlefield 2042 é um jogo de tiro em primeira pessoa emocionante que marca o retorno da guerra dinâmica que é marca registrada da franquia. \n Ambientado no futuro próximo de um mundo transformado pela desordem, você terá que se adaptar e superar campos de batalha dinâmicos com a ajuda do seu esquadrão e um arsenal de armas e veículos de ponta. \n Com suporte para 128 jogadores no PlayStation 5*, Battlefield 2042 apresenta dimensões nunca antes vistas, com campos de batalha vastos pelo mundo todo. Participe de experiências gigantescas, desde modos multijogador atualizados como Conquest e Breakthrough até o inédito Hazard Zone."
+  },
+  {
+    "name": "EA SPORTS: FC 24",
+    "categoryId": 8,
+    "price": 249.9,
+    "image": "https://howlongtobeat.com/games/131658_EA_Sports_FC_24.jpg",
+    "description": "EA SPORTS FC™ 24 marca o início do futuro do futebol. Feito com base em inovação e autenticidade, o jogo vai deixar você mais perto dos gramados, na experiência futebolística mais fiel já vista, com os melhores jogadores dos maiores times, ligas e competições pelo mundo. \n Experimente um realismo sem igual em cada partida, tudo graças a três tecnologias de ponta: HyperMotionV, PlayStyles otimizado por Opta e a engine Frostbite™ aprimorada. \n Com mais de 19 mil jogadores totalmente licenciados, 700 times e 30 ligas — incluindo as Champions League masculina e feminina da UEFA —, EA SPORTS FC 24 traz uma autenticidade sem igual aos gramados."
+  },
+  {
+    "name": "NBA 2K24",
+    "categoryId": 8,
+    "price": 249.9,
+    "image": "https://howlongtobeat.com/games/131359_NBA_2K24.jpg",
+    "description": "Jogue com suas equipes favoritas da NBA e WNBA em NBA 2K24, com elencos totalmente atualizados e times históricos e lendários. \n Mostre seu complexo arsenal de habilidades, com controles de combo para drible e defesa interna reformulados para uma jogabilidade mais reativa e gratificante. \n Escolha sua equipe e curta a ação pura e realista nas quadras numa série de modos, incluindo as inúmeras opções personalizadas e sem limites de MyPLAYER em MyCAREER. Colecione uma série incrível de lendas e monte sua escalação perfeita em MyTEAM e muito mais, incluindo novos desafios MAMBA MOMENTS™. \n A gente se vê nas quadras."
+  },
+  {
+    "name": "Call Of Duty: MODERN WARFARE III",
+    "categoryId": 3,
+    "price": 349,
+    "image": "https://howlongtobeat.com/games/132689_Call_of_Duty_Modern_Warfare_III.jpg",
+    "description": "Na sequência direta do recordista Call of Duty: Modern Warfare II, o Capitão Price e a Força-Tarefa 141 enfrentam a ameaça definitiva.O ultranacionalista e criminoso de guerra, Vladimir Makarov, está estendendo seu domínio por todo o mundo, fazendo com que a Força-Tarefa 141 lute como nunca antes."
+  },
+  {
+    "name": "Alan Wake II",
+    "categoryId": 4,
+    "price": 249,
+    "image": "https://image.api.playstation.com/vulcan/ap/rnd/202305/2420/fbd0dcc88b31805fc7d49f59b8e0e5d0276403cde7fb8cc8.jpg",
+    "description": "Uma série de assassinatos ritualísticos ameaça Bright Falls, uma comunidade de cidade pequena cercada pela natureza selvagem do noroeste do Pacífico. Saga Anderson, uma talentosa agente do FBI conhecida por resolver casos impossíveis, chega para investigar os assassinatos. O caso de Anderson vira um pesadelo quando ela descobre páginas de uma história de terror que começa a se tornar realidade ao seu redor. \n Alan Wake, um escritor perdido preso em um pesadelo além do nosso mundo, escreve uma história sombria na tentativa de moldar a realidade à sua volta e escapar de sua prisão. Perseguido por um horror sombrio, Wake tenta manter sua sanidade e derrotar o diabo no próprio jogo dele. \n Anderson e Wake são dois heróis em duas jornadas desesperadas e duas realidades separadas, conectados pelo coração de maneiras que nem eles mesmos conseguem entender, refletindo um no outro, ecoando um ao outro e afetando o mundo ao redor de ambos. \n Alimentada pela história de terror, a escuridão sobrenatural invade Bright Falls, corrompendo os moradores e ameaçando os entes queridos de Anderson e Wake. A luz é a arma — e o refúgio deles — contra a escuridão que enfrentam. Presos em uma história de terror sinistra onde só há vítimas e monstros, conseguirão eles se transformar nos heróis que precisam ser? \n Desvende um mistério fatal \n O que começa como uma investigação de assassinato em cidade pequena rapidamente se transforma em uma jornada aterrorizante. Descubra a fonte da escuridão sobrenatural nesta história de terror psicológico cheia de suspense intenso e reviravoltas inesperadas. \n Jogue com duas personagens \n Viva as histórias de Alan Wake e Saga Anderson e veja as situações se desenrolarem de diferentes perspectivas. Alterne entre a corrida de vida ou morte de Anderson para resolver o caso e as tentativas desesperadas de Wake de reescrever sua realidade para escapar das profundezas do Lugar Obscuro. \n Explore dois mundos \n Conheça dois mundos lindos, mas aterrorizantes, cada um com seu rico elenco de personagens e ameaças mortais. Descubra as paisagens majestosas de Cauldron Lake no noroeste do Pacífico e as cidades paradisíacas de Bright Falls e Watery. Em um forte contraste, tente escapar da paisagem urbana aterrorizante do Lugar Obscuro. \n Sobreviva com a luz \n Com recursos limitados, enfrente poderosos inimigos sobrenaturais em situações desesperadoras de combate próximo. Uma arma não é o suficiente para sobreviver. A luz é a maior arma na luta contra a escuridão e será seu refúgio quando os inimigos ameaçarem acabar com você."
+  },
+  {
+    "name": "The Crew: Motorfest",
+    "categoryId": 5,
+    "price": 249,
+    "image": "https://howlongtobeat.com/games/130044_The_Crew_Motorfest.jpg",
+    "description": "O mais novo capítulo da série de ação e corrida em mundo aberto transforma a bela ilha havaiana de O'ahu num grande destino automobilístico. \n Esse cenário diverso é todo seu para explorar, das ruas urbanas de Honolulu e trilhas de terra na floresta tropical a estradas de montanha, perfeitas para drift, e subidas desafiadoras em vulcões. \n Você pode experimentar esse paraíso das corridas por conta própria ou com sua equipe, usando centenas de veículos licenciados e participando de disputas emocionantes, eventos temáticos e desafios exclusivos. Seja qual for seu aspecto favorito do automobilismo, o jogo tem algo para você."
+  },
+  {
+    "name": "The Witcher 3 Complete Edition",
+    "categoryId": 2,
+    "price": 249,
+    "image": "https://howlongtobeat.com/games/10270_The_Witcher_3_Wild_Hunt.jpg",
+    "description": "O JOGO MAIS PREMIADO DE UMA GERAÇÃO \n AGORA APERFEIÇOADA PARA A PRÓXIMA \n SOBRE O JOGO \n Você é Geralt de Rívia, mercenário matador de monstros. O lugar é um continente devastado pela guerra e infestado de monstros que você pode explorar à vontade. Seu contrato atual? Encontrar Ciri, a Criança da Profecia — uma arma viva que pode alterar a forma do mundo. \n A Complete Edition contém o jogo-base, com uma enorme aventura de mundo aberto com mais de cem horas de duração, além das duas grandes expansões da história: Hearts of Stone e Blood and Wine, com mais cinquenta horas de jogo! \n Ele também vem com todos os conteúdos adicionais lançados para o jogo, além de novos itens, incluindo espadas, armaduras, aparências alternativas inspiradas na série The Witcher da Netflix e muito mais! \n Contemple o mundo sombrio de fantasia do Continente como nunca antes! A versão Xbox Series X|S de The Witcher 3: Wild Hunt foi aprimorada com inúmeras melhorias visuais e técnicas, inclusive com nível de detalhes elaborado, tempos de carregamento mais curtos, uma variedade de modificações criadas e recém-desenvolvidas pela comunidade para o jogo, traçado de raios em tempo real e muito mais — especialmente para o desempenho dos novos consoles — além do Modo Fotografia integrado. \n JOGUE COMO UM MERCENÁRIO MATADOR DE MONSTROS ALTAMENTE TREINADO \n Treinados desde a infância e transformados para ganhar habilidades, força e reflexos sobre-humanos, os bruxos se contrapõem a um mundo infestado de monstros. \n • Destrua totalmente os inimigos como um caçador de monstros profissional armado com uma variedade de armas melhoráveis, poções mutantes e magia de combate. \n • Cace uma grande variedade de monstros exóticos, desde feras selvagens à espreita nas passagens montanhosas até astutos predadores sobrenaturais em emboscadas nos becos sombrios de cidades densamente povoadas.• Invista suas recompensas para melhorar seu armamento e comprar armaduras personalizadas — ou gaste-as em corridas de cavalos, jogos de cartas, lutas e outros prazeres mundanos. \n EXPLORE UM MUNDO ABERTO DE FANTASIA MORALMENTE AMBÍGUO \n Concebido para uma aventura sem fim, o enorme mundo aberto de The Witcher estabelece novos padrões em termos de tamanho, profundidade e complexidade. \n • Atravesse um mundo aberto fantástico: explore ruínas esquecidas, cavernas e naufrágios, negocie com mercadores e ferreiros anões nas cidades e cace em planícies abertas, mares e montanhas.• Lide com generais traidores, bruxas desonestas e nobres corruptos para fornecer serviços sombrios e perigosos. \n • Faça escolhas que vão além do bem e do mal e enfrente suas duradouras consequências. \n BUSQUE A CRIANÇA DA PROFECIA \n Assuma o contrato mais importante de sua vida: rastrear a criança da profecia — a chave para salvar ou destruir o mundo. \n • Em tempos de guerra, persiga a criança da profecia — uma arma viva prevista em antigas lendas élficas. \n • Lute contra governantes atrozes, espíritos selvagens e até uma ameaça de além do véu — todos determinados a controlar este mundo. \n • Defina o seu destino num mundo que talvez não valha a pena salvar."
+  },
+  {
+    "name": "Resident Evil 4 Remake",
+    "categoryId": 4,
+    "price": 199,
+    "image": "https://howlongtobeat.com/games/108881_Resident_Evil_4.jpg",
+    "description": "Resident Evil 4, o jogo lendário de terror e sobrevivência de 2005, está totalmente atualizado nesse remake completo. \n Seis anos após os eventos de Resident Evil 2, Leon Kennedy, sobrevivente de Raccoon City, foi enviado a um vilarejo isolado na Europa para investigar o desaparecimento da filha do presidente dos Estados Unidos. O que ele descobre lá é diferente de tudo o que ele já enfrentou antes. \n Todos os aspectos do jogo clássico foram atualizados para a geração atual, desde gráficos e controles modernizados até um enredo reimaginado que vai surpreender até mesmo os fãs veteranos."
+  },
+  {
+    "name": "Forza Motorsport",
+    "categoryId": 5,
+    "price": 299,
+    "image": "https://howlongtobeat.com/games/109240_Forza_Motorsport.jpg",
+    "description": "• Mergulhe em mais de 500 carros reais por 20 pistas mundialmente famosas, incluindo alguns dos locais e layouts de pistas mais queridos dos fãs, cada um apresentando horários dinâmicos específicos, com clima e condições de pilotagem únicas. \n • Supere os adversários usando mais de 800 aprimoramentos de desempenho na nova, divertida e gratificante experiência para um jogador, o Modo Carreira da Copa dos Construtores. \n • Corra ao lado de seus amigos em eventos multijogador* com estratégias de pneus e combustível, uma estrutura inspirada nos grandes eventos de corrida e novas classificações de pilotos e segurança. \n • Corra contra oponentes de IA de ponta, com física avançada, assistências poderosas, novos sistemas de acumulação de dano e terra e visuais fotorrealistas com traçado de raio em tempo real na pista. \n • Corra com mais de 500 carros do mundo real, incluindo carros de corrida modernos e mais de 100 carros novos no Forza Motorsport. Faça cada volta valer a pena em 20 ambientes com locais favoritos dos fãs e vários traçados de pista para dominar, cada um com pontuação ao vivo na pista, horários e clima totalmente dinâmicos e condições de pilotagem únicas, que garantem que duas voltas nunca vão ser iguais. \n Experimente uma simulação de ponta com visuais fotorrealistas incríveis que oferecem traçado em tempo real na pista, novos sistemas de acúmulo de danos e terra e física extremamente aprimorada, com assistências poderosas e uma melhoria de 48x na fidelidade dos pneus. \n Supere os adversários ganhando mais de 800 aprimoramentos de desempenho e enfrente nossos oponentes de IA mais avançados em uma campanha para um jogador totalmente nova, divertida e recompensadora, o Modo Carreira da Copa dos Construtores. \n Dispute o pódio em eventos Multijogador* em Destaque com uma estrutura inspirada nos grandes eventos de corrida ou crie a corrida que você e seus amigos desejarem no Jogo Livre. As corridas online são mais seguras, divertidas e competitivas com as Regras de Corrida do Forza aprimoradas por IA, estratégias de pneus e combustível e novas classificações de pilotos e segurança.  \n Mergulhe em um mundo em expansão no automobilismo. Novos campeonatos de carreira e eventos online serão apresentados regularmente, oferecendo desafios exclusivos, novos carros e pistas incríveis e novas experiências de jogo emocionantes nos próximos anos."
+  },
+  {
+    "name": "Hi-Fi Rush",
+    "categoryId": 1,
+    "price": 89,
+    "image": "https://howlongtobeat.com/games/122891_Hi-Fi_Rush.jpg",
+    "description": "Sinta a batida enquanto o aspirante a estrela Chai e seu inesperado time de aliados lutam contra uma megacorporação maligna de melhorias robóticas usando um estrondoso combate ritmado! Da Tango Gameworks, o estúdio por trás de The Evil Within® e Ghostwire®: Tokyo (não, sério), chega agora Hi-Fi RUSH, um novíssimo jogo de ação em que o mundo entra em sincronia com a música! \n CHAI CONTRA O MUNDO \n Marcado como um 'defeito' após um experimento corporativo suspeito fundir por engano um aparelho de música ao seu coração, Chai agora precisa lutar por sua liberdade em um mundo animado envolvente, onde tudo – desafios de plataforma, ataques de inimigos e até piadas e bate-papos irreverentes – está sincronizado com a batida da música. \n ABRA A RODA DE POGO! \n Enfrente um exército de robôs corporativos (leia-se: robôs de verdade) em combates empolgantes, que são amplificados pela batida. Acerte o tempo das suas ações para executar impressionantes Batidões, habilidades especiais de impacto e até ataques combinados com seus aliados! Quer se exibir? Vá além e use ao máximo a batida para amplificar suas habilidades e ganhar as cobiçadas classificações S."
+  },
+  {
+    "name": "Forza Horizon 5",
+    "categoryId": 5,
+    "price": 249,
+    "image": "https://howlongtobeat.com/games/93948_Forza_Horizon_5.jpg",
+    "description": "Sua maior aventura Horizon te espera! Lidere impressionantes expedições pelo mundo aberto vibrante e em constante evolução nas terras mexicanas. Participe de corridas divertidas e sem limites enquanto pilota centenas dos melhores carros do mundo."
+  },
+  {
+    "name": "Horizon Forbidden West",
+    "categoryId": 2,
+    "price": 299,
+    "image": "https://howlongtobeat.com/games/79775_Horizon_Forbidden_West.jpg",
+    "description": "Explore terras distantes, enfrente máquinas maiores e mais imponentes, e encontre novas tribos incríveis ao retornar o futuro distante e pós-apocalíptico de Horizon. \n A terra está morrendo! Tempestades implacáveis e uma praga incontrolável devastam o que sobrou da humanidade enquanto máquinas assustadoras vagam por territórios próximos. A vida na Terra segue rumo à outra extinção, e ninguém sabe o porquê. \n Cabe a Aloy descobrir os segredos por trás dessas ameaças e restaurar a ordem e equilíbrio ao mundo. Ao longo do caminho, ela reencontrará velhos amigos, forjará alianças com novas facções e descobrirá o legado do passado antigo enquanto tenta se manter um passo à frente de um novo inimigo."
+  },
+  {
+    "name": "Elden Ring",
+    "categoryId": 7,
+    "price": 249.9,
+    "image":
+      "https://howlongtobeat.com/games/68151_Elden_Ring.jpg",
+    "description": "O NOVO RPG DE AÇÃO E FANTASIA. \n Levante-se, Maculado, e seja guiado pela graça para portar o poder do Anel Prístino e se tornar um Lorde Prístino nas Terras Intermédias. \n • Um mundo vasto e emocionante \n Um mundo vasto onde campos abertos e uma variedade de situações e masmorras imensas, com complexos designs tridimensionais se conectam com fluidez. Conforme explora, sinta a alegria de descobrir poderosas e desconhecidas ameaças que aguardam por você, levando a um grande senso de conquista. \n • Crie seu próprio personagem \n Além de personalizar a aparência do seu personagem, você pode combinar livremente armas, armaduras e magias que equipar. Você pode desenvolver seu personagem de acordo com seu estilo de jogo, como aumentar a força muscular para se tornar um poderoso guerreiro, ou dominar a magia. \n • Um drama épico nascido de um mito \n Uma história cheia de camadas, contada em fragmentos. Um drama épico onde os vários pensamentos dos personagens se interligam nas Terras Intermédias. \n • Jogo on-line único que conecta você livremente aos outros \n Além do multijogador, onde você pode se conectar diretamente com outros jogadores e viajarem juntos, o jogo suporta um elemento on-line assíncrono único que permite que você sinta a presença dos outros."
+  },
+  {
+    "name": "Indiana Jones and the Great Circle",
+    "categoryId": 1,
+    "price": 349.9,
+    "image": "https://howlongtobeat.com/games/144234_Indiana_Jones_and_the_Great_Circle.jpg",
+    "description": "Desvende um dos maiores mistérios da história em Indiana Jones e o Grande Círculo™, uma aventura solo em primeira pessoa ambientada entre os eventos de Os Caçadores da Arca Perdida™ e A Última Cruzada™. Em 1937, forças sinistras estão vasculhando o mundo atrás do segredo de um poder ancestral ligado ao Grande Círculo. Só uma pessoa pode impedi-las: Indiana Jones™. Você se tornará o lendário arqueólogo neste jogo cinematográfico de ação e aventura da MachineGames, o premiado estúdio responsável pela recente série Wolfenstein, e de Todd Howard, produtor executivo que está no Hall da Fama dos videogames. \n VOCÊ É INDIANA JONES \n Viva a aventura como Indy em uma história emocionante cheia de exploração, ação imersiva e quebra-cabeças intrigantes. Como o brilhante arqueólogo conhecido pelo intelecto aguçado, engenhosidade, astúcia e humor característico, você viajará pelo mundo em uma corrida contra forças inimigas para descobrir os segredos de um dos maiores mistérios de todos os tempos. \n UM MUNDO DE MISTÉRIO ESTÁ À SUA ESPERA \n Viaje dos corredores da Marshall College para o coração do Vaticano, as pirâmides do Egito, os templos submersos de Sukhothai e muito mais. Quando uma invasão na calada da noite acaba em confronto com um homem enorme e misterioso, você deve desvendar um mistério chocante por trás do roubo de um artefato aparentemente sem importância. Forjando novas alianças e enfrentando velhos inimigos, você se envolverá com personagens intrigantes, usará astúcia e inteligência para resolver enigmas ancestrais e sobreviverá a um intenso quebra-cabeças. \n AÇÃO DE ESTALAR O CHICOTE \n O famoso chicote de Indiana ainda é a peça principal de seu arsenal e pode ser usado para distrair, desarmar e atacar inimigos. Mas ele não é só uma arma, é a ferramenta mais importante de Indy para explorar o ambiente. Passe por cima de rondas desatentas e escale paredes enquanto cruza um mundo incrível. Combine infiltração furtiva, combate corpo a corpo intenso e uso de armas para enfrentar a ameaça inimiga e desvendar o mistério. \n O ESPÍRITO DA DESCOBERTA \n Aventure-se em um jogo que mistura narrativa linear e mapas de regiões abertas. Alimente o espírito de exploração dentro de você e desenterre um mundo de mistérios fascinantes, armadilhas mortais e quebra-cabeças terríveis, onde qualquer coisa pode esconder a próxima peça do mistério... ou cobras. Por que tinha que ser cobras?"
+  },
+  {
+    "name": "Black Myth Wukong",
+    "categoryId": 7,
+    "price": 299,
+    "image": "https://howlongtobeat.com/games/82089_Black_Myth_Wukong.jpg",
+    "description": "Black Myth: Wukong é um RPG de ação inspirado na mitologia da China e baseado em 'Jornada para o Oeste', um dos quatro grandes romances clássicos da literatura chinesa. \n No papel do Predestinado, você partirá numa aventura repleta de desafios e maravilhas para descobrir a verdade obscura por trás de uma lenda gloriosa do passado. \n Como o Predestinado, você enfrentará inimigos poderosos e rivais dignos no decorrer da jornada. Trave batalhas épicas nas quais render-se não é uma opção. \n Além de dominar diversas técnicas com o bastão, você terá liberdade para combinar diferentes feitiços, habilidades, armas e equipamentos para encontrar a estratégia vencedora mais adequada ao seu estilo de combate. "
+  },
+  {
+    "name": "Lies of P",
+    "categoryId": 7,
+    "price": 249.9,
+    "image": "https://howlongtobeat.com/games/92418_Lies_of_P.jpg",
+    "description": "Lies of P é um soulslike emocionante que pega a história de Pinóquio, vira-a de ponta-cabeça e coloca-a num cenário sombrio e elegante da era belle époque. \n Você é um títere criado por Geppetto, preso numa teia de mentiras com monstros inimagináveis e figuras pouco confiáveis que ficarão entre você e os eventos no mundo de Lies of P. \n Uma voz misteriosa desperta você e guia seus passos pela atormentada cidade de Krat — um lugar outrora animado que foi envenenado pela loucura e sede de sangue. Em nosso soulslike, você deve adaptar suas armas e seu personagem para enfrentar horrores incalculáveis, desvendar os segredos insondáveis das elites da cidade e escolher entre confrontar as dificuldades com a verdade ou tecer mentiras para superá-las na jornada para encontrar a si mesmo. \n ・ UM MUNDO SOMBRIAMENTE ELEGANTE E CRUEL \n Descubra os segredos da cidade de Krat — um lugar imerso no estilo da era belle époque que já prosperou devido à sua indústria de títeres e agora se encontra com as ruas cobertas de sangue. \n ・LUTE COM INSTRUMENTOS PERVERSOS \n Desenvolva um estilo de combate único para combater inimigos e terrenos cruéis, com combinações de armas dinâmicas, o uso de Braço Legionário e a ativação de novas habilidades. \n ・O QUE HÁ EM MENTIR? \n Haverá momentos em que você será confrontado com escolhas nas quais poderá mentir para confortar outras pessoas em sofrimento ou desespero… ou poderá optar por dizer a verdade. \n Trace seu próprio caminho. \n ・UM CLÁSSICO REINVENTADO \n Experimente o amado conto de fadas de Pinóquio reinterpretado como uma narrativa sombria que permite aos jogadores descobrir os segredos e símbolos escondidos no mundo de Lies of P."
+  },
+  {
+    "name": "God of War",
+    "categoryId": 1,
+    "price": 249,
+    "image": "https://howlongtobeat.com/games/38050_God_of_War.jpg",
+    "description": "Kratos é pai novamente. Como mentor e protetor de Atreus, um filho determinado a ganhar seu respeito, ele é forçado a encarar e controlar a fúria que há muito tempo o define enquanto viaja por um mundo ameaçador com o seu filho. \n Com a vingança contra os deuses do Olimpo no passado, Kratos agora vive no reino das divindades e monstros nórdicos. \n É nesse mundo duro e impiedoso que ele deve lutar para sobreviver enquanto ensina seu filho a fazer o mesmo e tenta impedi-lo de repetir os erros cruéis do Fantasma de Esparta. \n Esta impressionante repaginação de God of War reúne todas as características marcantes dessa famosa franquia — combate brutal, lutas épicas contra chefes e uma grandiosidade de tirar o fôlego — e as mescla a uma narrativa poderosa e emocionante que reestabelece o mundo de Kratos. "
+  },
+  {
+    "name": "The Last of Us Part I",
+    "categoryId": 10,
+    "price": 249,
+    "image": "https://howlongtobeat.com/games/109104_The_Last_of_Us_Part_I.jpg",
+    "description": "Conheça a história emocionante e os personagens inesquecíveis de The Last of Us, vencedor de mais de 200 prêmios de Jogo do Ano. \n Em uma civilização devastada, em que infectados e sobreviventes veteranos estão à solta, Joel, um protagonista abatido, é contratado para tirar uma garota de 14 anos, Ellie, de uma zona de quarentena militar. No entanto, o que começa como um pequeno serviço se transforma em uma jornada brutal através do país. \n Inclui a campanha de The Last of Us e o aclamado capítulo anterior à trama, Left Behind, que explora os eventos que mudaram para sempre as vidas de Ellie e sua melhor amiga, Riley."
+  },
+  {
+    "name": "The Last of Us Part II",
+    "categoryId": 10,
+    "price": 249,
+    "image": "https://howlongtobeat.com/games/41753_The_Last_of_Us_Part_II.jpg",
+    "description": "Jogue o título vencedor de mais de 300 prêmios de Jogo do Ano, remasterizado para o console PlayStation®5. Jogue de novo ou comece a descobrir a história de Ellie e Abby com melhorias gráficas, novos modos de jogo, como a experiência de sobrevivência roguelike Sem Volta, integração ao controle sem fio DualSense®  e muito mais. \n Cinco anos depois de uma jornada perigosa pelos Estados Unidos num cenário pós-pandêmico, Ellie e Joel foram morar em Jackson, Wyoming. A vida numa comunidade próspera de sobreviventes lhes trouxe paz e estabilidade, apesar da ameaça constante dos infectados e de outros sobreviventes mais desesperados. Quando um evento violento interrompe a paz, Ellie parte numa jornada incansável para fazer justiça e virar a página."
+  },
+  {
+    "name": "Marvel's Spider-Man",
+    "categoryId": 1,
+    "price": 249,
+    "image": "https://howlongtobeat.com/games/44852_Spider-Man_(2017).jpg",
+    "description": "Esse não é o Spider-Man que você conheceu ou viu. No Marvel’s Spider-Man Remasterizado, encontramos um Peter Parker experiente e mais preparado para enfrentar a onda de crimes de Nova York. Em contrapartida, ele luta para conciliar o caos em sua vida pessoal e carreira enquanto o destino da Nova York da Marvel pesa sobre seus ombros. \n Descubra a história completa do teioso com Marvel's Spider-Man: Miles Morales Ultimate Edition. Este pacote imperdível vem com um código do voucher** para Marvel’s Spider-Man Remasterizado, que inclui o premiado Marvel's Spider-Man remasterizado e aprimorado para console PS5 e os três capítulos de DLC de A Cidade que Nunca Dorme da aventura. "
+  },
+  {
+    "name": "Marvel's Spider-Man Miles Morales",
+    "categoryId": 1,
+    "price": 249,
+    "image": "https://howlongtobeat.com/games/79859_Marvels_Spider-Man_Miles_Morales.jpg",
+    "description": "Na mais nova aventura do universo de Marvel's Spider-Man, o adolescente Miles Morales está se adaptando a um novo lar enquanto segue os passos de seu mentor, Peter Parker, como novo Spider-Man. \n Mas quando uma violenta disputa de forças ameaça destruir sua vizinhança, o aspirante a herói percebe que com grandes poderes também vêm grandes responsabilidades. Para salvar a Nova York da Marvel, Miles deve reconhecer e assumir o título de Spider-Man."
+  },
+  {
+    "name": "Ratchet & Clank: Rift Apart",
+    "categoryId": 1,
+    "price": 199,
+    "image": "https://howlongtobeat.com/games/79776_Ratchet_&_Clank_Rift_Apart.jpg",
+    "description": "Pule de dimensão a dimensão com Ratchet e Clank para enfrentar um imperador maligno de outra realidade. Viaje por mundos repletos de ação, e além deles em velocidade alucinante, com visuais incríveis e um arsenal insano. \n Arsenal irado  \n Um imperador robótico maligno está determinado a conquistar mundos interdimensionais, e a dimensão de Ratchet e Clank é a próxima da lista. Você vai precisar tirar a poeira do arsenal irado da dupla dinâmica para impedir um colapso dimensional. Abra caminho de volta para casa com um arsenal de novas armas explosivas, como a Pistola de Rajada, o Irrigador de Topiaria e a Bomba de Estilhaços. Aventure-se em paisagens urbanas, participe do combate e deslize por dimensões com dispositivos novos que desafiam a física. \n Gente nova \n Junte-se à dupla suprema com um elenco de aliados familiares e gente nova, incluindo Lombax, uma nova lutadora da resistência determinada a acabar com a escória robótica. Jogue com o Ratchet e com a Lombax, nova personagem misteriosa de outra dimensão.  Descubra a nova mecânica interdimensional de Clank."
+  },
+  {
+    "name": "Forza Horizon 3",
+    "categoryId": 5,
+    "price": 149,
+    "image": "https://howlongtobeat.com/games/38052_Forza_Horizon_3.jpg",
+    "description": "ESTE É O SEU HORIZON \n Você está no comando do Festival Horizon. Personalize tudo, contrate e demita seus amigos e explore a Austrália em mais de 350 dos melhores carros do mundo. Torne seu Horizon a celebração suprema de carros, música e liberdade nas estradas. Como chegar lá? Isso é com você. \n EXPLORE A AUSTRÁLIA, O MAIOR MUNDO HORIZON DE TODOS OS TEMPOS \n Cruze vastos desertos e desfiladeiros pedregosos indo do Outback até as florestas, passando pelas praias e arranha-céus da costa dourada da Austrália. \n ESCOLHA ENTRE 350 DOS MELHORES CARROS DO MUNDO \n Cada carro foi recriado com os detalhes do ForzaVista™, incluindo a visão no cockpit, luzes e limpadores de para-brisa funcionais e os novos tipos de pneus que darão uma sensação de pilotagem jamais vista antes no Forza. \n DESCUBRA NOVAS FORMAS DE PILOTAGEM \n Saltos em locais de perigo, Comboios e Áreas de Drift são apenas alguns dos novos desafios emocionantes que o aguardam. Você também será a estrela em Eventos de Exibição espetaculares que o colocarão contra uma frota de lanchas e até um zepelim gigante!"
+  },
+  {
+    "name": "Forza Horizon 4",
+    "categoryId": 5,
+    "price": 199,
+    "image": "https://howlongtobeat.com/games/55661_Forza_Horizon_4.jpg",
+    "description": "Estações dinâmicas mudam tudo no maior festival automotivo do mundo. Participe sozinho ou junte os amigos para explorar a linda e histórica Grã-Bretanha num mundo aberto compartilhado. Colete, modifique e pilote mais de 450 carros. Corra, faça proeza, crie e explore. Escolha seu caminho para se tornar um superastro do Horizon."
+  },
+  {
+    "name": "Stray",
+    "categoryId": 1,
+    "price": 99,
+    "image": "https://howlongtobeat.com/games/79790_Stray_(2021).jpg",
+    "description": "Stray é um jogo de aventura felina em terceira pessoa que se passa nos detalhados becos iluminados por néon de uma cidade futurista e nos obscuros locais de seu submundo. \n Veja o mundo pelos olhos de um gato de rua e interaja com o ambiente de maneiras divertidas. \n Stray é desenvolvido pelo BlueTwelve Studio, uma equipe pequena do sul da França formada sobretudo por gatos e alguns humanos."
+  },
+  {
+    "name": "Grand Theft Auto IV: The Complete Edition",
+    "categoryId": 10,
+    "price": 99,
+    "image": "https://howlongtobeat.com/games/250px-GTAIV_Logo.jpg",
+    "description": "O quê que o sonho americano significa hoje em dia? Para Niko Bellic, que acaba de desembarcar de um navio vindo da Europa, é a esperança de escapar do seu passado. Para seu primo, Roman, é a visão de que juntos eles podem ficar ricos em Liberty City, a porta para a terra das oportunidades. À medida que adquirem dívidas e são arrastados para o mundo perverso do crime por uma série de trapaceiros, ladrões e sociopatas, eles descobrem que a realidade é muito diferente do sonho em uma cidade que cultua dinheiro e status e que é o paraíso para quem tem essas coisas, mas um pesadelo para quem não têm."
+  },
+  {
+    "name": "Returnal",
+    "categoryId": 9,
+    "price": 249,
+    "image": "https://howlongtobeat.com/games/80102_Returnal.jpg",
+    "description": "Após o pouso forçado neste mundo que muda de forma, Selene deve pesquisar a paisagem árida de uma antiga civilização para escapar. Isolada e solitária, ela se vê lutando com unhas e dentes pela sua sobrevivência. Repetidas vezes ela é derrotada - forçada a reiniciar sua jornada sempre que morre. \n Por meio de um jogo implacável de RPG tipo masmorra, você descobrirá que, assim como o planeta muda a cada ciclo, os itens à sua disposição também mudam. Cada loop oferece novas combinações, forçando você a ultrapassar seus limites e a combater com uma estratégia diferente. \n Trazida à vida por efeitos visuais incríveis, a beleza sombria do mundo decadente ao seu redor está repleta de surpresas explosivas. Com combates de alto risco e com munição de bala, reviravoltas viscerais em ambientes rígidos e contrastantes. Você vai explorar, descobrir e lutar em uma jornada implacável, onde o mistério espreita todos os seus movimentos. \n Projetado para extrema repetibilidade, o mundo processual de Returnal convida você a tirar a poeira da derrota e enfrentar novos desafios em evolução a cada renascimento."
+  },
+  {
+    "name": "Ori and the Blind Forest",
+    "categoryId": 6,
+    "price": 99,
+    "image": "https://howlongtobeat.com/games/36755_Ori_and_the_Blind_Forest_Definitive_Edition.jpg",
+    "description": "A floresta de Nibel está morrendo. Após uma grande tempestade colocar em andamento uma série de eventos devastadores, Ori deve viajar em busca da coragem para confrontar um inimigo sombrio e salvar a floresta de Nibel. “Ori and the Blind Forest” conta a história de um jovem órfão destinado ao heroísmo, em um jogo de Ação em Plataformas com visual incrível criado pela Moon Studios. Apresentando artes pintadas à mão, personagens animados meticulosamente, uma trilha sonora totalmente orquestral e dezenas de novos recursos na Definitive Edition, “Ori and the Blind Forest” explora uma história profundamente emocional sobre amor e sacrifício e sobre a esperança que existe em todos nós. \n NOVIDADES DA DEFINITIVE EDITION \n • Recheada de conteúdos novos e adicionais: Novas áreas, novos segredos, novas habilidades, mais sequências da história, vários níveis de dificuldade, suporte total a retornos e muito mais! \n • Descobra o passado de Naru em dois ambientes totalmente novos. \n • Domine duas novas habilidades poderosas – Impulso e Explosão de Luz. \n • Encontre novas áreas secretas e explore Nibel mais rápido teletransportando-se entre as Fontes Espirituais."
+  },
+  {
+    "name": "Hellblade: Senua's Sacrifice",
+    "categoryId": 1,
+    "price": 59,
+    "image": "https://howlongtobeat.com/games/41638_Hellblade_Senuas_Sacrifice.jpg",
+    "description": "Dos criadores de Heavenly Sword, Enslaved: Odyssey to the West e DmC: Devil May Cry, chega-nos a viagem brutal de uma guerreira até ao mito e à loucura. \n No tempo dos vikings, uma guerreira celta parte numa demanda visionária arrepiante até ao inferno viking para lutar pela arma do seu falecido amado. \n Criado em colaboração com neurocientistas e pessoas que sofreram de psicoses, Hellblade: Senua’s Sacrifice vai arrastar-te para as profundezas da fúria melancólica da mente despedaçada da Senua."
+  },
+  {
+    "name": "Halo: The Master Chief Collection",
+    "categoryId": 3,
+    "price": 199,
+    "image": "https://howlongtobeat.com/games/Halo_Collection.jpg",
+    "description": "Aprimorada, atualizada e melhor do que nunca, agora a história completa do Master Chief está otimizada para o Xbox Series X|S. Aproveite recursos de próxima geração como carregamento rápido, cross-play multigeração, ajuste do campo de visão, experiência com tela dividida aprimorada e resolução de até 4K a 120FPS. \n Homenageando o herói lendário e sua jornada épica, a coletânea Halo: The Master Chief Collection reúne a história completa do Master Chief. Halo: Combat Evolved Anniversary, Halo 2: Anniversary, Halo 3, Halo 4, e agora Halo: Reach e Halo 3 ODST, foram incluídos e integrados em uma experiência única. \n O Pacote Digital da Master Chief Collection é a maior experiência de Halo já lançada, com um total de 67 missões de campanha, mais de 120 mapas multijogador (incluindo os mapas originais de Halo Combat Evolved), mapas Spartan Ops e inúmeras maneiras de jogar os conteúdos criados pela comunidade com a Forge. Agora atualizada com aprimoramentos para o Xbox Series X, esta é a coletânea dos sonhos de todo fã de Halo!*"
+  },
+  {
+    "name": "Halo Infinite",
+    "categoryId": 3,
+    "price": 299,
+    "image": "https://howlongtobeat.com/games/57454_Halo_Infinite.jpg",
+    "description": "Quando toda a esperança está perdida e o destino da humanidade está em jogo, o Master Chief está pronto para enfrentar o inimigo mais implacável que já enfrentou. Entre na armadura do maior herói da humanidade para vivenciar uma aventura épica de mundo aberto e explorar a grande escala do anel Halo. \n Com a Campanha Cooperativa e o Replay de Missões, você pode rever seus momentos preferidos, descobrir colecionáveis e explorar as maravilhas de Zeta Halo por conta própria ou com até três outros membros da esquadra."
+  },
+  {
+    "name": "Horizon Zero Dawn",
+    "categoryId": 2,
+    "price": 99,
+    "image": "https://howlongtobeat.com/games/53247_Horizon_Zero_Dawn_-_Complete_Edition.jpg",
+    "description": "Em uma era na qual máquinas vagam livremente e a humanidade deixou de ser a espécie dominante, uma jovem caçadora chamada Aloy inicia uma jornada na qual desvendará o seu destino. \n Em um mundo pós-apocalíptico exuberante, onde a natureza retomou as ruínas de uma civilização esquecida, pequenos grupos de pessoas vivem em tribos primitivas de caçadores e coletores. O domínio delas sobre esse novo ambiente selvagem foi usurpado pelas máquinas, terríveis criaturas mecânicas de origem desconhecida."
+  },
+  {
+    "name": "Atomic Heart",
+    "categoryId": 3,
+    "price": 199,
+    "image": "https://howlongtobeat.com/games/56297_Atomic_Heart.jpg",
+    "description": "Damos-te as boas-vindas a um mundo utópico de maravilhas e perfeição, onde os humanos vivem em harmonia com os seus leais e zelosos robôs. \n Bom, isso era dantes. Com o lançamento do último sistema de controlo de robôs a meros dias de distância, apenas um trágico acidente ou uma conspiração global o poderiam impedir… \n O inexorável avanço da tecnologia e experiências secretas deram origem a criaturas mutantes, máquinas aterrorizantes e robôs superpoderosos e todos se estão a revoltar contra os seus criadores. Apenas tu os podes impedir e descobrir o que está por trás deste mundo idealizado. \n Com as habilidades de combate concedidas pela tua luva experimental, o teu arsenal de espadas e armas de última geração, luta pela tua vida em encontros explosivos e frenéticos. Adapta o teu estilo de combate a cada adversário. Combina as tuas habilidades e recursos, usa o ambiente e melhora o teu equipamento para superar desafios e lutar pelo bem. \n • Um louco e sublime mundo utópico \n • Combate visceral, espetacular e impiedoso \n • Derrota máquinas gigantes e mutantes com as tuas várias habilidades e armas avançadas \n • Melhora o teu arsenal e equipamento"
+  },
+  {
+    "name": "Batman Arkham Asylum",
+    "categoryId": 1,
+    "price": 89.9,
+    "image": "https://howlongtobeat.com/games/Batman_Arkham_Asylum_GOTY.jpg",
+    "description": "Aclamado pela crítica, Batman: Arkham Asylum retorna com uma edição remasterizada do Jogo do Ano, com 4 mapas de desafio extras. Os mapas de desafio adicionais são Crime Alley; Pesadelo do Espantalho; Totally Insane e Nocturnal Hunter (ambos do Insane Night Map Pack). \n Utilize o sistema de combate exclusivo FreeFlow™ para encadear combos ilimitados perfeitamente e lutar contra enormes grupos de capangas do Coringa em brigas corpo a corpo brutais \n Investigue como Batman, O MAIOR DETETIVE DO MUNDO, resolvendo quebra-cabeças complexos com a ajuda de ferramentas forenses de ponta, incluindo varredura de raios X, leitura de impressões digitais, spray Amido Black e um rastreador de feromônios \n Enfrente os maiores vilões de Gotham, incluindo o Coringa, HARLEY QUINN, POISON IVY e KILLER CROC \n Torne-se o Predador Invisível™ com as eliminações do medo do Batman e o sistema exclusivo de pontos de vista para se mover sem ser visto e caçar inimigos \n Escolha vários métodos de queda, incluindo voar do céu e quebrar paredes. \n Explore cada centímetro do Arkham Asylum e vagueie livremente pela infame ilha, apresentada pela primeira vez em sua totalidade realista e corajosa \n Experimente como é ser o BATMAN usando BATARANGS, aerossol de gel explosivo, Batclaw, ressonador de sonar e lançador de linha \n Desbloqueie mais segredos completando desafios ocultos no mundo e desenvolva e personalize equipamentos ganhando pontos de experiência \n Desfrute de total liberdade de super-herói no ambiente com o uso da arma de arpão do Batman para chegar a qualquer lugar que você possa ver, pular de qualquer altura e deslizar em qualquer direção"
+  },
+  {
+    "name": "Batman Arkham City",
+    "categoryId": 1,
+    "price": 89.9,
+    "image": "https://howlongtobeat.com/games/11963_Batman_Arkham_City_GOTY.jpg",
+    "description": "Batman: Arkham City manda jogadores voando até Arkham City - uma prisão altamente fortificada no coração de Gotham City. Batman: Arkham City introduz uma nova história com os famosos e clássicos personagens e vilões assassinos do universo do Batman."
+  },
+  {
+    "name": "Batman Arkham Knight",
+    "categoryId": 1,
+    "price": 89.9,
+    "image": "https://howlongtobeat.com/games/Batman_Arkham_Knight_Cover_Art.jpg",
+    "description": "No explosivo último capítulo da série Arkham, o Espantalho retorna para reunir um grupo impressionante de supervilões, incluindo o Pinguim, o Duas Caras e a Arlequina. Batman: Arkham Knight apresenta o Batmóvel criado pela Rocksteady. O jogador poderá dirigi-lo pela primeira vez na franquia. O veículo lendário, combinado com a aclamada jogabilidade da série Batman Arkham, oferece aos jogadores uma experiência definitiva com o Batman ao percorrer Gotham City."
+  },
+  {
+    "name": "Resident Evil 2",
+    "categoryId": 4,
+    "price": 149.9,
+    "image": "https://howlongtobeat.com/games/57479_Resident_Evil_2.jpg",
+    "description": "Um vírus maligno toma conta dos residentes de Raccoon City em setembro de 1998, afundando a cidade no caos enquanto zumbis comedores de carne humana vagam pelas ruas em busca de sobreviventes. \n Um surto de adrenalina sem comparação, uma história instigante e horrores inimagináveis o aguardam. \n Presencie o retorno de Resident Evil 2."
+  },
+  {
+    "name": "Resident Evil 3",
+    "categoryId": 4,
+    "price": 149.9,
+    "image": "https://howlongtobeat.com/games/72822_Resident_Evil_3_(2020).jpg",
+    "description": "Jill Valentine é uma das últimas pessoas em Raccoon City a testemunhar as atrocidades que a Umbrella cometeu. Para pará-la a Umbrella libera sua arma secreta suprema: Nemesis! \n Jogar como Jill, você deve andar pelas ruas caóticas e infestadas de zumbis de Raccoon City, formidavelmente reconstruída utilizando o Mecanismo RE exclusivo da Capcom. Resolva enigmas, encontre outras criaturas tenebrosas e tente escapar do implacável Nemesis neste reimaginação do clássico de 1999!"
+  },
+  {
+    "name": "Dead Space 2",
+    "categoryId": 4,
+    "price": 99,
+    "image": "https://howlongtobeat.com/games/2335_Dead_Space_2.jpg",
+    "description": "O engenheiro Isaac Clarke regressa para mais uma aventura arrepiante na sequela do aclamado Dead Space™. Depois de acordar de um coma em uma enorme cidade espacial conhecida como “The Sprawl”, o único sobrevivente de uma terrível infecção alienígena se vê diante de um novo pesadelo catastrófico. Lutando contra a demência, sendo caçado pelo governo e assombrado pelas visões de sua namorada morta, Isaac fará o que for preciso para se salvar e dominar o terrível ataque. Com um arsenal de ferramentas para desmembrar Necromorfos e uma nova determinação, um engenheiro levará o terror ao espaço. O pesadelo retorna em 2011."
+  },
+  {
+    "name": "Dead Space 3",
+    "categoryId": 4,
+    "price": 99,
+    "image": "https://howlongtobeat.com/games/2337_Dead_Space_3.jpg",
+    "description": "Dead Space 3 junta Isaac Clarke e o implacável soldado John Carver numa aventura espacial para descobrir a origem dos Necromorph. Depois de se ter despenhado no planeta gelado Tau Volantis, Isaac tem de enfrentar um ambiente hostil para encontrar recursos. Irá pôr à prova as suas habilidades de engenharia para criar e personalizar armas e ferramentas de sobrevivência. O planeta gelado contém a chave para acabar com a praga dos Necromorphs, mas é preciso ultrapassar avalanches, escalar escarpas geladas e sobreviver neste clima violento. Ao enfrentar inimigos letais e a fúria dos elementos, Isaac pode trabalhar em equipa, para se salvar e a toda a Humanidade. Joga a solo no papel de Isaac Clarke ou com um amigo que vestirá a farda de Jonh Carver, num modo cooperativo com gestão automática de jogadores."
+  },
+  {
+    "name": "Death Stranding",
+    "categoryId": 1,
+    "price": 119,
+    "image": "https://howlongtobeat.com/games/38061_Death_Stranding.jpg",
+    "description": "Do criador Hideo Kojima, chega uma experiência totalmente nova, que desafia todos os géneros. \n Sam Bridges terá de enfrentar um mundo transformado pelo Death Stranding. Segurando nas mãos a reminiscência do nosso futuro, Sam embarca numa jornada para reestabelecer a ligação de um mundo estilhaçado. \n Com os destacados atores Norman Reedus, Mads Mikkelsen, Léa Seydoux e Lindsay Wagner. \n Funcionalidades adicionais para PC incluem Alta Taxa de Fotograma, Modo Fotográfico e Compatibilidade com Monitor Ultra-Wide. Além de conteúdo partilhado com a série HALF-LIFE, da Valve Corporation."
+  },
+  {
+    "name": "Mass Effect Legendary Edition",
+    "categoryId": 2,
+    "price": 149,
+    "image": "https://howlongtobeat.com/games/84851_Mass_Effect_Legendary_Edition.jpg",
+    "description": "Uma pessoa é tudo que protege a humanidade da maior ameaça que já enfrentou. Reviva a lenda de Comandante Shepard na aclamada trilogia de jogos com Mass Effect™ Legendary Edition. Inclui o conteúdo básico para um jogador ou uma jogadora e mais de 40 DLCs de Mass Effect, Mass Effect 2 e Mass Effect 3, além de armas promocionais, armaduras e pacotes, todos remasterizados e otimizados para 4K Ultra HD. \n Conheça um universo incrivelmente rico e detalhado onde suas decisões têm consequências profundas na ação e no resultado. \n REVIVA A SAGA CINEMATOGRÁFICA: A ação emocionante se junta a uma narrativa interativa e envolvente em que você decide como sua história vai se desenrolar. \n •Três jogos – Um inicializador: Jogue o conteúdo básico para um jogador ou uma jogadora e mais de 40 DLCs dos três jogos, incluindo armas promocionais, armaduras e pacotes. \n •Remasterizada para uma nova geração: Reviva a trilogia em 4K Ultra HD com desempenho, visuais e gráficos aprimorados, todos disponíveis em HDR. \n •Melhorias visuais nos três jogos: As atualizações incluem modelos, shaders, efeitos, iluminação e profundidade de campo aprimorados, além de áudio de resolução máxima. \n VIVENCIE A LENDA DE SHEPARD: Crie e personalize seu ou sua personagem, de sua aparência e habilidades até seu arsenal personalizado, e lidere seu esquadrão de reconhecimento de elite por uma galáxia mergulhada no caos. \n •Novas personalizações de Shepard: Com cabelo, maquiagem, cor dos olhos e tons de pele aprimorados, você pode personalizar seu ou sua Shepard em um criador de personagem unificado, com todas as opções da trilogia completa, ou escolher jogar com a icônica Comandante Shepard de Mass Effect 3, já disponível em todos os títulos. \n •Melhorias de jogabilidade no primeiro jogo de Mass Effect™: Foram aprimorados a mira e o equilíbrio de armas, os efeitos de som, entradas/controles, o comportamento do esquadrão, o comportamento de cobertura e as câmeras de jogo. \n REFLITA SOBRE SUAS ESCOLHAS: Suas escolhas são transportadas para o jogo seguinte. Cada decisão que você tomar influenciará o resultado de cada missão, cada relacionamento, cada batalha - e até mesmo o destino da própria galáxia. \n •Opções do modo de desempenho: Você pode optar por priorizar a qualidade para aumentar a resolução ou priorizar as taxas de frames para aumentar o FPS nos consoles. \n CONTEÚDO: Mass Effect™ Legendary Edition inclui o conteúdo básico para um jogador ou uma jogadora dos três títulos (Mass Effect, Mass Effect 2 e Mass Effect 3), seus DLCs de história para um jogador favoritos, armas promocionais, armaduras e pacotes."
+  }  
+]
