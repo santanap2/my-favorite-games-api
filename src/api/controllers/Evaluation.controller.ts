@@ -51,7 +51,6 @@ export class EvaluationController {
 
   public async update(req: Request, res: Response) {
     const { evaluationUpdate, email } = req.body
-    console.log(email)
 
     const { status, message, data } = await this.myService.update({
       evaluationUpdate,

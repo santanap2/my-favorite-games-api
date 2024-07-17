@@ -217,7 +217,6 @@ export class EvaluationService {
     evaluationUpdate: IEvaluationUpdate
     email: string
   }) {
-    console.log('BODY UPDATE', { stars, evaluationId, description, email })
     const user = new UserService()
     const { status, message, data } = await user.readByEmail(email)
     if (!data) return { status, message }
