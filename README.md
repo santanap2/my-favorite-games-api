@@ -4,7 +4,7 @@ O [My Favorite Games](https://github.com/santanap2/my-favorite-games) é um proj
 
 Toda a aplicação é alimentada por essa API, desenvolvida exclusivamente para essa aplicação, visando suprir suas necessidades.
 
-[Acesse agora o My Favorite Games](https://myfavgames.vercel.app/)
+[Acesse agora o My Favorite Games](https://myfavoritegames.vercel.app/)
 
 <img src="public/readme/site.png" alt="Overview do site" width="768" height="432" /> <img src="public/readme/game-page.png" alt="Overview do site" height="432" />
 
