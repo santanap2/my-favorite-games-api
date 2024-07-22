@@ -6,7 +6,7 @@ Toda a aplicação é alimentada por essa API, desenvolvida exclusivamente para 
 
 [Acesse agora o My Favorite Games](https://myfavgames.vercel.app/)
 
-<img src="public/readme/site.png" alt="Overview do site" width="768" height="432" /> <img src="public/readme/game-page.png" alt="Overview do site" />
+<img src="public/readme/site.png" alt="Overview do site" width="768" height="432" /> <img src="public/readme/game-page.png" alt="Overview do site" height="432" />
 
 ## Tecnologias utilizadas
 ### Principais:
