@@ -47,7 +47,7 @@ export class OrderService {
             ),
           },
           payment_method: paymentMethod,
-          status: 'awaitingPayment',
+          status: 'concluded',
           user: { connect: { id: data.id } },
           value,
         },
