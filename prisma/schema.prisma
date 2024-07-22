@@ -27,7 +27,7 @@ model Game {
   id          Int      @id @default(autoincrement())
   name        String   @unique
   categoryId  Int
-  price       Int
+  price       Float
   image       String
   description String   @db.VarChar(20000)
   created_at  DateTime @default(now())
