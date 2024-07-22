@@ -1,7 +1,6 @@
 import { prismaClient } from '../../database/prismaClient'
 import { IRegister, IUpdateUser } from '../../interfaces'
 import { comparePasswords, hashPassword } from '../../utils/bcrypt'
-import { isAuthenticatedValidation } from '../validations/CookieToken'
 import {
   createUserFieldsValidation,
   updateUserFieldsValidation,
@@ -37,27 +36,6 @@ export class UserService {
       status: 200,
       message: 'Usuário encontrado com sucesso',
       data: result,
-    }
-  }
-
-  // ///////////////////////////////////////////////////////////////
-
-  public async readByToken(cookie?: string) {
-    const {
-      status: statusValidation,
-      message: messageValidation,
-      data: dataValidation,
-    } = await isAuthenticatedValidation(cookie)
-
-    if (!dataValidation)
-      return { status: statusValidation, message: messageValidation }
-
-    const { status, data, message } = await this.readOne(dataValidation.id)
-
-    return {
-      status,
-      message,
-      data,
     }
   }
 

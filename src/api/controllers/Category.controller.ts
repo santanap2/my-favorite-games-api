@@ -27,8 +27,4 @@ export class CategoryController {
 
     return res.status(status).json({ message, categories: data })
   }
-
-  //   public async update(req: Request, res: Response) {}
-
-  //   public async delete(req: Request, res: Response) {}
 }

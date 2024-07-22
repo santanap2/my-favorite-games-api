@@ -4,15 +4,6 @@ import { UserService } from '../services/User.service'
 export class UserController {
   private userService = new UserService()
 
-  public async readByToken(req: Request, res: Response) {
-    const { cookie } = req.headers
-    const { message, status, data } = await this.userService.readByToken(cookie)
-
-    return res.status(status).json({ message, user: data })
-  }
-
-  // ///////////////////////////////////////////////////////////////
-
   public async readByEmail(req: Request, res: Response) {
     const { email } = req.params
 
